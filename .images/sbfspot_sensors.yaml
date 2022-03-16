@@ -1,0 +1,124 @@
+sensor:
+  - platform: mqtt
+    name: "SMA Output"
+    state_topic: "homeassistant/sbfspot_YOUR_PLANT_NAME/sbfspot_YOUR_INVERTER_SERIAL"
+    value_template: '{{ value_json.status }}'
+    json_attributes_topic: "sbfspot"
+    
+  - platform: mqtt
+    name: "SMA Sunny Boy"
+    state_topic: "homeassistant/sbfspot_YOUR_PLANT_NAME/sbfspot_YOUR_INVERTER_SERIAL"
+    value_template: '{{ value_json.InvName }}'
+    icon: "mdi:flash"
+    
+  - platform: mqtt
+    name: "SMA TimeStamp"
+    state_topic: "homeassistant/sbfspot_YOUR_PLANT_NAME/sbfspot_YOUR_INVERTER_SERIAL"
+    value_template: '{{ value_json.Timestamp }}'
+    icon: "mdi:clock"
+    
+  - platform: mqtt
+    name: "SMA Sun Rise"
+    state_topic: "homeassistant/sbfspot_YOUR_PLANT_NAME/sbfspot_YOUR_INVERTER_SERIAL"
+    value_template: '{{ value_json.SunRise }}'
+    icon: "mdi:weather-sunny"
+    
+  - platform: mqtt
+    name: "SMA Sun Set"
+    state_topic: "homeassistant/sbfspot_YOUR_PLANT_NAME/sbfspot_YOUR_INVERTER_SERIAL"
+    value_template: '{{ value_json.SunSet }}'
+    icon: "mdi:weather-sunset-down"
+    
+  - platform: mqtt
+    name: "SMA Running Temp"
+    state_topic: "homeassistant/sbfspot_YOUR_PLANT_NAME/sbfspot_YOUR_INVERTER_SERIAL"
+    value_template: '{{ value_json.InvTemperature }}'
+    unit_of_measurement: "°C"
+    icon: "mdi:coolant-temperature"
+    device_class: temperature
+    
+  - platform: mqtt
+    name: "SMA Status"
+    state_topic: "homeassistant/sbfspot_YOUR_PLANT_NAME/sbfspot_YOUR_INVERTER_SERIAL"
+    value_template: '{{ value_json.InvStatus }}'
+    icon: "mdi:flash"
+    
+  - platform: mqtt
+    name: "SMA Grid Relay"
+    state_topic: "homeassistant/sbfspot_YOUR_PLANT_NAME/sbfspot_YOUR_INVERTER_SERIAL"
+    value_template: '{{ value_json.InvGridRelay }}'
+    icon: "mdi:electric-switch"
+    
+  - platform: mqtt
+    name: "SMA Daily Energy"
+    state_topic: "homeassistant/sbfspot_YOUR_PLANT_NAME/sbfspot_YOUR_INVERTER_SERIAL"
+    value_template: '{{ value_json.EToday }}'
+    unit_of_measurement: "kWh"
+    icon: "mdi:solar-power"
+    device_class: energy
+    state_class: total_increasing
+    
+  - platform: mqtt
+    name: "SMA Total Energy"
+    state_topic: "homeassistant/sbfspot_YOUR_PLANT_NAME/sbfspot_YOUR_INVERTER_SERIAL"
+    value_template: '{{ value_json.ETotal }}'
+    unit_of_measurement: "kWh"
+    device_class: energy
+    state_class: total_increasing
+    
+  - platform: mqtt
+    name: "SMA Power AC"
+    state_topic: "homeassistant/sbfspot_YOUR_PLANT_NAME/sbfspot_YOUR_INVERTER_SERIAL"
+    value_template: '{{ value_json.PACTot }}'
+    unit_of_measurement: "W"
+    icon: "mdi:flash"
+    device_class: power
+    state_class: measurement
+    
+  - platform: mqtt
+    name: "SMA DC Array"
+    state_topic: "homeassistant/sbfspot_YOUR_PLANT_NAME/sbfspot_YOUR_INVERTER_SERIAL"
+    value_template: '{{ value_json.UDC1 }}'
+    unit_of_measurement: "Volts"
+    icon: "mdi:solar-panel-large"
+    device_class: voltage
+    
+  - platform: mqtt
+    name: "SMA DC Array2"
+    state_topic: "homeassistant/sbfspot_YOUR_PLANT_NAME/sbfspot_YOUR_INVERTER_SERIAL"
+    value_template: '{{ value_json.UDC2 }}'
+    unit_of_measurement: "Volts"
+    icon: "mdi:solar-panel"
+    device_class: voltage
+    
+  - platform: mqtt
+    name: "SMA DC Array"
+    state_topic: "homeassistant/sbfspot_YOUR_PLANT_NAME/sbfspot_YOUR_INVERTER_SERIAL"
+    value_template: '{{ value_json.IDC1 }}'
+    unit_of_measurement: "Amps"
+    icon: "mdi:solar-panel-large"
+    device_class: current
+    
+  - platform: mqtt
+    name: "SMA DC Array2"
+    state_topic: "homeassistant/sbfspot_YOUR_PLANT_NAME/sbfspot_YOUR_INVERTER_SERIAL"
+    value_template: '{{ value_json.IDC2 }}'
+    unit_of_measurement: "Amps"
+    icon: "mdi:solar-panel"
+    device_class: current
+    
+  - platform: mqtt
+    name: "SMA DC Array"
+    state_topic: "homeassistant/sbfspot_YOUR_PLANT_NAME/sbfspot_YOUR_INVERTER_SERIAL"
+    value_template: '{{ value_json.PDC1 }}'
+    unit_of_measurement: "Watts"
+    icon: "mdi:solar-panel-large"
+    device_class: power
+    
+  - platform: mqtt
+    name: "SMA DC Array2"
+    state_topic: "homeassistant/sbfspot_YOUR_PLANT_NAME/sbfspot_YOUR_INVERTER_SERIAL"
+    value_template: '{{ value_json.PDC2 }}'
+    unit_of_measurement: "Watts"
+    icon: "mdi:solar-panel"
+    device_class: power

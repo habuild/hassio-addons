@@ -1,0 +1,48 @@
+BTAddress: 00:00:00:00:00:00
+Password: Your_Sunny_Explorer_Password
+MIS_Enabled: 0
+Plantname: YourPlantname
+OutputPath: /data/sbfspot/%Y
+OutputPathEvents: /data/sbfspot/%Y/events
+Latitude: null
+Longitude: null
+CalculateMissingSpotValues: 1
+DateTimeFormat: '%d/%m/%Y %H:%M:%S'
+DateFormat: '%d/%m/%Y'
+DecimalPoint: comma
+TimeFormat: '%H:%M:%S'
+SynchTime: 7
+SynchTimeLow: 1
+SynchTimeHigh: 3600
+SunRSOffset: 900
+Locale: en-US
+Timezone: YourCountry/YourCity
+BTConnectRetries: 10
+CSV_Export: 0
+CSV_ExtendedHeader: 1
+CSV_Header: 1
+CSV_SaveZeroPower: 1
+CSV_Delimiter: semicolon
+CSV_Spot_TimeSource: Inverter
+CSV_Spot_WebboxHeader: 0
+SQL_Database: SBFspot
+SQL_Hostname: Your_MariaDB_Host (usually your homeassistant hostname or IP)
+SQL_Port: '3306'
+SQL_Username: sbfspot
+SQL_Password: Your_MariaDB_Password
+MQTT_Publisher: /usr/bin/mosquitto_pub
+MQTT_Host: Your_MariaDB_Host (usually your homeassistant hostname or IP)
+MQTT_Port: '1883'
+MQTT_Username": !secret mqtt_user,
+MQTT_Password": !secret mqtt_pass,
+MQTT_Topic: homeassistant/sbfspot_{plantname}/sbfspot_{serial}
+MQTT_ItemFormat: '"{key}": {value}'
+MQTT_ItemDelimiter: comma
+MQTT_PublisherArgs: '-h Your_MQTT_Hostname -u Your_MQTT_Username -P Your_MQTT_password -t {topic} -m "{{message}}" -d -r'
+MQTT_Data: >-
+  Timestamp,SunRise,SunSet,InvSerial,InvName,InvTime,InvStatus,InvTemperature,InvGridRelay,EToday,ETotal,PACTot,UDC1,UDC2,IDC1,IDC2,PDC1,PDC2
+LogDir: /data/sbfspot/log
+LogLevel: info
+PVoutput_SID: '00000000000:11111' #Your_Inverter_Serial:Your_PVoutput_SID
+PVoutput_Key: Your_PVoutput_API_key
+MQTT_ENABLE: '1'
