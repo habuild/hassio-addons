@@ -12,8 +12,8 @@ This repository contains the following add-ons
 
 ### [SBFspot_HA](./sbfspot)
 
-![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio_addons%2Fmaster%2Fsbfspot%2Fconfig.json)
-![Arch](https://img.shields.io/badge/dynamic/json?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio_addons%2Fmaster%2Fsbfspot%2Fconfig.json)
+![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmaster%2Fsbfspot%2Fconfig.json)
+![Arch](https://img.shields.io/badge/dynamic/json?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmaster%2Fsbfspot%2Fconfig.json)
 
 _Example add-on to use as a blueprint for new add-ons._
 
