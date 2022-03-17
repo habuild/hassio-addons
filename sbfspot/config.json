@@ -1,9 +1,9 @@
 {
   "name": "SBFspot",
-  "version": "2022.1.1",
+  "version": "2022.3.1",
   "slug": "sbfspot",
   "description": "Manage SBFspot with a simple interface",
-  "url": "https://github.com/habuild/sbfspot_forked_addon_old/tree/master/sbfspot",
+  "url": "https://github.com/habuild/hassio-addons/tree/main/sbfspot",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   
   "options": {
@@ -42,8 +42,6 @@
 	"MQTT_Publisher": "/usr/bin/mosquitto_pub",
 	"MQTT_Host": null,
 	"MQTT_Port": null,
-	"MQTT_Username": "!secret mqtt_user",
-	"MQTT_Password": "!secret has_pass",
 	"MQTT_Topic": "homeassistant/sbfspot_{plantname}/sbfspot_{serial}",
 	"MQTT_ItemFormat": "\"{key}\": {value}",
 	"MQTT_ItemDelimiter": "comma",
@@ -91,8 +89,6 @@
 	"MQTT_Publisher": "str",
 	"MQTT_Host": "str",
 	"MQTT_Port": "str",
-	"MQTT_Username": "str",
-	"MQTT_Password": "str",
 	"MQTT_Topic": "str",
 	"MQTT_ItemFormat": "str",
 	"MQTT_ItemDelimiter": "str",
@@ -107,5 +103,5 @@
   "host_network": true,
   "privileged": ["SYS_MODULE"],
   "devices": ["/dev/ttyAMA0"],
-  "image": "ghcr.io/habuild/{arch}-addon-sbfspot_forked_addon_old"
+  "image": "ghcr.io/habuild/{arch}-addon-sbfspot"
 }
