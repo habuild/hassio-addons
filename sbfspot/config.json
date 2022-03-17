@@ -43,8 +43,7 @@
         "MQTT_Publisher": "/usr/bin/mosquitto_pub",
         "MQTT_Host": null,
         "MQTT_Port": null,
-        #"MQTT_Username": "!secret mqtt_user",
-        #"MQTT_Password": "!secret has_pass",
+        
         "MQTT_Topic": "homeassistant/sbfspot_{plantname}/sbfspot_{serial}",
         "MQTT_ItemFormat": "\"{key}\": {value}",
         "MQTT_ItemDelimiter": "comma",
@@ -92,8 +91,7 @@
         "MQTT_Publisher": "str",
         "MQTT_Host": "str",
         "MQTT_Port": "str?",
-        #"MQTT_Username": "str?",
-        #"MQTT_Password": "str?",
+        
         "MQTT_Topic": "str",
         "MQTT_ItemFormat": "str",
         "MQTT_ItemDelimiter": "str",
