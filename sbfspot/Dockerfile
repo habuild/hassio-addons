@@ -41,7 +41,7 @@ RUN \
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN apk --no-cache add boost-date_time bluez-libs libstdc++ tzdata mariadb-common mariadb-connector-c ncurses-libs libcurl mosquitto-clients openrc
-
+COPY rootfs /
 # openrc changes
 RUN \
     # Tell openrc its running inside a container, till now that has meant LXC
@@ -63,7 +63,7 @@ RUN rc-status
 RUN mkdir -p /run/openrc && touch /run/openrc/softlevel
 
 # Copy data for add-on
-COPY rootfs /
+
 COPY --from=builder /tmp/SBFspot/mysql/bin/SBFspot /tmp/SBFspot/mysql/bin/SBFspot
 COPY --from=builder /tmp/SBFspotUploadDaemon/mysql/bin/SBFspotUploadDaemon /tmp/SBFspotUploadDaemon/mysql/bin/SBFspotUploadDaemon
 COPY --from=builder /tmp/SBFspot/date_time_zonespec.csv /tmp/SBFspot/date_time_zonespec.csv
