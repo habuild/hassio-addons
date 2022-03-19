@@ -68,7 +68,6 @@ COPY rootfs /
 COPY --from=builder /run/openrc/softlevel /run/openrc/softlevel
 RUN touch /run/openrc/softlevel
 
-RUN rc-status
 
 # Copy data for add-on
 
