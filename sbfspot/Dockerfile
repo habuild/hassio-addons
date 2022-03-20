@@ -47,7 +47,7 @@ RUN \
     # can't do cgroups
         sed -i 's/cgroup_add_service /# cgroup_add_service /g' /lib/rc/sh/openrc-run.sh
 
-RUN rc-status
+
 RUN mkdir -p /run/openrc && touch /run/openrc/softlevel
 
 # runtinme container   
