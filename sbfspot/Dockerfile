@@ -34,6 +34,8 @@ RUN \
 RUN \
     # Tell openrc its running inside a container, till now that has meant LXC
         sed -i 's/#rc_sys=""/rc_sys="lxc"/g' /etc/rc.conf &&\
+    # Tell openrc no need for cgroups signal kill
+        sed -i 's/#rc_send_sigkill="YES"/rc_send_sigkill="NO"/g' /etc/rc.conf &&\
     # Tell openrc loopback and net are already there, since docker handles the networking
         echo 'rc_provide="loopback net"' >> /etc/rc.conf &&\
     # no need for loggers
