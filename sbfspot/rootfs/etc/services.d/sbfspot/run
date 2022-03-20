@@ -26,8 +26,8 @@ echo 'Starting daemon'
 rc-service SBFspotUploadDaemon.service start
 
 # add logging to HA logs
-echo 'Showing Logs in HA'
-tail -Fn1 -s 30 /var/log/sbfspot/* > /dev/stdout >> /proc/1/fd/2
+#echo 'Showing Logs in HA'
+#tail -Fn1 -s 30 /var/log/sbfspot/* > /dev/stdout >> /proc/1/fd/2
 
 # cron
 echo 'Starting cron in foreground'
