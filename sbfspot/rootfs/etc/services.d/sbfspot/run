@@ -29,5 +29,9 @@ rc-service SBFspotUploadDaemon.service start
 echo 'Starting cron in foreground'
 /usr/sbin/crond -f
 
+# add logging to HA logs, this is a hard coded directory, which also doesn't get deleted if in /data...
+echo 'Showing Logs in HA'
+tail -fn1 /data/sbfspot/log/* > /dev/stdout
+
 # echo 'Starting daemon'
 # ./SBFspotUploadDaemon
