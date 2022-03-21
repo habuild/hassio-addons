@@ -29,7 +29,7 @@ Download and import either [No Drop DB create](https://github.com/habuild/hassio
 
 **-d** is for MQTT debug in log. 
 
-**-r** is to retain messages.
+**-r** is to retain messages. retain is not advised.
 
 
 ### Example Configuration Options.
@@ -39,7 +39,7 @@ can be copy/pasted as [Example Config](https://github.com/habuild/hassio-addons/
 ### Data paths 
 In docker the /data/ path arrives at /usr/share/hassio/addons/data/slug#_sbfspot on the host. 
 ### Upload logs
-TODO Need to grep? or bashio the upload log file back into HA log. The log file here may need to be cleaned up manually.
+The log file here may need to be cleaned up manually. 
 
 ### **Link to SBFspot Documentation**
 Refer to the [Wiki](https://github.com/SBFspot/SBFspot/wiki) for documentation and FAQ.
