@@ -18,8 +18,6 @@ cd /
 echo "PWD is current directory $(pwd)"
 ./generateConfig.sh SBFspot.cfg SBFspotUpload.cfg
 
-#chmod a+x SBFspot.cfg SBFspotUpload.cfg
-
 # ---- RUN ----
 # start service
 echo 'Starting daemon'
@@ -32,6 +30,3 @@ rc-service SBFspotUploadDaemon.service start
 # cron
 echo 'Starting cron in foreground'
 /usr/sbin/crond -f
-
-# echo 'Starting daemon'
-# ./SBFspotUploadDaemon

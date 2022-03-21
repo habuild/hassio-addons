@@ -84,7 +84,7 @@ RUN cp /tmp/SBFspotUploadDaemon/mysql/bin/SBFspotUploadDaemon /
 RUN cp /tmp/SBFspot/date_time_zonespec.csv /
 RUN cp /tmp/SBFspot/TagList* /
 
-RUN chmod a+x /generateConfig.sh /openrc-restart-crashed.sh /SBFspot /SBFspotUploadDaemon /etc/init.d/SBFspotUploadDaemon.service /SBFspot.default.cfg /SBFspotUpload.default.cfg
+RUN chmod a+x /taillog.sh /generateConfig.sh /openrc-restart-crashed.sh /SBFspot /SBFspotUploadDaemon /etc/init.d/SBFspotUploadDaemon.service /SBFspot.default.cfg /SBFspotUpload.default.cfg
 
 
 # --- install cron ---
@@ -98,6 +98,8 @@ RUN echo '55 05 * * *       /SBFspot -v -sp0 -ad0 -am1 -ae1 -finq > /dev/stdout'
 RUN echo '*/15 * * * *       /openrc-restart-crashed.sh -- SBFspotUploadDaemon.service > /dev/stdout' >> /etc/crontabs/root
 # openrc status logging
 RUN echo '*/5 * * * *       rc-status -s > /dev/stdout' >> /etc/crontabs/root
+# Log SBFspotUpload to HA logging window
+RUN echo '*/5 6-22 * * * /taillog.sh > /dev/stdout' >> /etc/crontabs/root
 
 # install service
 RUN rc-update add SBFspotUploadDaemon.service default
