@@ -1,9 +1,12 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
-## 2022.3.0 ![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fsbfspot_addon%2Fmaster%2Fsbfspot%2Fconfig.yaml)
+## ![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.json)
 
-- Updates
+- Released
+- SBFspot version 3.9.3
 
-## 2022.0.0
+## ![Release][release-shield] 
 
-- Initial release
+[release-shield]: https://img.shields.io/badge/version-2022.3.0-blue.svg
+
+- Initial release from test version
