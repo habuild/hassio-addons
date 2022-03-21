@@ -1,5 +1,11 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 ## ![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmaster%2Fsbfspot%2Fconfig.json)
+- Upload logging moved to HA logging window.
+    - needs default /data/sbfspot/log directory.
+- SBFspot version 3.9.3
+
+## ![Release][release-shield-2022-3-2]
+[release-shield-2022-3-2]: https://img.shields.io/badge/version-2022.3.2-blue.svg
 - bug chasing
 - SBFspot version 3.9.3
 
