@@ -5,8 +5,8 @@
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2022.svg
 
-![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmaster%2Fhaos-sbfspot%2Fconfig.json)
-![Arch](https://img.shields.io/badge/dynamic/json?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmaster%2Fhaos-sbfspot%2Fconfig.json)
+![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.json)
+![Arch](https://img.shields.io/badge/dynamic/json?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.json)
 
 This [home assistant](https://www.home-assistant.io/getting-started/) add-on provides the installation, configuration, and integration for the **Bluetooth** version of [haos-sbfspot 3.9.3](https://github.com/habuild/hassio-addons/tree/master/haos-sbfspot).
 
@@ -18,12 +18,12 @@ It also sends a MQTT message to home assistant, therefore a MQTT broker is requi
 ### Initial database creation.
 Download and import either [No Drop DB create](https://github.com/habuild/hassio-addons/blob/master/haos-sbfspot/.images/CreateMySQLDB_no_drop.sql) **or** [Create My SQL.sql](https://github.com/haos-sbfspot/haos-sbfspot/blob/master/haos-sbfspot/CreateMySQLDB.sql) in [phpMyAdmin](https://github.com/hassio-addons/addon-phpmyadmin) to create your database. **IF** you haven't already created the database previously, use the NO Drop version. You will also need to add the Database and User/Password to MariaDB and allocate the port.
 
-![screenshot](https://raw.githubusercontent.com/habuild/hassio-addons/master/.images/MariaDB%20setup.PNG)
+![screenshot](https://raw.githubusercontent.com/habuild/hassio-addons/main/.images/MariaDB%20setup.PNG)
 
 ### MQTT 
-[haos-sbfspot_sensors.yaml](https://github.com/habuild/hassio-addons/blob/master/haos-sbfspot/.images/haos-sbfspot_sensors.yaml) I use packages to include these yaml sensors. You will need to change to match your plant name and serial as you have set in the add-on configuration options. 
+[haos-sbfspot_sensors.yaml](https://github.com/habuild/hassio-addons/blob/main/haos-sbfspot/.images/haos-sbfspot_sensors.yaml) I use packages to include these yaml sensors. You will need to change to match your plant name and serial as you have set in the add-on configuration options. 
 
-**Although** the [configuration options](https://github.com/habuild/hassio-addons/blob/master/haos-sbfspot/.images/Example_Config.yaml) list a MQTT host. The MQTT Host, Username, and Password need to be hardcoded into the **MQTT_PublisherArgs:** The **{topic}** and **{{message}}** will be picked up from options. 
+**Although** the [configuration options](https://github.com/habuild/hassio-addons/blob/main/haos-sbfspot/.images/Example_Config.yaml) list a MQTT host. The MQTT Host, Username, and Password need to be hardcoded into the **MQTT_PublisherArgs:** The **{topic}** and **{{message}}** will be picked up from options. 
 
 **MQTT_PublisherArgs:** **'-h Your_MQTT_Hostname -u Your_MQTT_Username -P Your_MQTT_password -t {topic} -m "{{message}}" -d -r'**
 
@@ -33,8 +33,8 @@ Download and import either [No Drop DB create](https://github.com/habuild/hassio
 
 
 ### Example Configuration Options.
-can be copy/pasted as [Example Config](https://github.com/habuild/hassio-addons/blob/master/haos-sbfspot/.images/Example_Config.yaml) or entered via UI 
-![Example Options](https://raw.githubusercontent.com/habuild/hassio-addons/master/.images/Example_config_png.PNG) 
+can be copy/pasted as [Example Config](https://github.com/habuild/hassio-addons/blob/main/haos-sbfspot/.images/Example_Config.yaml) or entered via UI 
+![Example Options](https://raw.githubusercontent.com/habuild/hassio-addons/main/.images/Example_config_png.PNG) 
 
 ### Data paths 
 In docker the /data/ path arrives at /usr/share/hassio/addons/data/slug#_haos-sbfspot on the host. 
