@@ -23,11 +23,11 @@ Download and import either [No Drop DB create](https://github.com/habuild/hassio
 ### MQTT 
 [sbfspot_sensors.yaml](https://github.com/habuild/hassio-addons/blob/main/.images/sbfspot_sensors.yaml) I use packages to include these yaml sensors. You will need to change to match your plant name and serial as you have set in the add-on configuration options. 
 
-**Although** the [configuration options](https://github.com/habuild/hassio-addons/blob/main/.images/Example_Config.yaml) list a MQTT host. The MQTT Host, Username, and Password need to be hardcoded into the **MQTT_PublisherArgs:** The **{topic}** and **{{message}}** will be picked up from options. 
+**MQTT arument options** [configuration options](https://github.com/habuild/hassio-addons/blob/main/.images/Example_Config.yaml) The MQTT Username, and Password need to be hardcoded into the **MQTT_PublisherArgs:** The **{host}** **{topic}** and **{{message}}** will be picked up from options. 
 
 **MQTT_PublisherArgs:** **'-h Your_MQTT_Hostname -u Your_MQTT_Username -P Your_MQTT_password -t {topic} -m "{{message}}" -d -r'**
 
-**-d** is for MQTT debug in log. 
+**-d** is for MQTT debug in log. This is helpful for confirming the MQTT messages are actually being sent.
 
 **-r** is to retain messages. retain is not advised.
 
