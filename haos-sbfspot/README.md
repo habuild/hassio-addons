@@ -8,7 +8,7 @@
 ![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.json)
 ![Arch](https://img.shields.io/badge/dynamic/json?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.json)
 
-This [home assistant](https://www.home-assistant.io/getting-started/) add-on provides the installation, configuration, and integration for the **Bluetooth** version of [haos-sbfspot 3.9.3](https://github.com/habuild/hassio-addons/tree/master/haos-sbfspot).
+This [home assistant](https://www.home-assistant.io/getting-started/) add-on provides the installation, configuration, and integration for the **Bluetooth** version of [sbfspot 3.9.3](https://github.com/SBFspot/SBFspot).
 
 This add-on installs a cron service for SPFspot uploader at 5 minutely daytime interval, [PVoutput](https://pvoutput.org/) account and API are required, it also requires an SQL database like Mariadb. 
 It also sends a MQTT message to home assistant, therefore a MQTT broker is required.
@@ -16,7 +16,7 @@ It also sends a MQTT message to home assistant, therefore a MQTT broker is requi
 # Installation
 
 ### Initial database creation.
-Download and import either [No Drop DB create](https://github.com/habuild/hassio-addons/blob/master/haos-sbfspot/.images/CreateMySQLDB_no_drop.sql) **or** [Create My SQL.sql](https://github.com/haos-sbfspot/haos-sbfspot/blob/master/haos-sbfspot/CreateMySQLDB.sql) in [phpMyAdmin](https://github.com/hassio-addons/addon-phpmyadmin) to create your database. **IF** you haven't already created the database previously, use the NO Drop version. You will also need to add the Database and User/Password to MariaDB and allocate the port.
+Download and import either [No Drop DB create](https://github.com/habuild/hassio-addons/blob/main/haos-sbfspot/.images/CreateMySQLDB_no_drop.sql) **or** [Create My SQL.sql](https://github.com/haos-sbfspot/haos-sbfspot/blob/main/haos-sbfspot/CreateMySQLDB.sql) in [phpMyAdmin](https://github.com/hassio-addons/addon-phpmyadmin) to create your database. **IF** you haven't already created the database previously, use the NO Drop version. You will also need to add the Database and User/Password to MariaDB and allocate the port.
 
 ![screenshot](https://raw.githubusercontent.com/habuild/hassio-addons/main/.images/MariaDB%20setup.PNG)
 
@@ -42,11 +42,11 @@ In docker the /data/ path arrives at /usr/share/hassio/addons/data/slug#_haos-sb
 TODO Need to grep? or bashio the upload log file back into HA log. The log file here may need to be cleaned up manually.
 
 ### **Link to haos-sbfspot Documentation**
-Refer to the [Wiki](https://github.com/haos-sbfspot/haos-sbfspot/wiki) for documentation and FAQ.
+Refer to the [Wiki](https://github.com/sbfspot/sbfspot/wiki) for documentation and FAQ.
 
 ### **Special thanks to:**
 * LauR3y/hassio-addons which this version is cleaned up from.
-* The haos-sbfspot team for SPFspot.
+* The sbfspot team for SPFspot.
 
 
 ![Supports aarch64 Architecture][aarch64-shield]
