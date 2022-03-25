@@ -93,4 +93,4 @@ LABEL \
     org.label-schema.vendor="Hasqt"
 
 
-#CMD [ "/run.sh" ] not needed with rootfs/etc/init.d/{slug}run
+##CMD [ "/run.sh" ] not needed with rootfs/etc/init.d/{slug}run
