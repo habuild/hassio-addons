@@ -20,14 +20,14 @@ Fill in the config details to setup Inverter connection, Database, MQTT , and Up
 
 Start the addon
 
-### [haos-sbfspot](./haos-sbfspot)
+## [haos-sbfspot](./haos-sbfspot)
 ![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmaster%2Fhaos-sbfspot%2Fconfig.json)
 ![Arch](https://img.shields.io/badge/dynamic/json?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmaster%2Fhaos-sbfspot%2Fconfig.json)
 
 This version is specifically for Home Assistant Operating System HAOS. It omits Openrc found in the other version, which is largely redundant anyway.
 ### [Installation](https://github.com/habuild/hassio-addons/blob/main/haos-sbfspot/README.md)
 
-### [SBFspot](./sbfspot)
+## [SBFspot](./sbfspot)
 
 ![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmaster%2Fsbfspot%2Fconfig.json)
 ![Arch](https://img.shields.io/badge/dynamic/json?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmaster%2Fsbfspot%2Fconfig.json)
