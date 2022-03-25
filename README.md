@@ -10,12 +10,31 @@ Add-on documentation: <https://developers.home-assistant.io/docs/add-ons>
 
 This repository contains the following add-ons
 
-### [SBFspot_HA](./sbfspot)
+SBFspot addon for supervised Home Assistant, based an open source project located at github ([SBFspot on github](https://github.com/SBFspot/SBFspot)).
+This project creates an addon install for Home assistant users using the latest release of SBFspot as a docker container.
+
+# Installation and configuration
+Add ([this respository](https://github.com/HABuild/hassio_addons)) to Home Assistant via the superviser > new respository menu > add respository
+
+Fill in the config details to setup Inverter connection, Database, MQTT , and Upload API.
+
+Start the addon
+
+### [haos-sbfspot](./haos-sbfspot)
+![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmaster%2Fhaos-sbfspot%2Fconfig.json)
+![Arch](https://img.shields.io/badge/dynamic/json?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmaster%2Fhaos-sbfspot%2Fconfig.json)
+
+This version is specifically for Home Assistant Operating System HAOS. It omits Openrc found in the other version, which is largely redundant anyway.
+### [Installation](https://github.com/habuild/hassio-addons/blob/main/haos-sbfspot/README.md)
+
+### [SBFspot](./sbfspot)
 
 ![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmaster%2Fsbfspot%2Fconfig.json)
 ![Arch](https://img.shields.io/badge/dynamic/json?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmaster%2Fsbfspot%2Fconfig.json)
 
-_Example add-on to use as a blueprint for new add-ons._
+This version includes openrc to manage SBFspotUpload service. It is doesn't particulary offer any great advantage. They both perform very similarly. Except openrc partially requires a read access to the host to monitor other services which HAOS doesn't allow. 
+
+### [Installation](https://github.com/habuild/hassio-addons/blob/main/sbfspot/README.md)
 
 <!--
 
@@ -41,29 +60,11 @@ Notes to developers after forking or using the github template feature:
 
 ## ToDo List
 ### Fix
-map directories to /addon/??
 
-configure gui to SBFspot.cfg and SBFspotUpload.cfg??
-
-
-
-### Configure 
-built in MQTT conections??
-
-built in MariaDB ( point to and add database and user in existing addon??
-
+- fix options to display GUI options correctly, currently only edit in yaml is available to save options. 
+- Add colors to log file.
 
 ## ToDo end
-
-SBFspot addon for supervised Home Assistant, based an open source project located at github ([SBFspot on github](https://github.com/SBFspot/SBFspot)).
-This project creates an addon install for Home assistant users using the latest release of SBFspot as a docker install.
-
-# Installation and configuration
-Add ([this respository](https://github.com/HABuild/hassio_addons)) to Home Assistant via the superviser > new respository menu > add respository
-
-Fill in the config details to setup Inverter connection, Database, MQTT , and Upload API.
-
-Start the addon
 
 
 # Special Thanks To: 
