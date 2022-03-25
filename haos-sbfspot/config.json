@@ -1,6 +1,6 @@
 {
   "name": "HAOS-SBFspot",
-  "version": "2022.3.1",
+  "version": "2022.3.4",
   "slug": "haos-sbfspot",
   "description": "Manage SBFspot with a simple interface",
   "url": "https://github.com/habuild/hassio_addons/tree/main/haos-sbfspot",
