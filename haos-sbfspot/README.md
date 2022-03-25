@@ -37,9 +37,10 @@ can be copy/pasted as [Example Config](https://github.com/habuild/hassio-addons/
 ![Example Options](https://raw.githubusercontent.com/habuild/hassio-addons/main/.images/Example_config_png.PNG) 
 
 ### Data paths 
-In docker the /data/ path arrives at /usr/share/hassio/addons/data/slug#_haos-sbfspot on the host. 
+In HAOS (home assistant operating system) the /data/ path arrives at /mnt/data/supervisor/addons/data/{slug}_haos-sbfspot on the host.
+
 ### Upload logs
-TODO Need to grep? or bashio the upload log file back into HA log. The log file here may need to be cleaned up manually.
+Logs delete after 3 days now. Your would need SSH with Root host access to find them anyway.
 
 ### **Link to haos-sbfspot Documentation**
 Refer to the [Wiki](https://github.com/sbfspot/sbfspot/wiki) for documentation and FAQ.
