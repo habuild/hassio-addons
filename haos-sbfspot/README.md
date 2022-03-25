@@ -40,7 +40,7 @@ can be copy/pasted as [Example Config](https://github.com/habuild/hassio-addons/
 In HAOS (home assistant operating system) the /data/ path arrives at /mnt/data/supervisor/addons/data/{slug}_haos-sbfspot on the host.
 
 ### Upload logs
-Logs delete after 3 days now. Your would need SSH with Root host access to find them anyway.
+Logs delete after 3 days now. You would need SSH with Root host access to find them anyway.
 
 ### **Link to haos-sbfspot Documentation**
 Refer to the [Wiki](https://github.com/sbfspot/sbfspot/wiki) for documentation and FAQ.
