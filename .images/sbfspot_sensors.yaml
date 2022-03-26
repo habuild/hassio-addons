@@ -1,3 +1,5 @@
+
+### Note You will need to manually adjust YOUR_PLANT_NAME and YOUR_INVERTER_SERIAL to match your options in SBFspot 
 sensor:
       
   - platform: mqtt
