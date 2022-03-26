@@ -1,10 +1,5 @@
 sensor:
-  - platform: mqtt
-    name: "SMA Output"
-    state_topic: "homeassistant/sbfspot_YOUR_PLANT_NAME/sbfspot_YOUR_INVERTER_SERIAL"
-    value_template: '{{ value_json.status }}'
-    json_attributes_topic: "sbfspot"
-    
+      
   - platform: mqtt
     name: "SMA Sunny Boy"
     state_topic: "homeassistant/sbfspot_YOUR_PLANT_NAME/sbfspot_YOUR_INVERTER_SERIAL"
