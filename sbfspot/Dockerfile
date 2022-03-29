@@ -91,7 +91,7 @@ RUN chmod a+x /taillog.sh /generateConfig.sh /openrc-restart-crashed.sh /SBFspot
 # set shell
 RUN echo 'SHELL=/bin/bash' > /etc/crontabs/root
 # update sensors after restart
-RUN '@reboot sleep 30 && /etc/sbfspot/SBFspot -v -ad0 -am0 -mqtt -finq > /dev/stdout' >> /etc/crontabs/root
+RUN '@reboot sleep 30 && /SBFspot -v -ad0 -am0 -mqtt -finq > /dev/stdout' >> /etc/crontabs/root
 # daily data SBFspot
 RUN echo '*/5 6-22 * * *    /SBFspot -v -ad1 -am0 -ae0 -mqtt > /dev/stdout' >> /etc/crontabs/root
 # monthly data SBFspot
