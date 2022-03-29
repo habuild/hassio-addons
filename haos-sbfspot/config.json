@@ -45,7 +45,7 @@
       "MQTT_ItemFormat": "\"{key}\": {value}",
       "MQTT_ItemDelimiter": "comma",
       "MQTT_PublisherArgs": "-h {host} -u {MQTT_Username} -P {MQTT_Password} -t {topic} -m \"{{message}}\" -d",
-      "MQTT_Data": "Timestamp,SunRise,SunSet,InvSerial,InvName,InvTime,InvStatus,InvTemperature,InvGridRelay,EToday,ETotal,PACTot,UDC1,UDC2,IDC1,IDC2,PDC1,PDC2",
+      "MQTT_Data": "Timestamp,SunRise,SunSet,InvSerial,InvName,InvTime,InvStatus,InvTemperature,InvGridRelay,EToday,ETotal,GridFreq,PACTot,UDC1,UDC2,IDC1,IDC2,PDC1,PDC2",
       "LogDir": "/dev/stdout >> /proc/1/fd/1",
       "LogLevel": "info",
       "PVoutput_SID": null,
