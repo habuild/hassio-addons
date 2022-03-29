@@ -119,3 +119,11 @@ sensor:
     unit_of_measurement: "Watts"
     icon: "mdi:solar-panel"
     device_class: power
+    
+  - platform: mqtt
+    name: "SMA Grid Frequency"
+    state_topic: "homeassistant/sbfspot_YOUR_PLANT_NAME/sbfspot_YOUR_INVERTER_SERIAL"
+    value_template: '{{ value_json.GridFreq }}'
+    unit_of_measurement: "Hz"
+    icon: "mdi:transmission-tower"
+    device_class: frequency    
