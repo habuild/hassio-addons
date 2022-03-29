@@ -1,5 +1,12 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 ## ![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fsbfspot%2Fconfig.json)
+- Add cronjob to update sensors on restart
+- SBFspot version 3.9.4
+- Deprecation warning 
+    - This version offers little benefit over the alternative available.   
+
+## ![Release][release-shield-2022-3-4]
+[release-shield-2022-3-4]: https://img.shields.io/badge/version-2022.3.4-blue.svg
 - Better log handling for latest file.
 - Set removal of old logs at 3 days.
 
