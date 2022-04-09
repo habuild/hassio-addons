@@ -14,7 +14,7 @@ SBFspot addon for supervised Home Assistant, based an open source project locate
 This project creates an addon install for Home assistant users using the latest release of SBFspot as a docker container.
 
 # Installation and configuration
-Add ([this respository](https://github.com/HABuild/hassio_addons)) to Home Assistant via the superviser > new respository menu > add respository
+Add ([this respository](https://github.com/habuild/hassio-addons)) to Home Assistant via the superviser > new respository menu > add respository
 
 Fill in the config details to setup Inverter connection, Database, MQTT , and Upload API.
 
