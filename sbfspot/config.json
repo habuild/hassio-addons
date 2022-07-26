@@ -99,8 +99,7 @@
       "PVoutput_Key": "str",
       "MQTT_ENABLE": "int"
   },
-  "host_network": true,
-  "privileged": ["SYS_MODULE"],
-  
+  "host_network": true
+    
   "image": "ghcr.io/habuild/{arch}-addon-sbfspot"
 }
