@@ -101,6 +101,6 @@
   },
   "host_network": true,
   "privileged": ["SYS_MODULE"],
-  "devices": ["/dev/ttyAMA0"],
+  
   "image": "ghcr.io/habuild/{arch}-addon-sbfspot"
 }
