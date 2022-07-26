@@ -14,7 +14,7 @@ ENV MQTT_ENABLE 1
 # Copy root filesystem
 COPY rootfs /
 # Set shell
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+# SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # install requirements
 RUN apk update && apk upgrade && apk add --no-cache git g++ make mysql-dev bluez-dev boost-dev curl-dev tzdata mosquitto-clients mariadb-dev
@@ -39,7 +39,6 @@ RUN \
     curl -sSLf -o /usr/bin/tempio \
     "https://github.com/home-assistant/tempio/releases/download/${TEMPIO_VERSION}/tempio_${BUILD_ARCH}"
 
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN apk update && apk upgrade && apk add --no-cache boost-date_time bluez-libs libstdc++ tzdata mariadb-common mariadb-connector-c ncurses-libs libcurl mosquitto-clients
 COPY rootfs /
