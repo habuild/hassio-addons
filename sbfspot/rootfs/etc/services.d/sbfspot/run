@@ -34,3 +34,4 @@ echo 'Starting daemon'
 # cron
 echo 'Starting cron in foreground'
 /usr/sbin/crond -f
+
