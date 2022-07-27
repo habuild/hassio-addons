@@ -59,7 +59,7 @@ RUN cp /tmp/SBFspotUploadDaemon/mariadb/bin/SBFspotUploadDaemon /etc/sbfspot
 RUN cp /tmp/SBFspot/date_time_zonespec.csv /etc/sbfspot
 RUN cp /tmp/SBFspot/TagList* /etc/sbfspot
 
-RUN chmod a+x /etc/sbfspot/taillog.sh /etc/sbfspot/generateConfig.sh /etc/sbfspot/SBFspot /etc/sbfspot/SBFspotUploadDaemon /etc/sbfspot/SBFspot.default.cfg /etc/sbfspot/SBFspotUpload.default.cfg
+RUN chmod a+x rootfs/etc/services.d/sbfspot/run rootfs/etc/services.d/sbfspot/finish /etc/sbfspot/taillog.sh /etc/sbfspot/generateConfig.sh /etc/sbfspot/SBFspot /etc/sbfspot/SBFspotUploadDaemon /etc/sbfspot/SBFspot.default.cfg /etc/sbfspot/SBFspotUpload.default.cfg
 
 
 # --- install cron ---
