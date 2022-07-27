@@ -78,7 +78,7 @@ RUN echo '*/5 6-22 * * * /etc/sbfspot/taillog.sh > /dev/stdout' >> /etc/crontabs
 
 # Labels
 LABEL \
-    io.hass.name="SBFspot" \
+    io.hass.name="test-SBFspot" \
     io.hass.description="Home Assitant addon for Bluetooth SBFspot, is an open source project to get actual and archive data out of an SMA® inverter over Bluetooth or Ethernet (Speedwire®)" \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
@@ -86,7 +86,7 @@ LABEL \
     maintainer="Hasqt <https://community.home-assistant.io/u/hasqt>" \
     org.label-schema.description="Home Assitant addon for Bluetooth SBFspot, is an open source project to get actual and archive data out of an SMA® inverter over Bluetooth or Ethernet (Speedwire®)" \
     org.label-schema.build-date=${BUILD_DATE} \
-    org.label-schema.name="SBFspot" \
+    org.label-schema.name="test-SBFspot" \
     org.label-schema.schema-version="1.0" \
     org.label-schema.url="https://github.com/habuild/hassio-addons/tree/main/test-sbfspot" \
     org.label-schema.usage="https://github.com/habuild/hassio-addons/tree/main/test-sbfspot/README.md" \
@@ -95,4 +95,4 @@ LABEL \
     org.label-schema.vendor="Hasqt"
 
 
-##CMD [ "/run.sh" ] not needed with rootfs/etc/init.d/{slug}run
+###CMD [ "/run.sh" ] not needed with rootfs/etc/init.d/{slug}run
