@@ -1,6 +1,6 @@
 {
   "name": "TEST-SBFspot",
-  "version": "2022.7.1",
+  "version": "2022.7.2",
   "slug": "test-sbfspot",
   "description": "Manage SBFspot with a simple interface",
   "url": "https://github.com/habuild/hassio_addons/tree/main/test-sbfspot",
@@ -102,6 +102,6 @@
   },
   "host_network": true,
   "privileged": ["SYS_MODULE"],
-  "devices": ["/dev/bus/usb/*"],
+  "devices": ["/dev/ttyUSB0"],
   "image": "ghcr.io/habuild/{arch}-addon-test-sbfspot"
 }
