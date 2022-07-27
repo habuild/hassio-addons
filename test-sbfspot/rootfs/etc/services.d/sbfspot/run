@@ -4,14 +4,6 @@
 # s6-overlay docs: https://github.com/just-containers/s6-overlay
 # ==============================================================================
 
-#!/bin/sh
-set -e
-
-#echo 'Show all runlevels and their services.'
-#rc-status -a
-
-#echo 'Show all services.'
-#rc-status -s
 
 # --- GENERATE CONFIG --
 echo "PWD is current directory $(pwd)"
@@ -22,16 +14,10 @@ echo "PWD is current directory $(pwd)"
 
 
 # ---- RUN ----
-# start service
-#echo 'Starting daemon'
-#rc-service SBFspotUploadDaemon.service start
 
 echo 'Starting daemon'
 
-# add logging to HA logs #In cronjob
-#echo 'Showing Logs in HA'
-#/etc/sbfspot/taillog.sh
 
 # cron
 echo 'Starting cron in foreground'
-/usr/sbin/crond -f
+exec /usr/sbin/crond -f
