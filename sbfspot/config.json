@@ -6,7 +6,6 @@
   "url": "https://github.com/habuild/hassio_addons/tree/main/sbfspot",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "init": false,
-  "apparmor": true,
   "options": {
       "BTAddress": "null",
       "Password": "0000",
