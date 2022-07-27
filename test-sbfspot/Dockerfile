@@ -46,7 +46,7 @@ COPY rootfs /
 
 # Copy data for add-on
 
-RUN mkdir -p /etc/sbfspot
+RUN mkdir -p /usr/bin/sbfspot
 
 COPY --from=builder /tmp/SBFspot/mariadb/bin/SBFspot /tmp/SBFspot/mariadb/bin/SBFspot
 COPY --from=builder /tmp/SBFspotUploadDaemon/mariadb/bin/SBFspotUploadDaemon /tmp/SBFspotUploadDaemon/mariadb/bin/SBFspotUploadDaemon
@@ -54,10 +54,10 @@ COPY --from=builder /tmp/SBFspot/date_time_zonespec.csv /tmp/SBFspot/date_time_z
 COPY --from=builder /tmp/SBFspot/TagList* /tmp/SBFspot/
 
 
-RUN cp /tmp/SBFspot/mariadb/bin/SBFspot /etc/sbfspot
+RUN cp /tmp/SBFspot/mariadb/bin/SBFspot /usr/bin/sbfspot
 RUN cp /tmp/SBFspotUploadDaemon/mariadb/bin/SBFspotUploadDaemon /usr/bin/sbfspot
 RUN cp /tmp/SBFspot/date_time_zonespec.csv /usr/bin/sbfspot
-RUN cp /tmp/SBFspot/TagList* /etc/sbfspot
+RUN cp /tmp/SBFspot/TagList* /usr/bin/sbfspot
 
 RUN chmod a+x /usr/bin/sbfspot/taillog.sh /usr/bin/sbfspot/generateConfig.sh /usr/bin/sbfspot/SBFspot /usr/bin/sbfspot/SBFspotUploadDaemon /usr/bin/sbfspot/SBFspot.default.cfg /usr/bin/sbfspot/SBFspotUpload.default.cfg
 
