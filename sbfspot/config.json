@@ -8,8 +8,8 @@
   "init": false,
   "options": {
       "BTAddress": "null",
-      "LocalBTAddress":"",
       "Password": "0000",
+      "LocalBTAddress":"",
       "MIS_Enabled": 0,
       "Plantname": "MyPlant",
       "OutputPath": "/data/sbfspot/%Y",
@@ -56,8 +56,8 @@
   },
   "schema": {
       "BTAddress": "str",
-      "LocalBTAddress":"?",
       "Password": "str",
+      "LocalBTAddress":"str",
       "MIS_Enabled": "int",
       "Plantname": "str",
       "OutputPath": "str",
