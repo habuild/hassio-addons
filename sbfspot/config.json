@@ -1,6 +1,6 @@
 {
   "name": "SBFspot",
-  "version": "2022.3.6",
+  "version": "2022.7.2",
   "slug": "sbfspot",
   "description": "Manage SBFspot with a simple interface",
   "url": "https://github.com/habuild/hassio_addons/tree/main/sbfspot",
@@ -8,6 +8,7 @@
   "init": false,
   "options": {
       "BTAddress": "null",
+      "LocalBTAddress":"",
       "Password": "0000",
       "MIS_Enabled": 0,
       "Plantname": "MyPlant",
@@ -55,6 +56,7 @@
   },
   "schema": {
       "BTAddress": "str",
+      "LocalBTAddress":"?",
       "Password": "str",
       "MIS_Enabled": "int",
       "Plantname": "str",
