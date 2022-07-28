@@ -7,7 +7,7 @@
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "init": false,
   "services": [
-       "addon_core_mariadb:need"
+       "mysql:need"
   ],
   "options": {
       "BTAddress": "null",
