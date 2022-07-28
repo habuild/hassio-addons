@@ -1,7 +1,13 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
-## ![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fsbfspot%2Fconfig.json)
+## ![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Ftest-sbfspot%2Fconfig.json)
+- This is a test version and will change without warning.
+- as above, you have been warned
+- added services:need for mariadb
+
+## ![Release][release-shield-2022-3-5]
+[release-shield-2022-3-5]: https://img.shields.io/badge/version-2022.3.5-blue.svg
 - Add cronjob to update sensors if restart occurs.
-- SBFspot version 3.9.4 was released.
+- SBFspot version 3.9.5 was released.
 
 ## ![Release][release-shield-2022-3-4]
 [release-shield-2022-3-4]: https://img.shields.io/badge/version-2022.3.4-blue.svg
