@@ -2,6 +2,13 @@
 ## ![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fsbfspot%2Fconfig.json)
 - THIS IS CONSIDERED A TEST BRANCH
 - bump for testing 
+- add changes for s6 overlay version 3 requirements
+- add local BT address option (use bluetoothctl to find your address)
+
+## ![Release][release-shield-2022-3-6]
+[release-shield-2022-3-6]: https://img.shields.io/badge/version-2022.3.6-blue.svg
+- THIS IS CONSIDERED A TEST BRANCH
+- bump for testing 
 - moved to test build to match HAOS-SBFspot version
 
 ## ![Release][release-shield-2022-3-5]
