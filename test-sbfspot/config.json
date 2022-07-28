@@ -6,7 +6,7 @@
   "url": "https://github.com/habuild/hassio_addons/tree/main/test-sbfspot",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "init": false,
-  "services": ["addon_core_mariadb:need"],
+  "services": "addon_core_mariadb":"need",
   "options": {
       "BTAddress": "null",
       "Password": "0000",
