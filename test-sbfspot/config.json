@@ -1,14 +1,17 @@
 {
   "name": "TEST-SBFspot",
-  "version": "2022.7.2",
+  "version": "2022.7.3",
   "slug": "test-sbfspot",
   "description": "Manage SBFspot with a simple interface",
   "url": "https://github.com/habuild/hassio_addons/tree/main/test-sbfspot",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "init": false,
+  "services":
+      ["addon_core_mariadb": "need"],
   "options": {
       "BTAddress": "null",
       "Password": "0000",
+      "LocalBTAddress":"00:00:00:00:00:00",
       "MIS_Enabled": 0,
       "Plantname": "MyPlant",
       "OutputPath": "/data/sbfspot/%Y",
@@ -56,6 +59,7 @@
   "schema": {
       "BTAddress": "str",
       "Password": "str",
+      "LocalBTAddress":"str",
       "MIS_Enabled": "int",
       "Plantname": "str",
       "OutputPath": "str",
@@ -102,6 +106,6 @@
   },
   "host_network": true,
   "privileged": ["SYS_MODULE"],
-  "devices": ["/dev/ttyUSB1"],
+  
   "image": "ghcr.io/habuild/{arch}-addon-test-sbfspot"
 }
