@@ -107,6 +107,7 @@
   },
   "host_network": true,
   "privileged": ["SYS_MODULE"],
+  "devices": ["/dev/ttyACM1"],
   "usb": true,
   "host_dbus": true,
   "image": "ghcr.io/habuild/{arch}-addon-test-sbfspot"
