@@ -17,7 +17,7 @@ COPY rootfs /
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # install requirements
-RUN apk update && apk upgrade && apk add --no-cache git g++ make mysql-dev bluez bluez-dev boost-dev curl-dev tzdata mosquitto-clients mariadb-dev
+RUN apk update && apk upgrade && apk add --no-cache git g++ make mysql-dev bluez dbus bluez-dev boost-dev curl-dev tzdata mosquitto-clients mariadb-dev
 
 # download and build SBFspot
 RUN \
@@ -41,7 +41,7 @@ RUN \
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-RUN apk update && apk upgrade && apk add --no-cache boost-date_time bluez nano bluez-libs libstdc++ tzdata mariadb-common mariadb-connector-c ncurses-libs libcurl mosquitto-clients
+RUN apk update && apk upgrade && apk add --no-cache boost-date_time bluez dbus nano bluez-libs libstdc++ tzdata mariadb-common mariadb-connector-c ncurses-libs libcurl mosquitto-clients
 COPY rootfs /
 
 # Copy data for add-on
