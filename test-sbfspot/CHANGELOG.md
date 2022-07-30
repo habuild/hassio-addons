@@ -2,6 +2,14 @@
 ## ![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Ftest-sbfspot%2Fconfig.json)
 - This is a test version and will change without warning.
 - as above, you have been warned
+- apparmor is working
+- added hassio:api
+- added services:need for mariadb, mqtt:want
+
+## ![Release][release-shield-2022-7-3]
+[release-shield-2022-7-3]: https://img.shields.io/badge/version-2022.7.3-blue.svg
+- This is a test version and will change without warning.
+- as above, you have been warned
 - added services:need for mariadb
 
 ## ![Release][release-shield-2022-3-5]

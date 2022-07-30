@@ -1,13 +1,21 @@
 {
   "name": "TEST-SBFspot",
-  "version": "2022.7.3",
+  "version": "2022.7.4",
   "slug": "test-sbfspot",
   "description": "Manage SBFspot with a simple interface",
   "url": "https://github.com/habuild/hassio_addons/tree/main/test-sbfspot",
-  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "arch": [
+       "armhf", 
+       "armv7", 
+       "aarch64", 
+       "amd64", 
+       "i386"
+  ],
   "init": false,
+  "hassio_api": true,
   "services": [
-       "mysql:need"
+       "mysql:need",
+       "mqtt:want"
   ],
   "options": {
       "BTAddress": "null",
@@ -107,8 +115,6 @@
   },
   "host_network": true,
   "privileged": ["SYS_MODULE"],
-  "devices": ["/dev/ttyS0", "/dev/ttyAMA0", "/dev/ttyAMA1"],
-  "usb": true,
-  "host_dbus": true,
+  
   "image": "ghcr.io/habuild/{arch}-addon-test-sbfspot"
 }
