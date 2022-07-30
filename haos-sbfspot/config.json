@@ -1,13 +1,26 @@
 {
   "name": "HAOS-SBFspot",
-  "version": "2022.3.5",
+  "version": "2022.7.5",
   "slug": "haos-sbfspot",
   "description": "Manage SBFspot with a simple interface",
   "url": "https://github.com/habuild/hassio_addons/tree/main/haos-sbfspot",
-  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "arch": [
+      "armhf",
+      "armv7",
+      "aarch64",
+      "amd64",
+      "i386"
+  ],
+  "init": false,
+  "hassio_api": true,
+  "services": [
+       "mysql:need",
+       "mqtt:want"
+  ],  
   "options": {
       "BTAddress": "null",
       "Password": "0000",
+      "LocalBTAddress":"00:00:00:00:00:00",
       "MIS_Enabled": 0,
       "Plantname": "MyPlant",
       "OutputPath": "/data/sbfspot/%Y",
@@ -55,6 +68,7 @@
   "schema": {
       "BTAddress": "str",
       "Password": "str",
+      "LocalBTAddress":"str",
       "MIS_Enabled": "int",
       "Plantname": "str",
       "OutputPath": "str",
@@ -101,6 +115,6 @@
   },
   "host_network": true,
   "privileged": ["SYS_MODULE"],
-  "devices": ["/dev/ttyAMA0"],
+  
   "image": "ghcr.io/habuild/{arch}-addon-haos-sbfspot"
 }
