@@ -46,7 +46,7 @@ COPY rootfs /
 
 # Copy data for add-on
 
-RUN mkdir -p /etc/sbfspot
+RUN mkdir -p /usr/bin/sbfspot
 
 COPY --from=builder /tmp/SBFspot/mariadb/bin/SBFspot /tmp/SBFspot/mariadb/bin/SBFspot
 COPY --from=builder /tmp/SBFspotUploadDaemon/mariadb/bin/SBFspotUploadDaemon /tmp/SBFspotUploadDaemon/mariadb/bin/SBFspotUploadDaemon
@@ -54,27 +54,27 @@ COPY --from=builder /tmp/SBFspot/date_time_zonespec.csv /tmp/SBFspot/date_time_z
 COPY --from=builder /tmp/SBFspot/TagList* /tmp/SBFspot/
 
 
-RUN cp /tmp/SBFspot/mariadb/bin/SBFspot /etc/sbfspot
-RUN cp /tmp/SBFspotUploadDaemon/mariadb/bin/SBFspotUploadDaemon /etc/sbfspot
-RUN cp /tmp/SBFspot/date_time_zonespec.csv /etc/sbfspot
-RUN cp /tmp/SBFspot/TagList* /etc/sbfspot
+RUN cp /tmp/SBFspot/mariadb/bin/SBFspot /usr/bin/sbfspot
+RUN cp /tmp/SBFspotUploadDaemon/mariadb/bin/SBFspotUploadDaemon /usr/bin/sbfspot
+RUN cp /tmp/SBFspot/date_time_zonespec.csv /usr/bin/sbfspot
+RUN cp /tmp/SBFspot/TagList* /usr/bin/sbfspot
 
-RUN chmod a+x /etc/sbfspot/taillog.sh /etc/sbfspot/generateConfig.sh /etc/sbfspot/SBFspot /etc/sbfspot/SBFspotUploadDaemon /etc/sbfspot/SBFspot.default.cfg /etc/sbfspot/SBFspotUpload.default.cfg
+RUN chmod a+x etc/services.d/sbfspot/run etc/services.d/sbfspot/finish /usr/bin/sbfspot/taillog.sh /usr/bin/sbfspot/generateConfig.sh /usr/bin/sbfspot/SBFspot /usr/bin/sbfspot/SBFspotUploadDaemon /usr/bin/sbfspot/SBFspot.default.cfg /usr/bin/sbfspot/SBFspotUpload.default.cfg
 
 
 # --- install cron ---
 # set shell
 RUN echo 'SHELL=/bin/bash' > /etc/crontabs/root
 # update sensors after restart
-RUN echo '@reboot sleep 30 && /etc/sbfspot/SBFspot -v -ad0 -am0 -mqtt -finq > /dev/stdout' >> /etc/crontabs/root
+RUN echo '@reboot sleep 30 && /usr/bin/sbfspot/SBFspot -v -ad0 -am0 -mqtt -finq > /dev/stdout' >> /etc/crontabs/root
 # daily data SBFspot
-RUN echo '*/5 6-22 * * *    /etc/sbfspot/SBFspot -v -ad1 -am0 -ae0 -mqtt > /dev/stdout' >> /etc/crontabs/root
+RUN echo '*/5 6-22 * * *    /usr/bin/sbfspot/SBFspot -v -ad1 -am0 -ae0 -mqtt > /dev/stdout' >> /etc/crontabs/root
 # monthly data SBFspot
-RUN echo '55 05 * * *       /etc/sbfspot/SBFspot -v -sp0 -ad0 -am1 -ae1 -finq > /dev/stdout' >> /etc/crontabs/root
+RUN echo '55 05 * * *       /usr/bin/sbfspot/SBFspot -v -sp0 -ad0 -am1 -ae1 -finq > /dev/stdout' >> /etc/crontabs/root
 # start SBFspotUpload 1 min after boot
-RUN echo '@reboot sleep 60 && /etc/sbfspot/SBFspotUploadDaemon -c /etc/sbfspot/SBFspotUpload.cfg' >> /etc/crontabs/root
+RUN echo '@reboot sleep 60 && /usr/bin/sbfspot/SBFspotUploadDaemon -c /usr/bin/sbfspot/SBFspotUpload.cfg' >> /etc/crontabs/root
 # Log SBFspotUpload to HA logging window
-RUN echo '*/5 6-22 * * * /etc/sbfspot/taillog.sh > /dev/stdout' >> /etc/crontabs/root
+RUN echo '*/5 6-22 * * * /usr/bin/sbfspot/taillog.sh > /dev/stdout' >> /etc/crontabs/root
 
 # Labels
 LABEL \
