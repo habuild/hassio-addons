@@ -1,6 +1,6 @@
 #include <tunables/global>
 
-profile test-sbfspot flags=(attach_disconnected,mediate_deleted) {
+profile haos-sbfspot flags=(attach_disconnected,mediate_deleted) {
   #include <abstractions/base>
 
   # Capabilities
