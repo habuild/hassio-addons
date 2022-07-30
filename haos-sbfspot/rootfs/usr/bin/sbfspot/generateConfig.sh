@@ -1,12 +1,11 @@
 CFG_PATH=$1
 CFG_PATH_UPLOAD=$2
-CONFIG_OUTPUTPATH=$3
 CONFIG_PATH=/data/options.json
-
 
 echo "Generating $CFG_PATH & $CFG_PATH_UPLOAD"
 
 CONFIG_BTADDRESS="$(jq --raw-output '.BTAddress' $CONFIG_PATH)"
+CONFIG_LOCALBTADDRESS="$(jq --raw-output '.LocalBTAddress' $CONFIG_PATH)"
 CONFIG_PASSWORD="$(jq --raw-output '.Password' $CONFIG_PATH)"
 CONFIG_MSI_ENABLED="$(jq --raw-output '.MIS_Enabled' $CONFIG_PATH)"
 CONFIG_PLANTNAME="$(jq --raw-output '.Plantname' $CONFIG_PATH)"
@@ -80,6 +79,9 @@ cat > $CFG_PATH <<EOL
 # Linux  : hcitool scan
 # IMPORTANT FOR SPEEDWIRE USERS: COMMENT OUT BTADDRESS (PUT # IN FRONT)
 BTAddress=$CONFIG_BTADDRESS
+
+# If multiple local BT adapters are available, select the one to use
+LocalBTAddress=$CONFIG_LOCALBTADDRESS
 
 # SMA Inverter's Speedwire IP address
 # If IP_Address is not set or is 0.0.0.0 SBFspot will try to detect the speedwire inverter by broadcast
@@ -304,5 +306,4 @@ EOL
 
 # create folders
 mkdir -p $CONFIG_OUTPUTPATH
-mkdir -p $CONFIG_LOGDIR 
-# log here instead > /dev/stdout >> /proc/1/fd/1 # tail -fn1 /data/sbfspot/log/* > /dev/stdout
+mkdir -p $CONFIG_LOGDIR

@@ -8,7 +8,7 @@
 ![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.json)
 ![Arch](https://img.shields.io/badge/dynamic/json?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.json)
 
-This [home assistant](https://www.home-assistant.io/getting-started/) add-on provides the installation, configuration, and integration for the **Bluetooth** version of [sbfspot 3.9.4](https://github.com/SBFspot/SBFspot). This version is for the OS installation method of Home assistant.
+This [home assistant](https://www.home-assistant.io/getting-started/) add-on provides the installation, configuration, and integration for the **Bluetooth** version of [sbfspot 3.9.5](https://github.com/SBFspot/SBFspot). This version is for the OS installation method of Home assistant.
 
 This add-on installs a cron service for SPFspot uploader at 5 minutely daytime interval, [PVoutput](https://pvoutput.org/) account and API are required, it also requires an SQL database like Mariadb. 
 It also sends a MQTT message to home assistant, therefore a MQTT broker is required.
@@ -31,6 +31,8 @@ Download and import either [No Drop DB create](https://github.com/habuild/hassio
 
 **-r** is to retain messages. it is advised against using retain flag
 
+### Find your Local BT device address with Bluetoothctl
+You can use the **bluetoothctl** command from the console(terminal or ssh addon) in homeassistant. This will list your controller mac address so you can add it to SBFspot addon config. You can also do this via portainer and connecting to this addon directly.
 
 ### Example Configuration Options.
 can be copy/pasted as [Example Config](https://github.com/habuild/hassio-addons/blob/main/haos-sbfspot/.images/Example_Config.yaml) or entered via UI 
