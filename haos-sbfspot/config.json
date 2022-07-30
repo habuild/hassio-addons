@@ -115,6 +115,6 @@
   },
   "host_network": true,
   "privileged": ["SYS_MODULE"],
-  
+  "host_dbus": true,
   "image": "ghcr.io/habuild/{arch}-addon-haos-sbfspot"
 }
