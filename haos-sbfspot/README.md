@@ -31,6 +31,8 @@ Download and import either [No Drop DB create](https://github.com/habuild/hassio
 
 **-r** is to retain messages. it is advised against using retain flag
 
+### Find your Local BT device address with Bluetoothctl
+You can use the **bluetoothctl** command from the console(terminal or ssh addon) in homeassistant. This will list your controller mac address so you can add it to SBFspot addon config. You can also do this via portainer and connecting to this addon directly.
 
 ### Example Configuration Options.
 can be copy/pasted as [Example Config](https://github.com/habuild/hassio-addons/blob/main/haos-sbfspot/.images/Example_Config.yaml) or entered via UI 
