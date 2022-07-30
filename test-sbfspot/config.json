@@ -116,6 +116,6 @@
   "host_network": true,
   "privileged": ["SYS_MODULE"],
   "host_dbus": true,
-  "devcices": ["/dev/tty"],
+  "devices": ["/dev/tty"],
   "image": "ghcr.io/habuild/{arch}-addon-test-sbfspot"
 }
