@@ -14,7 +14,7 @@
   "init": false,
   "hassio_api": true,
   "services": [
-       "mysql:need"
+       "mysql:need",
        "mqtt:want"
   ],
   "options": {
