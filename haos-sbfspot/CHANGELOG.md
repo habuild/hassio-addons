@@ -1,5 +1,14 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
-## ![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fsbfspot%2Fconfig.json)
+## ![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.json)
+- Added LocalBTAddress to config(this shouldn't cause an issue on upgrades I hope)
+- SBFspot version 3.9.5 was released.
+- Major changes for s6-Overlay v3 changes
+- Added apparmor config
+- Some other background tweaks.
+- updated base containers to 3.16
+
+## ![Release][release-shield-2022-3-5]
+[release-shield-2022-3-5]: https://img.shields.io/badge/version-2022.3.5-blue.svg
 - Add cronjob to update sensors if restart occurs.
 - SBFspot version 3.9.4 was released.
 
