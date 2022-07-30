@@ -103,6 +103,7 @@
       "MQTT_ENABLE": "int"
   },
   "host_network": true,
-    
+  "host_dbus": true,
+  
   "image": "ghcr.io/habuild/{arch}-addon-sbfspot"
 }
