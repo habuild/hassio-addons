@@ -12,6 +12,13 @@ cd /
 echo "PWD is current directory $(pwd)"
 /usr/bin/sbfspot/generateConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg 
 
+# ---- Print Host BT Controller
+## Get the 'message' key from the user config options.
+message=$(echo "[Host Bluetooth MAC Address] $(bluetoothctl list)")
+
+
+## Print the message the user supplied, defaults to "Hello World..."
+bashio::log.info "${message:="Hello World..."}"
 
 # ---- RUN ----
 
