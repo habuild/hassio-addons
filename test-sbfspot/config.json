@@ -3,7 +3,7 @@
   "version": "2022.7.5",
   "slug": "test-sbfspot",
   "description": "Manage SBFspot with a simple interface",
-  "url": "https://github.com/habuild/hassio_addons/tree/main/test-sbfspot",
+  "url": "https://github.com/habuild/hassio-addons/tree/main/test-sbfspot",
   "arch": [
        "armhf", 
        "armv7", 
