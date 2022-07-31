@@ -4,8 +4,8 @@
 - Added **Bluetoothctl list** to log
 - Green
 
-## ![Release][release-shield-2022-3-5]
-[release-shield-2022-3-5]: https://img.shields.io/badge/version-2022.3.5-blue.svg
+## ![Release][release-shield-2022-7-5]
+[release-shield-2022-7-5]: https://img.shields.io/badge/version-2022.7.5-blue.svg
 - Added LocalBTAddress to config
 - SBFspot version 3.9.5 was released.
 - Major changes for s6-Overlay v3 changes
