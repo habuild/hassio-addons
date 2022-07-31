@@ -12,6 +12,9 @@ cd /
 echo "PWD is current directory $(pwd)"
 /usr/bin/sbfspot/generateConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg 
 
+# ---- Print Host BT Controller
+echo 'Host Bluetooth Controllers'
+bashio::log.info "$(bluetoothctl list)"
 
 # ---- RUN ----
 
