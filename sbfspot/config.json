@@ -1,12 +1,12 @@
 {
   "name": "SBFspot",
-  "version": "2022.7.2",
+  "version": "2022.7.3",
   "slug": "sbfspot",
   "description": "Manage SBFspot with a simple interface",
   "url": "https://github.com/habuild/hassio-addons/tree/main/sbfspot",
   "arch": ["amd64", "armhf", "armv7", "aarch64", "i386"],
   "init": false,
-  "stage":"deprecated",
+  "stage": "deprecated",
   "options": {
       "BTAddress": "null",
       "Password": "0000",
