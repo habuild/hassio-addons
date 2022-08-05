@@ -8,8 +8,8 @@ echo "Generating $CFG_PATH & $CFG_PATH_UPLOAD"
 CONFIG_CONNECTION_TYPE="$(jq --raw-output '.Connection_Type' $CONFIG_PATH)"
 $4="$(jq --raw-output '.Bluetooth' $CONFIG_PATH)"
 $3="$(jq --raw-output '.Ethernet' $CONFIG_PATH)"
-/#=$3
-/#=$4
+$3=#
+$4=#
 
 CONFIG_BTADDRESS="$(jq --raw-output '.BTAddress' $CONFIG_PATH)"
 CONFIG_LOCALBTADDRESS="$(jq --raw-output '.LocalBTAddress' $CONFIG_PATH)"
