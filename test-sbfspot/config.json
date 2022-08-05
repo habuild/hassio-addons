@@ -6,9 +6,7 @@
   "url": "https://github.com/habuild/hassio-addons/tree/main/test-sbfspot",
   "stage": "experimental",
   "arch": [
-       "armhf", 
-       "armv7", 
-       "aarch64", 
+        
        "amd64", 
        "i386"
   ],
