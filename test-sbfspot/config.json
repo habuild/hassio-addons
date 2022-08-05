@@ -13,7 +13,7 @@
        "mqtt:want"
   ],
   "options": {
-      "Connection_Type": "# Bluetooth",
+      "Connection_Type": "Bluetooth",
       "BTAddress": "null",
       "Password": "0000",
       "LocalBTAddress": "00:00:00:00:00:00",
@@ -64,7 +64,7 @@
   },
   "schema": {
     
-      "Connection_Type": "list('# Bluetooth' | '# Ethernet')?",
+      "Connection_Type": "list(Bluetooth|Ethernet)?",
      
       "BTAddress": "str",
       "Password": "str",
