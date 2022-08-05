@@ -1,15 +1,11 @@
 {
   "name": "TEST-SBFspot",
-  "version": "2022.7.5",
+  "version": "2022.7.6",
   "slug": "test-sbfspot",
   "description": "Manage SBFspot with a simple interface",
   "url": "https://github.com/habuild/hassio-addons/tree/main/test-sbfspot",
   "stage": "experimental",
-  "arch": [
-        
-       "amd64", 
-       "i386"
-  ],
+  "arch": ["amd64", "i386"],
   "init": false,
   "hassio_api": true,
   "services": [
