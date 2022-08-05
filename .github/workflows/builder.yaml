@@ -2,7 +2,7 @@ name: Builder
 
 env:
   # BUILD_ARGS: "--test"
-  MONITORED_FILES: "build.* config.* Dockerfile rootfs"
+  MONITORED_FILES: "build.* config.* Dockerfile rootfs --test-sbfspot"
 
 on:
   push:
