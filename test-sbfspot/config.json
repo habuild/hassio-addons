@@ -64,7 +64,7 @@
   },
   "schema": {
     
-      "Connection_Type": "list(BTAddress: str, Password: str | IP_Address: str)?",
+      "Connection_Type": "list(BTAddress | IP_Address)?",
      
       "BTAddress": "str",
       "Password": "str",
