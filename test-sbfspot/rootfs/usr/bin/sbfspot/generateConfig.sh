@@ -6,6 +6,7 @@ echo "Generating $CFG_PATH & $CFG_PATH_UPLOAD"
 
 CONFIG_BTADDRESS="$(jq --raw-output '.BTAddress' $CONFIG_PATH)"
 CONFIG_LOCALBTADDRESS="$(jq --raw-output '.LocalBTAddress' $CONFIG_PATH)"
+CONFIG_IP_ADDRESS="$(jq --raw-output '.IP_Address' $CONFIG_PATH)"
 CONFIG_PASSWORD="$(jq --raw-output '.Password' $CONFIG_PATH)"
 CONFIG_MSI_ENABLED="$(jq --raw-output '.MIS_Enabled' $CONFIG_PATH)"
 CONFIG_PLANTNAME="$(jq --raw-output '.Plantname' $CONFIG_PATH)"
@@ -78,7 +79,7 @@ cat > $CFG_PATH <<EOL
 # Windows: smaspot -scan
 # Linux  : hcitool scan
 # IMPORTANT FOR SPEEDWIRE USERS: COMMENT OUT BTADDRESS (PUT # IN FRONT)
-BTAddress=$CONFIG_BTADDRESS
+  BTAddress=$CONFIG_BTADDRESS
 
 # If multiple local BT adapters are available, select the one to use
 LocalBTAddress=$CONFIG_LOCALBTADDRESS
@@ -87,7 +88,7 @@ LocalBTAddress=$CONFIG_LOCALBTADDRESS
 # If IP_Address is not set or is 0.0.0.0 SBFspot will try to detect the speedwire inverter by broadcast
 # If IP_Address is set to a valid IP, SBFspot will try to connect directly to that IP without broadcast detection
 # Multiple IP addresses can be provided (comma separated)
-#IP_Address=0.0.0.0
+# IP_Address=$CONFIG_IP_ADDRESS
 
 # User password (default 0000)
 Password=$CONFIG_PASSWORD
