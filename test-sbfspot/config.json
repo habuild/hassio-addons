@@ -1,6 +1,6 @@
 {
   "name": "TEST-SBFspot",
-  "version": "2022.7.6",
+  "version": "2022.7.5",
   "slug": "test-sbfspot",
   "description": "Manage SBFspot with a simple interface",
   "url": "https://github.com/habuild/hassio-addons/tree/main/test-sbfspot",
@@ -13,7 +13,7 @@
        "mqtt:want"
   ],
   "options": {
-      "Connection_Type": "BTAddress",
+      "Connection_Type": "# Bluetooth",
       "BTAddress": "null",
       "Password": "0000",
       "LocalBTAddress": "00:00:00:00:00:00",
@@ -64,7 +64,7 @@
   },
   "schema": {
     
-      "Connection_Type": "list(BTAddress | IP_Address)?",
+      "Connection_Type": "list('# Bluetooth' | '# Ethernet')?",
      
       "BTAddress": "str",
       "Password": "str",
