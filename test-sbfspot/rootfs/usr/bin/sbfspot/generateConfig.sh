@@ -5,8 +5,8 @@ CONFIG_PATH=/data/options.json
 echo "Generating $CFG_PATH & $CFG_PATH_UPLOAD"
 
 
-CONFIG_BLUETOOTH="$(jq --raw-output '#' $CONFIG_PATH)"
-CONFIG_ETHERNET="$(jq --raw-output '#' $CONFIG_PATH)"
+CONFIG_BLUETOOTH="$(jq --raw-output '.#' $CONFIG_PATH)"
+CONFIG_ETHERNET="$(jq --raw-output '.#' $CONFIG_PATH)"
 CONFIG_BTADDRESS="$(jq --raw-output '.BTAddress' $CONFIG_PATH)"
 CONFIG_LOCALBTADDRESS="$(jq --raw-output '.LocalBTAddress' $CONFIG_PATH)"
 CONFIG_IP_ADDRESS="$(jq --raw-output '.IP_Address' $CONFIG_PATH)"
