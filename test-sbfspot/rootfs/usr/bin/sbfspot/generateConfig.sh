@@ -82,7 +82,7 @@ cat > $CFG_PATH <<EOL
 # Windows: smaspot -scan
 # Linux  : hcitool scan
 # IMPORTANT FOR SPEEDWIRE USERS: COMMENT OUT BTADDRESS (PUT # IN FRONT)
- =CONFIG_ETHERNET BTAddress=$CONFIG_BTADDRESS
+ =$CONFIG_ETHERNET BTAddress=$CONFIG_BTADDRESS
 
 # If multiple local BT adapters are available, select the one to use
   LocalBTAddress=$CONFIG_LOCALBTADDRESS
