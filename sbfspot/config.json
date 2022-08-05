@@ -4,8 +4,9 @@
   "slug": "sbfspot",
   "description": "Manage SBFspot with a simple interface",
   "url": "https://github.com/habuild/hassio-addons/tree/main/sbfspot",
-  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "arch": ["amd64", "armhf", "armv7", "aarch64", "i386"],
   "init": false,
+  "stage":"deprecated"
   "options": {
       "BTAddress": "null",
       "Password": "0000",
