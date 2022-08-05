@@ -4,13 +4,20 @@
 # s6-overlay docs: https://github.com/just-containers/s6-overlay
 # ==============================================================================
 
+ echo "$(uname -smrv)"
 
 # --- GENERATE CONFIG --
 echo "PWD is current directory $(pwd)"
 cd / 
 
 echo "PWD is current directory $(pwd)"
-/usr/bin/sbfspot/generateConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg 
+if bashio::config.true 'Bluetooth'; then
+   exec /usr/bin/sbfspot/genBluetoothConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg
+fi
+
+ if bashio::config.true 'Ethernet'; then
+   exec /usr/bin/sbfspot/genEthernetConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg
+fi
 
 # ---- Print Host BT Controller
 ## Get the 'message' key from the user config options.
