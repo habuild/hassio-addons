@@ -4,8 +4,8 @@ CONFIG_PATH=/data/options.json
 
 echo "Generating $CFG_PATH & $CFG_PATH_UPLOAD"
 
-.#=$3
-.#=$4
+H=$3
+H=$4
 CONFIG_CONNECTION_TYPE="$(jq --raw-output '.Connection_Type' $CONFIG_PATH)"
 $4="$(jq --raw-output '.Bluetooth' $CONFIG_PATH)"
 $3="$(jq --raw-output '.Ethernet' $CONFIG_PATH)"
