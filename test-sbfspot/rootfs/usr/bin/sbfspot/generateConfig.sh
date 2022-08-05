@@ -1,15 +1,30 @@
+#!/usr/bin/with-contenv bashio
+
+echo "Generating $CFG_PATH & $CFG_PATH_UPLOAD"
+
+# Declare variables
+declare bluetooth
+declare ethernet
+
+## Get Connection_Type
+if bluetooth=$(bashio::config.)
+
 CFG_PATH=$1
 CFG_PATH_UPLOAD=$2
 CONFIG_PATH=/data/options.json
 
-echo "Generating $CFG_PATH & $CFG_PATH_UPLOAD"
-
-BLUETOOTH=$4
-ETHERNET=$3
-
 CONFIG_CONNECTION_TYPE="$(jq --raw-output '.Connection_Type' $CONFIG_PATH)"
-CONFIG_BLUETOOTH="$(jq --raw-output '.Bluetooth' $CONFIG_PATH)"
-CONFIG_ETHERNET="$(jq --raw-output '.Ethernet' $CONFIG_PATH)"
+
+## Get Connection_Type
+if bluetooth=$(bashio::config.CONFIG_CONNECTION); then
+bashio::config.ethernet "{# IP_Adrress}"
+
+if ethernet=$(bashio::config.CONFIG_CONNECTION): then
+bashio::config.bluetooth "${# BTAddres}"
+
+
+#CONFIG_BLUETOOTH="$(jq --raw-output '.Bluetooth' $CONFIG_PATH)"
+#CONFIG_ETHERNET="$(jq --raw-output '.Ethernet' $CONFIG_PATH)"
 
 
 CONFIG_BTADDRESS="$(jq --raw-output '.BTAddress' $CONFIG_PATH)"
@@ -87,7 +102,7 @@ cat > $CFG_PATH <<EOL
 # Windows: smaspot -scan
 # Linux  : hcitool scan
 # IMPORTANT FOR SPEEDWIRE USERS: COMMENT OUT BTADDRESS (PUT # IN FRONT)
-$3 BTAddress=$CONFIG_BTADDRESS
+  BTAddress=$CONFIG_BTADDRESS
 
 # If multiple local BT adapters are available, select the one to use
   LocalBTAddress=$CONFIG_LOCALBTADDRESS
@@ -96,7 +111,7 @@ $3 BTAddress=$CONFIG_BTADDRESS
 # If IP_Address is not set or is 0.0.0.0 SBFspot will try to detect the speedwire inverter by broadcast
 # If IP_Address is set to a valid IP, SBFspot will try to connect directly to that IP without broadcast detection
 # Multiple IP addresses can be provided (comma separated)
-$4 IP_Address=$CONFIG_IP_ADDRESS
+  IP_Address=$CONFIG_IP_ADDRESS
 
 # User password (default 0000)
   Password=$CONFIG_PASSWORD
