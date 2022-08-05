@@ -11,7 +11,7 @@
 
 
 
-This [home assistant](https://www.home-assistant.io/getting-started/) add-on provides the installation, configuration, and integration for the **Bluetooth** version of [sbfspot 3.9.4](https://github.com/SBFspot/SBFspot). This version is for the OS installation method of Home assistant.
+This [home assistant](https://www.home-assistant.io/getting-started/) add-on provides the installation, configuration, and integration for the **Bluetooth** version of [sbfspot 3.9.5](https://github.com/SBFspot/SBFspot/releases/latest). This version is for the OS installation method of Home assistant.
 
 This add-on installs a cron service for SPFspot uploader at 5 minutely daytime interval, [PVoutput](https://pvoutput.org/) account and API are required, it also requires an SQL database like Mariadb. 
 It also sends a MQTT message to home assistant, therefore a MQTT broker is required.
