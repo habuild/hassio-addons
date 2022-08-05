@@ -4,6 +4,7 @@
   "slug": "test-sbfspot",
   "description": "Manage SBFspot with a simple interface",
   "url": "https://github.com/habuild/hassio-addons/tree/main/test-sbfspot",
+  "stage": "experimental"
   "arch": [
        "armhf", 
        "armv7", 
@@ -18,9 +19,11 @@
        "mqtt:want"
   ],
   "options": {
+      "Connection_Type": "Bluetooth",
       "BTAddress": "null",
       "Password": "0000",
-      "LocalBTAddress":"00:00:00:00:00:00",
+      "LocalBTAddress": "00:00:00:00:00:00",
+      "IP_Address": "255.255.255.255",
       "MIS_Enabled": 0,
       "Plantname": "MyPlant",
       "OutputPath": "/data/sbfspot/%Y",
@@ -66,9 +69,13 @@
       "MQTT_ENABLE": "1" 
   },
   "schema": {
+    
+      "Connection_Type": "list([BTAddress: str, Password: str] | IP_Address)?",
+     
       "BTAddress": "str",
       "Password": "str",
       "LocalBTAddress":"str",
+      "IP_Address":"str",
       "MIS_Enabled": "int",
       "Plantname": "str",
       "OutputPath": "str",
