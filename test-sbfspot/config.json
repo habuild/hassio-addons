@@ -9,7 +9,7 @@
   "init": false,
   "hassio_api": true,
   "panel_icon": "mdi:solar",
-  "panel_title": "SBFspot"
+  "panel_title": "SBFspot",
   "services": [
        "mysql:need",
        "mqtt:want"
