@@ -34,8 +34,73 @@ jobs:
     steps:
       - name: ⤵️ Check out code from GitHub
         uses: actions/checkout@v3.0.2
-
       - name: 🚀 Run Home Assistant Add-on Lint
         uses: frenck/action-addon-linter@v2.9
         with:
           path: "./${{ matrix.path }}"
+          
+  lint-hadolint:
+    name: Hadolint
+    needs:
+      - information
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⤵️ Check out code from GitHub
+        uses: actions/checkout@v3
+      - name: 🚀 Run Hadolint
+        uses: brpaz/hadolint-action@v1.5.0
+        with:
+          dockerfile: "./${{ needs.information.outputs.target }}/Dockerfile"
+
+  lint-json:
+    name: JSON Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⤵️ Check out code from GitHub
+        uses: actions/checkout@v3
+      - name: 🚀 Run JQ
+        run: |
+          shopt -s globstar
+          cat **/*.json | jq '.'
+  lint-markdown:
+    name: MarkdownLint
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⤵️ Check out code from GitHub
+        uses: actions/checkout@v3
+      - name: 🚀 Run mdl
+        uses: actionshub/markdownlint@2.0.2
+
+  lint-shellcheck:
+    name: Shellcheck
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⤵️ Check out code from GitHub
+        uses: actions/checkout@v3
+      - name: 🚀 Run Shellcheck
+        uses: ludeeus/action-shellcheck@1.1.0
+        env:
+          SHELLCHECK_OPTS: -s bash
+
+  lint-yamllint:
+    name: YAMLLint
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⤵️ Check out code from GitHub
+        uses: actions/checkout@v3
+      - name: 🚀 Run YAMLLint
+        uses: frenck/action-yamllint@v1.2
+
+  lint-prettier:
+    name: Prettier
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⤵️ Check out code from GitHub
+        uses: actions/checkout@v3
+      - name: 🚀 Run Prettier
+        uses: creyD/prettier_action@v4.2
+        with:
+          prettier_options: --write **/*.{json,js,md,yaml}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
