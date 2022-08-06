@@ -8,7 +8,7 @@ build_from:
   
 labels:
   org.opencontainers.image.title: "SBFspot for Home Assistant"
-  org.opencontainers.image.description: "SBFspot from a blueprint for new add-ons."
+  org.opencontainers.image.description: "SBFspot for new add-ons."
   org.opencontainers.image.source: "https://github.com/habuild"
   org.opencontainers.image.licenses: "Apache License 2.0"
 args:
