@@ -1,6 +1,6 @@
 {
   "name": "TEST-SBFspot",
-  "version": "2022.8.6",
+  "version": "2022.8.1",
   "slug": "test-sbfspot",
   "description": "Manage SBFspot with a simple interface",
   "url": "https://github.com/habuild/hassio-addons/tree/main/test-sbfspot",
@@ -8,6 +8,8 @@
   "arch": ["amd64", "i386"],
   "init": false,
   "hassio_api": true,
+  "panel_icon": "mdi:solar",
+  "panel_title": "SBFspot"
   "services": [
        "mysql:need",
        "mqtt:want"
