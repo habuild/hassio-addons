@@ -13,14 +13,14 @@ cd /
 
 echo "PWD is current directory $(pwd)"
 
-if bashio::config.connection_type "Bluetooth"; then
+if bashio::config.true "$(connection_type: "Bluetooth")"; then
    bashio::log.info "Setting Connection to Bluetooth"
    /usr/bin/sbfspot/genBluetoothConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg
  else 
    bashio::log.error "Bluetooth Config not set"
 fi
 
-if bashio::config.connection_type "Ethernet"; then
+if bashio::config.true "$(connection_type: "Ethernet")"; then
    bashio::log.warning "Ethernet being setup"
    /usr/bin/sbfspot/genEthernetConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg
 fi
