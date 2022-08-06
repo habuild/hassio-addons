@@ -15,35 +15,26 @@ cd /
 
 echo "PWD is current directory $(pwd)"
 
-function bashio::config.equals() {
-    local key=${1}
-    local equals=${2}
-    local value
            
-    bashio::log.trace "${config.equals[0]}:" "$@"
-
-    value=$(bashio::config "${Connection_Type:=}")
-    if ! bashio::var.equals "${value}" "${Bluetooth}"; then
+ if bashio::config.has_value "Bluetooth"; then
     bashio::log.info
     bashio::log.info "[Bluetooth being setup]"
     bashio::log.info
     /usr/bin/sbfspot/genBluetoothConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg
         return "${__BASHIO_EXIT_NOK}"
     fi
-
     # return "${__BASHIO_EXIT_OK}"
-           
-    value=%(bashio::config "${Connection_Type:=}"); then
-    if ! bashio::var.equals "${value}" "${Ethernet}"; then
-    bashio::log.error
-    bashio::log.error "Ethernet being setup"
-    bashio::log.error
-    /usr/bin/sbfspot/genEthernetConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg
-        return "${__BASHIO_EXIT_NOK}"
+    else 
+    if bashio::config.has_value "Ethernet"; then           
+       bashio::log.error
+       bashio::log.error "Ethernet being setup"
+       bashio::log.error
+       /usr/bin/sbfspot/genEthernetConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg
+          return "${__BASHIO_EXIT_NOK}"
    fi
 
    return "${__BASHIO_EXIT_OK}"
-}
+fi
 
 # ---- Print Host BT Controller and sys info
 bashio::log.info
