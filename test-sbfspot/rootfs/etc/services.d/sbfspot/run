@@ -4,7 +4,9 @@
 # s6-overlay docs: https://github.com/just-containers/s6-overlay
 # ==============================================================================
 
- echo "$(uname -smrv)"
+config=/data/options.json
+
+echo "$(uname -smrv)"
 
 # --- GENERATE CONFIG --
 echo "PWD is current directory $(pwd)"
