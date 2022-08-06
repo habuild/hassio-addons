@@ -4,6 +4,8 @@
 # s6-overlay docs: https://github.com/just-containers/s6-overlay
 # ==============================================================================
 
+set -x
+
 CONFIG_PATH=/data/options.json
 
 
@@ -20,8 +22,8 @@ function bashio::config.equals() {
            
     bashio::log.trace "${config.equals[0]}:" "$@"
 
-    value=$(bashio::config "${"Connection_Type":=}")
-    if ! bashio::var.equals "${value}" "${"Bluetooth"}"; then
+    value=$(bashio::config "${Connection_Type:=}")
+    if ! bashio::var.equals "${value}" "${Bluetooth}"; then
     bashio::log.info
     bashio::log.info "[Bluetooth being setup]"
     bashio::log.info
@@ -31,8 +33,8 @@ function bashio::config.equals() {
 
     # return "${__BASHIO_EXIT_OK}"
            
-    value=%(bashio::config "${"Connection_Type":="Ethernet"}"); then
-    if ! bashio::var.equals "${value}" "${"Ethernet"}"; then
+    value=%(bashio::config "${Connection_Type:=}"); then
+    if ! bashio::var.equals "${value}" "${Ethernet}"; then
     bashio::log.error
     bashio::log.error "Ethernet being setup"
     bashio::log.error
