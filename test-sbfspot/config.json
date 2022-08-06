@@ -8,7 +8,7 @@
   "arch": ["amd64", "i386"],
   "init": false,
   "hassio_api": true,
-  "panel_icon": 'mdi:solar-power-variant',
+  "panel_icon": "mdi:solar-power-variant",
   "ingress": true,
   "ingress_port": 0,
   "ingress_stream": true,
