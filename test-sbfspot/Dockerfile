@@ -42,7 +42,7 @@ RUN \
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-RUN apk update && apk upgrade && apk add --no-cache boost-date_time bluez nano bluez-libs libstdc++ tzdata mariadb-common mariadb-connector-c ncurses-libs libcurl mosquitto-clients
+RUN apk update && apk upgrade && apk add --no-cache boost-date_time bluez nano bluez-libs libstdc++ tzdata mariadb-common mariadb-connector-c ncurses-libs libcurl mosquitto-clients nginx
 COPY rootfs /
 
 # Copy data for add-on
