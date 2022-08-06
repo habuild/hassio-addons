@@ -30,10 +30,10 @@ echo "PWD is current directory $(pwd)"
 
 
            
-if bashio::config.true "$(connection_type: "Ethernet")"; then
-   bashio::log.warning "Ethernet being setup"
-   /usr/bin/sbfspot/genEthernetConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg
-fi
+#if bashio::config.true "$(connection_type: "Ethernet")"; then
+#   bashio::log.warning "Ethernet being setup"
+#   /usr/bin/sbfspot/genEthernetConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg
+#fi
 
 # ---- Print Host BT Controller and sys info
 bashio::log.info
