@@ -4,7 +4,7 @@
 # s6-overlay docs: https://github.com/just-containers/s6-overlay
 # ==============================================================================
 
-config=/data/options.json
+declare config=/data/options.json
 
 echo "$(uname -smrv)"
 
