@@ -29,8 +29,8 @@ RUN \
     && cd .. \
     && cd SBFspotUploadDaemon \
     &&sed -i s/mariadbclient/mariadb/ makefile \
-    && make mariadb \
-    && mkdir -p /run/nginx
+    && make mariadb 
+    
     
 # runtinme container   
 FROM $BUILD_FROM
@@ -53,7 +53,7 @@ COPY --from=builder /tmp/SBFspot/mariadb/bin/SBFspot /tmp/SBFspot/mariadb/bin/SB
 COPY --from=builder /tmp/SBFspotUploadDaemon/mariadb/bin/SBFspotUploadDaemon /tmp/SBFspotUploadDaemon/mariadb/bin/SBFspotUploadDaemon
 COPY --from=builder /tmp/SBFspot/date_time_zonespec.csv /tmp/SBFspot/date_time_zonespec.csv
 COPY --from=builder /tmp/SBFspot/TagList* /tmp/SBFspot/
-COPY ingress.conf /etc/nginx/http.d/
+
 
 RUN cp /tmp/SBFspot/mariadb/bin/SBFspot /usr/bin/sbfspot
 RUN cp /tmp/SBFspotUploadDaemon/mariadb/bin/SBFspotUploadDaemon /usr/bin/sbfspot
