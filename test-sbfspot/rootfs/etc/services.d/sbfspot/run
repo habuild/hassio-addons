@@ -14,7 +14,7 @@ cd /
 echo "PWD is current directory $(pwd)"
 
 
-    bashio::log.trace "${config.equals[0]}:" "$@"
+    # bashio::log.trace "${config.equals[0]}:" "$@"
 
     value=$(bashio::config "${CONNECTION_TYPE}")
     if ! bashio::var.equals "${.Connection_Type}" "${Bluetooth}"; then
