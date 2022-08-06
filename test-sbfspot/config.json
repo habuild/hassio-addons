@@ -1,6 +1,6 @@
 {
   "name": "TEST-SBFspot",
-  "version": "2022.8.1",
+  "version": "2022.8.2",
   "slug": "test-sbfspot",
   "description": "Manage SBFspot with a simple interface",
   "url": "https://github.com/habuild/hassio-addons/tree/main/test-sbfspot",
@@ -9,7 +9,10 @@
   "init": false,
   "hassio_api": true,
   "panel_icon": "mdi:solar",
-  "panel_title": "SBFspot",
+  "ingress": true,
+  "ingress_port": 0,
+  "ingress_stream": true",
+  "ingress_entry": /logs,
   "services": [
        "mysql:need",
        "mqtt:want"
@@ -117,8 +120,8 @@
       "MQTT_ENABLE": "int"
   },
   "host_network": true,
-  "privileged": ["SYS_MODULE"],
   "host_dbus": true,
-  "devices": ["/dev/tty"],
+  "privileged": ["SYS_MODULE"],
+  
   "image": "ghcr.io/habuild/{arch}-addon-test-sbfspot"
 }
