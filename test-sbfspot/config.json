@@ -12,7 +12,7 @@
   "ingress": true,
   "ingress_port": 0,
   "ingress_stream": true,
-  "ingress_entry": "/hassio/addon/{slug}/logs",
+  "ingress_entry": "/{slug}/logs",
   "services": [
        "mysql:need",
        "mqtt:want"
