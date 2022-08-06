@@ -8,11 +8,11 @@
   "arch": ["amd64", "i386"],
   "init": false,
   "hassio_api": true,
-  "panel_icon": "mdi:solar",
+  "panel_icon": "mdi:solar-power-variant",
   "ingress": true,
   "ingress_port": 0,
   "ingress_stream": true,
-  "ingress_entry": "/logs",
+  "ingress_entry": "/hassio/addon/a51a23d8_test-sbfspot/logs",
   "services": [
        "mysql:need",
        "mqtt:want"
