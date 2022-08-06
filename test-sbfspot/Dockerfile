@@ -17,7 +17,7 @@ COPY rootfs /
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # install requirements
-RUN apk update && apk upgrade && apk add --no-cache git g++ make mysql-dev bluez bluez-dev boost-dev curl-dev tzdata mosquitto-clients mariadb-dev
+RUN apk update && apk upgrade && apk add --no-cache git g++ make mysql-dev bluez bluez-dev boost-dev curl-dev tzdata mosquitto-clients mariadb-dev nginx
 
 # download and build SBFspot
 RUN \
@@ -29,7 +29,8 @@ RUN \
     && cd .. \
     && cd SBFspotUploadDaemon \
     &&sed -i s/mariadbclient/mariadb/ makefile \
-    && make mariadb
+    && make mariadb \
+    && mkdir -p /run/nginx
     
 # runtinme container   
 FROM $BUILD_FROM
@@ -52,7 +53,7 @@ COPY --from=builder /tmp/SBFspot/mariadb/bin/SBFspot /tmp/SBFspot/mariadb/bin/SB
 COPY --from=builder /tmp/SBFspotUploadDaemon/mariadb/bin/SBFspotUploadDaemon /tmp/SBFspotUploadDaemon/mariadb/bin/SBFspotUploadDaemon
 COPY --from=builder /tmp/SBFspot/date_time_zonespec.csv /tmp/SBFspot/date_time_zonespec.csv
 COPY --from=builder /tmp/SBFspot/TagList* /tmp/SBFspot/
-
+COPY ingress.conf /etc/nginx/http.d/
 
 RUN cp /tmp/SBFspot/mariadb/bin/SBFspot /usr/bin/sbfspot
 RUN cp /tmp/SBFspotUploadDaemon/mariadb/bin/SBFspotUploadDaemon /usr/bin/sbfspot
@@ -94,4 +95,5 @@ LABEL \
     org.label-schema.vendor="Hasqt"
 
 
-##CMD [ "/run.sh" ] not needed with rootfs/etc/init.d/{slug}run
+#Launch nginx with debug options.
+CMD [ "nginx","-g","daemon off;error_log /dev/stdout debug;" ]
