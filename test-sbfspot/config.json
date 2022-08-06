@@ -11,7 +11,7 @@
   "panel_icon": "mdi:solar",
   "ingress": true,
   "ingress_port": 0,
-  "ingress_stream": true",
+  "ingress_stream": true,
   "ingress_entry": /logs,
   "services": [
        "mysql:need",
