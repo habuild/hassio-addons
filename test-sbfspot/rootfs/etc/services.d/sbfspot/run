@@ -13,15 +13,11 @@ cd /
 
 echo "PWD is current directory $(pwd)"
 
-function bashio::config.equals() {
-    local key=${Connection_Type}
-    local equals=${Bluetooth}
-    local Bluetooth
 
     bashio::log.trace "${FUNCNAME[0]}:" "$@"
 
-    value=$(bashio::config "${key}")
-    if ! bashio::var.equals "${value}" "${equals}"; then
+    value=$(bashio::config "${CONNECTION_TYPE}")
+    if ! bashio::var.equals "${.Connection_Type}" "${Bluetooth}"; then
     bashio::log.info
     bashio::log.info "[Bluetooth being setup]"
     bashio::log.info
@@ -59,5 +55,5 @@ echo 'Starting daemon'
 
 
 # cron
-bashio::log.info echo 'Starting cron in foreground'
+bashio::log.info echo '$('Starting cron in foreground')'
 exec /usr/sbin/crond -f
