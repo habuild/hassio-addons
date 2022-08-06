@@ -59,7 +59,7 @@ RUN cp /tmp/SBFspotUploadDaemon/mariadb/bin/SBFspotUploadDaemon /usr/bin/sbfspot
 RUN cp /tmp/SBFspot/date_time_zonespec.csv /usr/bin/sbfspot
 RUN cp /tmp/SBFspot/TagList* /usr/bin/sbfspot
 
-RUN chmod a+x etc/services.d/sbfspot/run etc/services.d/sbfspot/finish /usr/bin/sbfspot/taillog.sh /usr/bin/sbfspot/generateConfig.sh /usr/bin/sbfspot/genBluetoothConfig.sh /usr/bin/sbfspot/genEthernetConfig.sh /usr/bin/sbfspot/SBFspot /usr/bin/sbfspot/SBFspotUploadDaemon /usr/bin/sbfspot/SBFspot.default.cfg /usr/bin/sbfspot/SBFspotUpload.default.cfg
+RUN chmod a+x etc/services.d/sbfspot/run etc/services.d/sbfspot/ignore.finish /usr/bin/sbfspot/taillog.sh /usr/bin/sbfspot/generateConfig.sh /usr/bin/sbfspot/genBluetoothConfig.sh /usr/bin/sbfspot/genEthernetConfig.sh /usr/bin/sbfspot/SBFspot /usr/bin/sbfspot/SBFspotUploadDaemon /usr/bin/sbfspot/SBFspot.default.cfg /usr/bin/sbfspot/SBFspotUpload.default.cfg
 
 # --- install cron ---
 # set shell
