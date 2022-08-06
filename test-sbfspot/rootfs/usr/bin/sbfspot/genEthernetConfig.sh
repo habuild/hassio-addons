@@ -4,6 +4,8 @@ CONFIG_PATH=/data/options.json
 
 echo "Generating Ethernet $CFG_PATH & $CFG_PATH_UPLOAD"
 
+CONFIG_CONNECTION_TYPE="$(jq --raw-output '.Connection_Type' $CONFIG_PATH)"
+
 #CONFIG_BTADDRESS="$(jq --raw-output '.BTAddress' $CONFIG_PATH)"
 #CONFIG_LOCALBTADDRESS="$(jq --raw-output '.LocalBTAddress' $CONFIG_PATH)"
 
