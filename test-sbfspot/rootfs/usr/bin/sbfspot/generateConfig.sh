@@ -2,13 +2,6 @@
 
 echo "Generating $CFG_PATH & $CFG_PATH_UPLOAD"
 
-# Declare variables
-declare bluetooth
-declare ethernet
-
-## Get Connection_Type
-if bluetooth=$(bashio::config.)
-
 CFG_PATH=$1
 CFG_PATH_UPLOAD=$2
 CONFIG_PATH=/data/options.json
