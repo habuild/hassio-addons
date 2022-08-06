@@ -14,19 +14,8 @@ CFG_PATH_UPLOAD=$2
 CONFIG_PATH=/data/options.json
 
 CONFIG_CONNECTION_TYPE="$(jq --raw-output '.Connection_Type' $CONFIG_PATH)"
-
-## Get Connection_Type
-if bluetooth=$(bashio::config.CONFIG_CONNECTION); then
-bashio::config.ethernet "{# IP_Adrress}"
-
-if ethernet=$(bashio::config.CONFIG_CONNECTION): then
-bashio::config.bluetooth "${# BTAddres}"
-
-
 #CONFIG_BLUETOOTH="$(jq --raw-output '.Bluetooth' $CONFIG_PATH)"
 #CONFIG_ETHERNET="$(jq --raw-output '.Ethernet' $CONFIG_PATH)"
-
-
 CONFIG_BTADDRESS="$(jq --raw-output '.BTAddress' $CONFIG_PATH)"
 CONFIG_LOCALBTADDRESS="$(jq --raw-output '.LocalBTAddress' $CONFIG_PATH)"
 CONFIG_IP_ADDRESS="$(jq --raw-output '.IP_Address' $CONFIG_PATH)"
