@@ -16,7 +16,7 @@ cd /
 echo "PWD is current directory $(pwd)"
 
            
- if bashio::config.has_value "Bluetooth"; then
+ if bashio::config.has_value ".Bluetooth"; then
     bashio::log.info
     bashio::log.info "[Bluetooth being setup]"
     bashio::log.info
