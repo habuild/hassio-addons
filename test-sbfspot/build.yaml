@@ -7,7 +7,7 @@ build_from:
   i386: "ghcr.io/home-assistant/i386-base:3.16"
   
 labels:
-  org.opencontainers.image.title: "SBFspot for Home Assistant"
+  org.opencontainers.image.title: "SBFspot for Home Assistant BT and IP"
   org.opencontainers.image.description: "SBFspot Bluetooth add-ons."
   org.opencontainers.image.source: "https://github.com/habuild"
   org.opencontainers.image.licenses: "Apache License 2.0"
