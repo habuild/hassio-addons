@@ -18,6 +18,7 @@ bashio::log.debug "${message:=""}"
 # set -x
 
    if bashio::config "Bluetooth"; then
+      /usr/bin/sbfspot/genBluetoothConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg
       bashio::log.info
       bashio::log.info
       message=$(echo "||    Generating Bluetooth Configs    ||")
@@ -28,9 +29,10 @@ bashio::log.debug "${message:=""}"
       bashio::log.info ${__BASHIO_COLORS_BLUE} "${message:=""}"
       bashio::log.info
       bashio::log.info
-      ./usr/bin/sbfspot/genBluetoothConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg
+      
    fi    
    #if bashio::config "Ethernet"; then
+      /usr/bin/sbfspot/genEthernetConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg
       bashio::log.info
       bashio::log.info
       message=$(echo "||    Generating Ethernet Configs     ||")
@@ -41,7 +43,6 @@ bashio::log.debug "${message:=""}"
       bashio::log.info ${__BASHIO_COLORS_MAGENTA} "${message:=""}"
       bashio::log.info
       bashio::log.info
-      ./usr/bin/sbfspot/genEthernetConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg
    #fi
 
 # set +x
