@@ -1,3 +1,5 @@
+#!/usr/bin/with-contenv bashio
+
 CFG_PATH=$1
 CFG_PATH_UPLOAD=$2
 CONFIG_PATH=/data/options.json
