@@ -30,7 +30,7 @@
       "Latitude": "null",
       "Longitude": "null",
       "CalculateMissingSpotValues": 1,
-      "DateTimeFormat": {"%d/%m/%Y %H:%M:%S"},
+      "DateTimeFormat": "{%d/%m/%Y %H:%M:%S}",
       "DateFormat": {"%d/%m/%Y"},
       "DecimalPoint": "comma",
       "TimeFormat": {"%H:%M:%S"},
