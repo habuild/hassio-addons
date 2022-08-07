@@ -12,11 +12,11 @@
   "ingress": true,
   "ingress_port": 0,
   "ingress_entry": "/logs",
-  
   "services": [
        "mysql:need",
        "mqtt:want"
-  ],
+  ]
+}
   "options": {
       "Connection_Type": "Bluetooth",
       "Connections":[
