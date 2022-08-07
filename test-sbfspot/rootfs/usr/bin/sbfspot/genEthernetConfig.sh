@@ -4,15 +4,6 @@ CFG_PATH=$1
 CFG_PATH_UPLOAD=$2
 CONFIG_PATH=/data/options.json
 
-bashio::log.info
-message=$(echo "||    Generating Ethernet Configs     ||")
-bashio::log.info ${__BASHIO_COLORS_MAGENTA} "${message:=""}"
-message=$(echo "||    $CFG_PATH    ||")
-bashio::log.info ${__BASHIO_COLORS_MAGENTA} "${message:=""}"
-message=$(echo "|| $CFG_PATH_UPLOAD ||")
-bashio::log.info ${__BASHIO_COLORS_MAGENTA} "${message:=""}"
-bashio::log.info
-
 #CONFIG_CONNECTION_TYPE="$(jq --raw-output '.Connection_Type' $CONFIG_PATH)"
 #CONFIG_BTADDRESS="$(jq --raw-output '.BTAddress' $CONFIG_PATH)"
 #CONFIG_LOCALBTADDRESS="$(jq --raw-output '.LocalBTAddress' $CONFIG_PATH)"
