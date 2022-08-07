@@ -15,8 +15,7 @@
   "services": [
        "mysql:need",
        "mqtt:want"
-  ]
-}
+  ],
   "options": {
       "Connection_Type": "Bluetooth",
       "Connections":[
@@ -95,7 +94,6 @@
       "Plant Name and Multi Inverter Systems": [
         "Plantname": "str",
         "MIS_Enabled": "int"
-        
       ],
       "Path": [
         "OutputPath": "str",
@@ -147,7 +145,7 @@
         "LogDir": "str",
         "LogLevel": "str",
         "PVoutput_SID": "str",
-        "PVoutput_Key": "str",
+        "PVoutput_Key": "str"
       ]
   },
   "host_network": true,
