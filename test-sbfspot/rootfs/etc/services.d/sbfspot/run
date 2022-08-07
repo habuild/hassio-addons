@@ -22,14 +22,15 @@ bashio::log.debug "${message:=""}"
       bashio::log.info ${__BASHIO_COLORS_BLUE} "[Bluetooth being setup]"
       bashio::log.info
       ./usr/bin/sbfspot/genBluetoothConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg
+      
    fi
    
-#   if bashio::config "Ethernet"; then
-#      bashio::log.info
-#      bashio::log.info ${__BASHIO_COLORS_BLUE} "[Ethernet being setup]"
-#      bashio::log.info
-#      ./usr/bin/sbfspot/genBluetoothConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg
-#   fi
+   if bashio::config "Ethernet"; then
+      bashio::log.info
+      bashio::log.info ${__BASHIO_COLORS_BLUE} "[Ethernet being setup]"
+      bashio::log.info
+      ./usr/bin/sbfspot/genBluetoothConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg
+   fi
 
 # set +x
 
