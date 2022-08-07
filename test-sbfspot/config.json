@@ -1,5 +1,5 @@
 {
-	"name": "TEST-SBFspot",
+    "name": "TEST-SBFspot",
 	"version": "dev2",
 	"slug": "test-sbfspot",
 	"description": "Manage SBFspot with a simple interface",
@@ -15,7 +15,7 @@
 	"services": [
 		"mysql:need",
 		"mqtt:want"
-	],
+    ],
 	"options": {
 		"Connection_Type": "Bluetooth",
 		"Connections": [
