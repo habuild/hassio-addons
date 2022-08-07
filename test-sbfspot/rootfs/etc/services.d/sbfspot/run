@@ -19,7 +19,7 @@ bashio::log.debug "${message:=""}"
 # ---- Print Host sys info
 message=$(echo "$(uname -smrv)")
 bashio::log.info
-bashio::log.info "${__BASHIO_COLORS_CYAN} "${message:="Hello World..."}"
+bashio::log.info ${__BASHIO_COLORS_CYAN} "${message:="Hello World..."}"
 bashio::log.info
 
 # ---- Print Host BT Controller
@@ -57,7 +57,6 @@ bashio::log.info
       bashio::log.info
       bashio::log.info
    fi
-fi
 # set +x
 
 
