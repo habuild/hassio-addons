@@ -1,155 +1,152 @@
 {
-  "name": "TEST-SBFspot",
-  "version": "dev2",
-  "slug": "test-sbfspot",
-  "description": "Manage SBFspot with a simple interface",
-  "url": "https://github.com/habuild/hassio-addons/tree/main/test-sbfspot",
-  "stage": "experimental",
-  "arch": ["amd64", "i386"],
-  "init": false,
-  "hassio_api": true,
-  "panel_icon": "mdi:solar-power-variant",
-  "ingress": true,
-  "ingress_port": 0,
-  "ingress_entry": "/logs",
-  "services": [
-       "mysql:need",
-       "mqtt:want"
-  ],
-  "options": {
-      "Connection_Type": "Bluetooth",
-      "Connections":[
-        "BTAddress": "null",
-        "Password": "0000",
-        "LocalBTAddress": "00:00:00:00:00:00",
-        "IP_Address": "255.255.255.255"
-      ],
-      "Plant Name and Multi Inverter Systems": [
-        "Plantname": "MyPlant",
-        "MIS_Enabled": 0
-      ],
-      "Path": [
-        "OutputPath": "/data/sbfspot/%Y",
-        "OutputPathEvents": "/data/sbfspot/%Y/events"
-      ],
-      "Location and Time": [
-        "Latitude": "null",
-        "Longitude": "null",
-        "CalculateMissingSpotValues": 1,
-        "DateTimeFormat": "{%d/%m/%Y %H:%M:%S}",
-        "DateFormat": "%d/%m/%Y",
-        "DecimalPoint": "comma",
-        "TimeFormat": "%H:%M:%S",
-        "SynchTime": 0,
-        "SynchTimeLow": 1,
-        "SynchTimeHigh": 3600,
-        "SunRSOffset": 900,
-        "Locale": "en-US",
-        "Timezone": "Europe/Brussels",
-        "BTConnectRetries": 10
-      ],
-      "CSV Exporting": [
-        "CSV_Export": 0,
-        "CSV_ExtendedHeader": 1,
-        "CSV_Header": 1,
-        "CSV_SaveZeroPower": 1,
-        "CSV_Delimiter": "semicolon",
-        "CSV_Spot_TimeSource": "Inverter",
-        "CSV_Spot_WebboxHeader": 0
-      ],
-      "MariaDB": [
-        "SQL_Database": "null",
-        "SQL_Hostname": "core-mariadb",
-        "SQL_Port": "3306",
-        "SQL_Username": "null",
-        "SQL_Password": null
-      ],
-      "MQTT": [
-        "MQTT_Publisher": "/usr/bin/mosquitto_pub",
-        "MQTT_Host": "core-mosquitto",
-        "MQTT_Port": "null",
-        "MQTT_Topic": "homeassistant/sbfspot_{plantname}/sbfspot_{serial}",
-        "MQTT_ItemFormat": "\"{key}\": {value}",
-        "MQTT_ItemDelimiter": "comma",
-        "MQTT_PublisherArgs": "-h {host} -u {MQTT_Username} -P {MQTT_Password} -t {topic} -m \"{{message}}\" -d",
-        "MQTT_Data": "Timestamp,SunRise,SunSet,InvSerial,InvName,InvTime,InvStatus,InvTemperature,InvGridRelay,EToday,ETotal,GridFreq,PACTot,UDC1,UDC2,IDC1,IDC2,PDC1,PDC2", 
-        "MQTT_ENABLE": "1"
-      ],
-      "PVOutput": [
-        "LogDir": "/data/sbfspot/log/",
-        "LogLevel": "info",
-        "PVoutput_SID": "yourSID11111111:22222",
-        "PVoutput_Key": null 
-    ], 
-  },
-  "schema": {
-    
-      "Connection_Type": "list(Bluetooth|Ethernet)?",
-      "Connections": [
-        "BTAddress": "str",
-        "Password": "str",
-        "LocalBTAddress":"str",
-        "IP_Address":"str"
-      ],
-      "Plant Name and Multi Inverter Systems": [
-        "Plantname": "str",
-        "MIS_Enabled": "int"
-      ],
-      "Path": [
-        "OutputPath": "str",
-        "OutputPathEvents": "str"
-      ],
-      "Location and Time": [
-        "Latitude": "float",
-        "Longitude": "float",
-        "CalculateMissingSpotValues": "int",
-        "DateTimeFormat": "str",
-        "DateFormat": "str",
-        "DecimalPoint": "str",
-        "TimeFormat": "str",
-        "SynchTime": "int",
-        "SynchTimeLow": "int",
-        "SynchTimeHigh": "int",
-        "SunRSOffset": "int",
-        "Locale": "str",
-        "Timezone": "str",
-        "BTConnectRetries": "int"
-      ],
-      "CSV Exporting": [
-        "CSV_Export": "int",
-        "CSV_ExtendedHeader": "int",
-        "CSV_Header": "int",
-        "CSV_SaveZeroPower": "int",
-        "CSV_Delimiter": "str",
-        "CSV_Spot_TimeSource": "str",
-        "CSV_Spot_WebboxHeader": "int"
-      ],
-      "MariaDB": [
-        "SQL_Database": "str",
-        "SQL_Hostname": "str",
-        "SQL_Port": "str",
-        "SQL_Username": "str",
-        "SQL_Password": "str",
-      "MQTT": [
-        "MQTT_Publisher": "str",
-        "MQTT_Host": "str",
-        "MQTT_Port": "str",
-        "MQTT_Topic": "str",
-        "MQTT_ItemFormat": "str",
-        "MQTT_ItemDelimiter": "str",
-        "MQTT_PublisherArgs": "str",
-        "MQTT_Data": "str",
-        "MQTT_ENABLE": "int"
-      ],
-      "PVOutput": [
-        "LogDir": "str",
-        "LogLevel": "str",
-        "PVoutput_SID": "str",
-        "PVoutput_Key": "str"
-      ],
-  "host_network": true,
-  "host_dbus": true,
-  "privileged": ["SYS_MODULE"],
-  
-  "image": "ghcr.io/habuild/{arch}-addon-test-sbfspot"
-}
+	"name": "TEST-SBFspot",
+	"version": "dev2",
+	"slug": "test-sbfspot",
+	"description": "Manage SBFspot with a simple interface",
+	"url": "https://github.com/habuild/hassio-addons/tree/main/test-sbfspot",
+	"stage": "experimental",
+	"arch": ["amd64", "i386"],
+	"init": false,
+	"hassio_api": true,
+	"panel_icon": "mdi:solar-power-variant",
+	"ingress": true,
+	"ingress_port": 0,
+	"ingress_entry": "/logs",
+	"services": [
+		"mysql:need",
+		"mqtt:want"
+	],
+	"options": {
+		"Connection_Type": "Bluetooth",
+		"Connections": [
+			"BTAddress": "",
+			"Password": "0000",
+			"LocalBTAddress": "00:00:00:00:00:00",
+			"IP_Address": "255.255.255.255"
+		],
+		"Plant Name and Multi Inverter Systems": [
+			"Plantname": "MyPlant",
+			"MIS_Enabled": 0
+		],
+		"Path": [
+			"OutputPath": "/data/sbfspot/%Y",
+			"OutputPathEvents": "/data/sbfspot/%Y/events"
+		],
+		"Location and Time": [
+			"Latitude": "null",
+			"Longitude": "null",
+			"CalculateMissingSpotValues": 1,
+			"DateTimeFormat": "{%d/%m/%Y %H:%M:%S}",
+			"DateFormat": "%d/%m/%Y",
+			"DecimalPoint": "comma",
+			"TimeFormat": "%H:%M:%S",
+			"SynchTime": 0,
+			"SynchTimeLow": 1,
+			"SynchTimeHigh": 3600,
+			"SunRSOffset": 900,
+			"Locale": "en-US",
+			"Timezone": "Europe/Brussels",
+			"BTConnectRetries": 10
+		],
+		"CSV Exporting": [
+			"CSV_Export": 0,
+			"CSV_ExtendedHeader": 1,
+			"CSV_Header": 1,
+			"CSV_SaveZeroPower": 1,
+			"CSV_Delimiter": "semicolon",
+			"CSV_Spot_TimeSource": "Inverter",
+			"CSV_Spot_WebboxHeader": 0
+		],
+		"MariaDB": [
+			"SQL_Database": "null",
+			"SQL_Hostname": "core-mariadb",
+			"SQL_Port": "3306",
+			"SQL_Username": "null",
+			"SQL_Password": null
+		],
+		"MQTT": [
+			"MQTT_Publisher": "/usr/bin/mosquitto_pub",
+			"MQTT_Host": "core-mosquitto",
+			"MQTT_Port": "null",
+			"MQTT_Topic": "homeassistant/sbfspot_{plantname}/sbfspot_{serial}",
+			"MQTT_ItemFormat": "\"{key}\": {value}",
+			"MQTT_ItemDelimiter": "comma",
+			"MQTT_PublisherArgs": "-h {host} -u {MQTT_Username} -P {MQTT_Password} -t {topic} -m \"{{message}}\" -d",
+			"MQTT_Data": "Timestamp,SunRise,SunSet,InvSerial,InvName,InvTime,InvStatus,InvTemperature,InvGridRelay,EToday,ETotal,GridFreq,PACTot,UDC1,UDC2,IDC1,IDC2,PDC1,PDC2",
+			"MQTT_ENABLE": "1"
+		],
+		"PVOutput": [
+			"LogDir": "/data/sbfspot/log/",
+			"LogLevel": "info",
+			"PVoutput_SID": "yourSID11111111:22222",
+			"PVoutput_Key": null
+		],
+		"schema": {
+			"Connection_Type": "list(Bluetooth|Ethernet)?",
+			"Connections": [
+				"BTAddress": "str",
+				"Password": "str",
+				"LocalBTAddress": "str",
+				"IP_Address": "str"
+			],
+			"Plant Name and Multi Inverter Systems": [
+				"Plantname": "str",
+				"MIS_Enabled": "int"
+			],
+			"Path": [
+				"OutputPath": "str",
+				"OutputPathEvents": "str"
+			],
+			"Location and Time": [
+				"Latitude": "float",
+				"Longitude": "float",
+				"CalculateMissingSpotValues": "int",
+				"DateTimeFormat": "str",
+				"DateFormat": "str",
+				"DecimalPoint": "str",
+				"TimeFormat": "str",
+				"SynchTime": "int",
+				"SynchTimeLow": "int",
+				"SynchTimeHigh": "int",
+				"SunRSOffset": "int",
+				"Locale": "str",
+				"Timezone": "str",
+				"BTConnectRetries": "int"
+			],
+			"CSV Exporting": [
+				"CSV_Export": "int",
+				"CSV_ExtendedHeader": "int",
+				"CSV_Header": "int",
+				"CSV_SaveZeroPower": "int",
+				"CSV_Delimiter": "str",
+				"CSV_Spot_TimeSource": "str",
+				"CSV_Spot_WebboxHeader": "int"
+			],
+			"MariaDB": [
+				"SQL_Database": "str",
+				"SQL_Hostname": "str",
+				"SQL_Port": "str",
+				"SQL_Username": "str",
+				"SQL_Password": "str",
+				"MQTT": [
+					"MQTT_Publisher": "str",
+					"MQTT_Host": "str",
+					"MQTT_Port": "str",
+					"MQTT_Topic": "str",
+					"MQTT_ItemFormat": "str",
+					"MQTT_ItemDelimiter": "str",
+					"MQTT_PublisherArgs": "str",
+					"MQTT_Data": "str",
+					"MQTT_ENABLE": "int"
+				],
+				"PVOutput": [
+					"LogDir": "str",
+					"LogLevel": "str",
+					"PVoutput_SID": "str",
+					"PVoutput_Key": "str"
+				],
+				"host_network": true,
+				"host_dbus": true,
+				"privileged": ["SYS_MODULE"],
+				"image": "ghcr.io/habuild/{arch}-addon-test-sbfspot"
+		}
