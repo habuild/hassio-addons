@@ -2,17 +2,20 @@ CFG_PATH=$1
 CFG_PATH_UPLOAD=$2
 CONFIG_PATH=/data/options.json
 
-echo "Generating Ethernet $CFG_PATH & $CFG_PATH_UPLOAD"
+bashio::log.info
+message=$(echo "||     Generating Ethernet Configs    ||")
+bashio::log.info ${__BASHIO_COLORS_BLUE} "${message:=""}"
+message=$(echo "||      $CFG_PATH                     ||")
+bashio::log.info ${__BASHIO_COLORS_BLUE} "${message:=""}"
+message=$(echo "|| $CFG_PATH_UPLOAD                   ||")
+bashio::log.info ${__BASHIO_COLORS_BLUE} "${message:=""}"
+bashio::log.info
 
-CONFIG_CONNECTION_TYPE="$(jq --raw-output '.Connection_Type' $CONFIG_PATH)"
-
+#CONFIG_CONNECTION_TYPE="$(jq --raw-output '.Connection_Type' $CONFIG_PATH)"
 #CONFIG_BTADDRESS="$(jq --raw-output '.BTAddress' $CONFIG_PATH)"
 #CONFIG_LOCALBTADDRESS="$(jq --raw-output '.LocalBTAddress' $CONFIG_PATH)"
-
 CONFIG_IP_ADDRESS="$(jq --raw-output '.IP_Address' $CONFIG_PATH)"
-
 #CONFIG_PASSWORD="$(jq --raw-output '.Password' $CONFIG_PATH)"
-
 CONFIG_MSI_ENABLED="$(jq --raw-output '.MIS_Enabled' $CONFIG_PATH)"
 CONFIG_PLANTNAME="$(jq --raw-output '.Plantname' $CONFIG_PATH)"
 CONFIG_OUTPUTPATH="$(jq --raw-output '.OutputPath' $CONFIG_PATH)"
