@@ -11,7 +11,7 @@
   "panel_icon": "mdi:solar-power-variant",
   "ingress": true,
   "ingress_port": 8099,
-  "ingress_entry": /logs
+  "ingress_entry": "/logs"
   
   "services": [
        "mysql:need",
