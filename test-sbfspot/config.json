@@ -80,7 +80,7 @@
 			"LogLevel": "info",
 			"PVoutput_SID": "yourSID11111111:22222",
 			"PVoutput_Key": null
-		},
+	},
 	"schema": {
 		"Connection_Type": "list(Bluetooth|Ethernet)?",
 		"Connections": [
