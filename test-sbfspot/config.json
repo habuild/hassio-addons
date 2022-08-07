@@ -146,8 +146,7 @@
         "LogLevel": "str",
         "PVoutput_SID": "str",
         "PVoutput_Key": "str"
-      ]
-  },
+      ],
   "host_network": true,
   "host_dbus": true,
   "privileged": ["SYS_MODULE"],
