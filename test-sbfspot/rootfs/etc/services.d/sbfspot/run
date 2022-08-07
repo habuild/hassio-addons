@@ -20,21 +20,9 @@ echo "PWD is current directory $(pwd)"
     bashio::log.info
     bashio::log.info "[Bluetooth being setup]"
     bashio::log.info
-    /usr/bin/sbfspot/genBluetoothConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg
-        return "${__BASHIO_EXIT_NOK}"
-    fi
-    # return "${__BASHIO_EXIT_OK}"
-    else 
-    if bashio::config.has_value "Ethernet"; then           
-       bashio::log.error
-       bashio::log.error "Ethernet being setup"
-       bashio::log.error
-       /usr/bin/sbfspot/genEthernetConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg
-          return "${__BASHIO_EXIT_NOK}"
-   fi
-
-   return "${__BASHIO_EXIT_OK}"
-fi
+    /usr/bin/sbfspot/genBluetoothConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg   
+ fi
+    
 
 # ---- Print Host BT Controller and sys info
 bashio::log.info
@@ -56,5 +44,5 @@ echo 'Starting daemon'
 
 
 # cron
-bashio::log.info echo '$('Starting cron in foreground')'
+bashio::log.info "$([Starting cron in foreground])"
 exec /usr/sbin/crond -f
