@@ -15,7 +15,7 @@ cd /
 message=$(echo "PWD is current directory $(pwd)")
 bashio::log.debug "${message:=""}"
 
-set -x
+# set -x
 
    if bashio::config "Bluetooth"; then
       bashio::log.info
@@ -24,7 +24,7 @@ set -x
       exec /usr/bin/sbfspot/genBluetoothConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg
    fi
 
-set +x
+# set +x
 
 # ---- Print Host BT Controller and sys info
 bashio::log.info
