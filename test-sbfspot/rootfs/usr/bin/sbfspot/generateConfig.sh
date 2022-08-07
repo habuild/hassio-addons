@@ -1,4 +1,4 @@
-#!/usr/bin/with-contenv bashio
+
 
 echo "Generating $CFG_PATH & $CFG_PATH_UPLOAD"
 
