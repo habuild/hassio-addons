@@ -21,7 +21,7 @@ bashio::log.debug "${message:=""}"
       bashio::log.info
       bashio::log.info "[Bluetooth being setup]"
       bashio::log.info
-      exec /usr/bin/sbfspot/genBluetoothConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg
+      ./usr/bin/sbfspot/genBluetoothConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg
    fi
 
 # set +x
