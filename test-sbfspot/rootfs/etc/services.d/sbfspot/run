@@ -57,7 +57,7 @@ bashio::log.info
       bashio::log.info
       bashio::log.info
    fi
-
+fi
 # set +x
 
 
