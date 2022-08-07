@@ -134,6 +134,11 @@ set +x
 message=$(echo "[Starting SBFspotUpload]")
 bashio::log.info ${__BASHIO_COLORS_MAGENTA} "${message:=""}"
 
+# ---- Symbolic Links ----
+ln -s /usr/bin/sbfspot/SBFspot /SBFspot
+ln -s /usr/bin/sbfspot/SBFspot.cfg /SBFspot.cfg
+ln -s /usr/bin/sbfspot/SBFspotUpload.cfg /SBFspotUpload.cfg
+
 # cron
 message=$(echo "[Starting cron in foreground]")
 bashio::log.info "${message:=""}"
