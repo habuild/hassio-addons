@@ -42,21 +42,8 @@ bashio::log.info
       bashio::log.info ${__BASHIO_COLORS_BLUE} "${message:=""}"
       bashio::log.info
       bashio::log.info
-      
    fi    
-   if bashio::config {"Ethernet"}; then
-      /usr/bin/sbfspot/genEthernetConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg
-      bashio::log.info
-      bashio::log.info
-      message=$(echo "||    Generating Ethernet Configs     ||")
-      bashio::log.info ${__BASHIO_COLORS_MAGENTA} "${message:=""}"
-      message=$(echo "||    /usr/bin/sbfspot/SBFspot.cfg    ||")
-      bashio::log.info ${__BASHIO_COLORS_MAGENTA} "${message:=""}"
-      message=$(echo "|| /usr/bin/sbfspot/SBFspotUpload.cfg ||")
-      bashio::log.info ${__BASHIO_COLORS_MAGENTA} "${message:=""}"
-      bashio::log.info
-      bashio::log.info
-   fi
+
 # set +x
 
 
