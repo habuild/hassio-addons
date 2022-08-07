@@ -10,6 +10,7 @@
   "hassio_api": true,
   "panel_icon": "mdi:solar-power-variant",
   "ingress": true,
+  "ingress_port": 0,
   "ingress_entry": "/logs",
   
   "services": [
