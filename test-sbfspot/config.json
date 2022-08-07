@@ -1,6 +1,6 @@
 {
   "name": "TEST-SBFspot",
-  "version": "dev7",
+  "version": "dev8",
   "slug": "test-sbfspot",
   "description": "Manage SBFspot with a simple interface",
   "url": "https://github.com/habuild/hassio-addons/tree/main/test-sbfspot",
@@ -11,7 +11,7 @@
   "panel_icon": "mdi:solar-power-variant",
   "ingress": true,
   "ingress_port": 8099,
-  "ingress_stream": true,
+  
   
   "services": [
        "mysql:need",
