@@ -2,12 +2,14 @@ CFG_PATH=$1
 CFG_PATH_UPLOAD=$2
 CONFIG_PATH=/data/options.json
 
-message=$(echo "Generating Bluetooth Configs \ $CFG_PATH \ & $CFG_PATH_UPLOAD")
-bashio::color.blue
 bashio::log.info
-bashio::log.info "${message:=""}"
+message=$(echo "||    Generating Bluetooth Configs    ||")
+bashio::log.info ${__BASHIO_COLORS_BLUE} "${message:=""}"
+message=$(echo "||      $CFG_PATH                     ||")
+bashio::log.info ${__BASHIO_COLORS_BLUE} "${message:=""}"
+message=$(echo "|| $CFG_PATH_UPLOAD                   ||")
+bashio::log.info ${__BASHIO_COLORS_BLUE} "${message:=""}"
 bashio::log.info
-bashio::color.reset
 
 CONFIG_CONNECTION_TYPE="$(jq --raw-output '.Connection_Type' $CONFIG_PATH)"
 CONFIG_BTADDRESS="$(jq --raw-output '.BTAddress' $CONFIG_PATH)"
