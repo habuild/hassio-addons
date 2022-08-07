@@ -44,5 +44,5 @@ echo 'Starting daemon'
 
 
 # cron
-bashio::log.info "$([Starting cron in foreground])"
+bashio::log.info echo "[Starting cron in foreground]"
 exec /usr/sbin/crond -f
