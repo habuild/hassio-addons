@@ -5,7 +5,8 @@
 # ==============================================================================
 
 CONFIG_PATH=/data/options.json
-
+CFG_PATH=$1
+CFG_UPLOAD_PATH=$2
 
 # --- GENERATE CONFIG --
 message=$(echo "PWD is current directory $(pwd)")
