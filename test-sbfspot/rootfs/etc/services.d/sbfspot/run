@@ -17,14 +17,16 @@ cd /
 message=$(echo "PWD is current directory $(pwd)")
 bashio::log.debug "${message:=""}"
 
-           
- if bashio::config.has_value {"Connection_Type": "Bluetooth"}; then
-    bashio::log.info
-    bashio::log.info "[Bluetooth being setup]"
-    bashio::log.info
-    /usr/bin/sbfspot/genBluetoothConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg   
- fi
-    
+set -x
+
+   if bashio::config "Bluetooth"; then
+      bashio::log.info
+      bashio::log.info "[Bluetooth being setup]"
+      bashio::log.info
+      exec /usr/bin/sbfspot/genBluetoothConfig.sh
+   fi
+
+set +x
 
 # ---- Print Host BT Controller and sys info
 bashio::log.info
