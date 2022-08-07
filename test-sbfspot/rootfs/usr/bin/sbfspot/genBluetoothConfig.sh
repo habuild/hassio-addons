@@ -5,9 +5,9 @@ CONFIG_PATH=/data/options.json
 bashio::log.info
 message=$(echo "||    Generating Bluetooth Configs    ||")
 bashio::log.info ${__BASHIO_COLORS_BLUE} "${message:=""}"
-message=$(echo "||      $CFG_PATH                     ||")
+message=$(echo "||    $CFG_PATH    ||")
 bashio::log.info ${__BASHIO_COLORS_BLUE} "${message:=""}"
-message=$(echo "|| $CFG_PATH_UPLOAD                   ||")
+message=$(echo "|| $CFG_PATH_UPLOAD ||")
 bashio::log.info ${__BASHIO_COLORS_BLUE} "${message:=""}"
 bashio::log.info
 
