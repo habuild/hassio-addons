@@ -32,7 +32,7 @@ This version is specifically for Home Assistant Operating System HAOS. It omits 
 ![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmaster%2Fsbfspot%2Fconfig.json)
 ![Arch](https://img.shields.io/badge/dynamic/json?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmaster%2Fsbfspot%2Fconfig.json)
 
-This version includes openrc to manage SBFspotUpload service. It is doesn't particulary offer any great advantage. They both perform very similarly. Except openrc partially requires a read access to the host to monitor other services which HAOS doesn't allow. 
+This version includes openrc to manage SBFspotUpload service. It is doesn't particulary offer any great advantage. They both perform very similarly. Except openrc partially requires a read access to the host to monitor other services which HAOS doesn't allow.
 
 ### [Installation](https://github.com/habuild/hassio-addons/blob/main/sbfspot/README.md)
 
@@ -54,26 +54,23 @@ Notes to developers after forking or using the github template feature:
 - Do awesome stuff!
  -->
 
-
-
 ## ![SBFspot Logo](https://user-images.githubusercontent.com/1931158/30831762-006ec650-a249-11e7-86e3-13d01b36dd5d.jpg)
 
 ## ToDo List
 ### Fix
 
-- fix options to display GUI options correctly, currently only edit in yaml is available to save options. 
+- fix options to display GUI options correctly, currently only edit in yaml is available to save options.
 - Add colors to log file.
 
 ## ToDo end
 
-
-# Special Thanks To: 
+# Special Thanks To:
 SBFspot
 https://github.com/SBFspot/SBFspot
 
-and 
+and
 nakla for the dockerfile
-https://github.com/nakla/sbfspot 
+https://github.com/nakla/sbfspot
 
 and
 LauR3y for sbfspot addon
@@ -97,12 +94,12 @@ For a list of known bugs, consult the [issues](https://github.com/SBFspot/SBFspo
 Refer to the [Wiki](https://github.com/SBFspot/SBFspot/wiki) for documentation and FAQ.
 
 ### **Special thanks to:**
-* S. Pittaway: Author of ["NANODE SMA PV MONITOR"](https://github.com/stuartpittaway/nanodesmapvmonitor) on which this project is based.
-* W. Simons : Early adopter, main tester and SMAdata2® Protocol analyzer
-* G. Schnuff : SMAdata2® Protocol analyzer
-* T. Frank: Speedwire® support
-* Snowmiss: User manual
-* All other users for their contribution - in any form - to the success of this project
+1. S. Pittaway: Author of ["NANODE SMA PV MONITOR"](https://github.com/stuartpittaway/nanodesmapvmonitor) on which this project is based.
+2. W. Simons : Early adopter, main tester and SMAdata2® Protocol analyzer
+3. G. Schnuff : SMAdata2® Protocol analyzer
+4. T. Frank: Speedwire® support
+5. Snowmiss: User manual
+6. All other users for their contribution - in any form - to the success of this project
 
 ### **Donations**
 SBFspot is a free tool, developed during personal free time. If you like it, consider a donation.
