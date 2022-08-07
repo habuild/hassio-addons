@@ -39,10 +39,9 @@ bashio::log.info "${message:="Hello World..."}"
 bashio::log.info
 
 # ---- RUN ----
-
-echo 'Starting daemon'
-
-
+message=$(echo "[Starting SBFspotUpload]")
+bashio::log.error "${message:=""}"
 # cron
-bashio::log.info echo "[Starting cron in foreground]"
+message=$(echo "[Starting cron in foreground]")
+bashio::log.info "${message:=""}"
 exec /usr/sbin/crond -f
