@@ -32,7 +32,7 @@ bashio::log.info
 #set -x
 value=$(bashio::config 'Connection_Type')
 if  bashio::var.equals "${value}" "Bluetooth"; then
-    '/usr/bin/sbfspot/genBluetoothConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg'
+    /usr/bin/sbfspot/genBluetoothConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg
     bashio::log.info
     bashio::log.info
     message=$(echo "||    Generating Bluetooth Configs    ||")
@@ -53,7 +53,7 @@ elif bashio::var.equals "${value} "Ethernet"; then
     bashio::log.info ${__BASHIO_COLORS_MAGENTA} "${message:=""}"
     bashio::log.info
     bashio::log.info
-    '/usr/bin/sbfspot/genEthernetConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg'
+    /usr/bin/sbfspot/genEthernetConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg
 else
       bashio::log.info "Setup failed"
 fi
