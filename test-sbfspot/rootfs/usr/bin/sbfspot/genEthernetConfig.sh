@@ -1,4 +1,5 @@
-#!/usr/bin/with-contenv bashio
+export CFG_PATH
+export CFG_PATH_UPLOAD
 
 CFG_PATH=$1
 CFG_PATH_UPLOAD=$2
