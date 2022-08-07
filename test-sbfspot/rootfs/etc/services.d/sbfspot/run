@@ -10,13 +10,15 @@ CONFIG_PATH=/data/options.json
 
 
 # --- GENERATE CONFIG --
-echo "PWD is current directory $(pwd)"
+message=$(echo "PWD is current directory $(pwd)")
+bashio::log.debug "${message:=""}"
 cd / 
 
-echo "PWD is current directory $(pwd)"
+message=$(echo "PWD is current directory $(pwd)")
+bashio::log.debug "${message:=""}"
 
            
- if bashio::config.has_value ".Bluetooth"; then
+ if bashio::config.has_value "Bluetooth"; then
     bashio::log.info
     bashio::log.info "[Bluetooth being setup]"
     bashio::log.info
