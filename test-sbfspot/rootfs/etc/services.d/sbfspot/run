@@ -16,49 +16,52 @@ cd /
 message=$(echo "PWD is current directory $(pwd)")
 bashio::log.debug "${message:=""}"
 
+# ---- Print Host sys info
+message=$(echo "$(uname -smrv)")
+bashio::log.info
+bashio::log.info "${__BASHIO_COLORS_CYAN} "${message:="Hello World..."}"
+bashio::log.info
+
+# ---- Print Host BT Controller
+message=$(echo "[Host Bluetooth MAC Address] $(bluetoothctl list)")
+bashio::log.info
+bashio::log.info ${__BASHIO_COLORS_BLUE} "${message:="Hello World..."}"
+bashio::log.info
+
 # set -x
 
-   if bashio::config "Bluetooth"; then
+   if bashio::config {"Bluetooth"}; then
       /usr/bin/sbfspot/genBluetoothConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg
       bashio::log.info
       bashio::log.info
       message=$(echo "||    Generating Bluetooth Configs    ||")
       bashio::log.info ${__BASHIO_COLORS_BLUE} "${message:=""}"
-      message=$(echo "||    $CFG_PATH    ||")
+      message=$(echo "||    /usr/bin/sbfspot/SBFspot.cfg    ||")
       bashio::log.info ${__BASHIO_COLORS_BLUE} "${message:=""}"
-      message=$(echo "|| $CFG_PATH_UPLOAD ||")
+      message=$(echo "|| /usr/bin/sbfspot/SBFspotUpload.cfg ||")
       bashio::log.info ${__BASHIO_COLORS_BLUE} "${message:=""}"
       bashio::log.info
       bashio::log.info
       
    fi    
-   #if bashio::config "Ethernet"; then
+   if bashio::config {"Ethernet"}; then
       /usr/bin/sbfspot/genEthernetConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg
       bashio::log.info
       bashio::log.info
       message=$(echo "||    Generating Ethernet Configs     ||")
       bashio::log.info ${__BASHIO_COLORS_MAGENTA} "${message:=""}"
-      message=$(echo "||    $CFG_PATH    ||")
+      message=$(echo "||    /usr/bin/sbfspot/SBFspot.cfg    ||")
       bashio::log.info ${__BASHIO_COLORS_MAGENTA} "${message:=""}"
-      message=$(echo "|| $CFG_PATH_UPLOAD ||")
+      message=$(echo "|| /usr/bin/sbfspot/SBFspotUpload.cfg ||")
       bashio::log.info ${__BASHIO_COLORS_MAGENTA} "${message:=""}"
       bashio::log.info
       bashio::log.info
-   #fi
+   fi
 
 # set +x
 
-# ---- Print Host BT Controller and sys info
-bashio::log.info
-bashio::log.info echo "$(uname -smrv)"
-bashio::log.info
 
-## Print the message the user supplied, defaults to "Hello World..."
-## Get the 'message' key from the user config options.
-message=$(echo "[Host Bluetooth MAC Address] $(bluetoothctl list)")
-bashio::log.info
-bashio::log.info "${message:="Hello World..."}"
-bashio::log.info
+
 
 # ---- RUN ----
 message=$(echo "[Starting SBFspotUpload]")
