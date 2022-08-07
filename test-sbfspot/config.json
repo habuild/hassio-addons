@@ -12,13 +12,13 @@
   "ingress": true,
   "ingress_port": 8099,
   "ingress_stream": true,
-  "ingress_entry": "/",
+  
   "services": [
        "mysql:need",
        "mqtt:want"
   ],
   "options": {
-      "Connection_Type": "Bluetooth",
+      "Connection_Type": 'Bluetooth',
       "BTAddress": "null",
       "Password": "0000",
       "LocalBTAddress": "00:00:00:00:00:00",
