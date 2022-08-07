@@ -1,5 +1,5 @@
 {
-    "name": "TEST-SBFspot",
+	"name": "TEST-SBFspot",
 	"version": "dev2",
 	"slug": "test-sbfspot",
 	"description": "Manage SBFspot with a simple interface",
@@ -15,7 +15,8 @@
 	"services": [
 		"mysql:need",
 		"mqtt:want"
-    ],
+	],
+                  
 	"options": {
 		"Connection_Type": "Bluetooth",
 		"Connections": [
@@ -80,7 +81,7 @@
 			"LogLevel": "info",
 			"PVoutput_SID": "yourSID11111111:22222",
 			"PVoutput_Key": null
-	},
+		},
 	"schema": {
 		"Connection_Type": "list(Bluetooth|Ethernet)?",
 		"Connections": [
@@ -150,4 +151,3 @@
 	"privileged": ["SYS_MODULE"],
 	"image": "ghcr.io/habuild/{arch}-addon-test-sbfspot"
 }
-
