@@ -5,8 +5,8 @@
 # ==============================================================================
 
 CONFIG_PATH=/data/options.json
-CFG_PATH=$1
-CFG_UPLOAD_PATH=$2
+CFG_PATH=/usr/bin/sbfspot/SBFspot.cfg
+CFG_UPLOAD_PATH=/usr/bin/sbfspot/SBFspotUpload.cfg
 
 # --- GENERATE CONFIG --
 message=$(echo "PWD is current directory $(pwd)")
