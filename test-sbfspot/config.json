@@ -1,6 +1,6 @@
 {
   "name": "TEST-SBFspot",
-  "version": "dev5",
+  "version": "dev6",
   "slug": "test-sbfspot",
   "description": "Manage SBFspot with a simple interface",
   "url": "https://github.com/habuild/hassio-addons/tree/main/test-sbfspot",
@@ -10,7 +10,6 @@
   "hassio_api": true,
   "panel_icon": "mdi:solar-power-variant",
   "ingress": true,
-  "ingress_port": 8099,
   "ingress_entry": "/logs",
   
   "services": [
@@ -70,7 +69,6 @@
   "schema": {
     
       "Connection_Type": "list(Bluetooth|Ethernet)?",
-     
       "BTAddress": "str",
       "Password": "str",
       "LocalBTAddress":"str",
