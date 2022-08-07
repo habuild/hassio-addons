@@ -93,10 +93,10 @@ cat > $CFG_PATH <<EOL
 # If IP_Address is not set or is 0.0.0.0 SBFspot will try to detect the speedwire inverter by broadcast
 # If IP_Address is set to a valid IP, SBFspot will try to connect directly to that IP without broadcast detection
 # Multiple IP addresses can be provided (comma separated)
-  IP_Address=0.0.0.0
+IP_Address=0.0.0.0
 
 # User password (default 0000)
-#  Password=$CONFIG_PASSWORD
+# Password=$CONFIG_PASSWORD
 
 # MIS_Enabled (Multi Inverter Support: Default=0 Disabled)
 # +------------+-------+-------------+
