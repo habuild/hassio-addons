@@ -1,6 +1,6 @@
 {
   "name": "TEST-SBFspot",
-  "version": "dev6",
+  "version": "dev1",
   "slug": "test-sbfspot",
   "description": "Manage SBFspot with a simple interface",
   "url": "https://github.com/habuild/hassio-addons/tree/main/test-sbfspot",
