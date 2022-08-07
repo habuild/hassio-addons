@@ -150,3 +150,4 @@
 	"privileged": ["SYS_MODULE"],
 	"image": "ghcr.io/habuild/{arch}-addon-test-sbfspot"
 }
+}
