@@ -1,3 +1,4 @@
+---
 # Community Hass.io Add-ons: SBFspot
 
 ![project-stage-shield] ![Project Maintenance][maintenance-shield]
