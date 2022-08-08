@@ -39,7 +39,7 @@ options:
   MQTT:
     - MQTT_Publisher: '/usr/bin/mosquitto_pub'
     - MQTT_Host: 'core-mosquitto'
-    - MQTT_Port: 'null'
+    - MQTT_Port: '1883'
     - MQTT_Topic: 'homeassistant/sbfspot_{plantname}/sbfspot_{serial}'
     - MQTT_ItemFormat: "\"{key}\": {value}"
     - MQTT_ItemDelimiter: 'comma'
@@ -58,7 +58,7 @@ schema:
   Connection_Type: list(Bluetooth|Ethernet)?
   Connections:
     - BTAddress: 'str?'
-    - Password: 'str'
+    - Password: 'str?'
     - LocalBTAddress: 'str?'
     - IP_Address: 'str?'
     - Plantname: 'str'
@@ -98,9 +98,9 @@ schema:
     - SQL_Password: 'str?'
   MQTT:
     - MQTT_Publisher: 'str?'
-    - MQTT_Host: 'str?'
+    - MQTT_Host: 'str'
     - MQTT_Port: 'str'
-    - MQTT_Topic: 'str?'
+    - MQTT_Topic: 'str'
     - MQTT_ItemFormat: 'str?"
     - MQTT_ItemDelimiter: 'str?'
     - MQTT_PublisherArgs: 'str?'
