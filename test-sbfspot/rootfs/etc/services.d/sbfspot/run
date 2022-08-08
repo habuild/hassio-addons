@@ -1,0 +1,23 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# Start the SBFspot service
+# s6-overlay docs: https://github.com/just-containers/s6-overlay
+# ==============================================================================
+
+
+# --- GENERATE CONFIG --
+echo "PWD is current directory $(pwd)"
+cd / 
+
+echo "PWD is current directory $(pwd)"
+/usr/bin/sbfspot/generateConfig.sh /usr/bin/sbfspot/SBFspot.cfg /usr/bin/sbfspot/SBFspotUpload.cfg 
+
+
+# ---- RUN ----
+
+echo 'Starting daemon'
+
+
+# cron
+echo 'Starting cron in foreground'
+exec /usr/sbin/crond -f
