@@ -1,5 +1,0 @@
-# ---
-configuration:
-  message:
-    name: Message
-    description: Monitoring SMA Bluetooth inverters with SBFspot.
