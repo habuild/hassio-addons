@@ -1,6 +1,6 @@
 ---
 name: TEST-BFspot
-version: dev01
+version: dev-01
 slug: test-sbfspot
 description: Manage SBFspot with a simple interface
 url: 'https://github.com/habuild/hassio/tree/main/test-sbfspot'
