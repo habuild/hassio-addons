@@ -41,7 +41,7 @@ options:
     - MQTT_Host: 'core-mosquitto'
     - MQTT_Port: 'null'
     - MQTT_Topic: 'homeassistant/sbfspot_{plantname}/sbfspot_{serial}'
-    - MQTT_ItemFormat: "\"{key}\": {value}",
+    - MQTT_ItemFormat: "\"{key}\": {value}"
     - MQTT_ItemDelimiter: 'comma'
     - MQTT_PublisherArgs: >-
              '-h {host} -u {MQTT_Username} -P {MQTT_Password} -t {topic} -m "{{message}}" -d'
