@@ -101,10 +101,10 @@ schema:
     - MQTT_Host: 'str'
     - MQTT_Port: 'str'
     - MQTT_Topic: 'str'
-    - MQTT_ItemFormat: 'str?"
-    - MQTT_ItemDelimiter: 'str?'
-    - MQTT_PublisherArgs: 'str?'
-    - MQTT_Data: 'str?'
+    - MQTT_ItemFormat: 'str"
+    - MQTT_ItemDelimiter: 'str'
+    - MQTT_PublisherArgs: 'str'
+    - MQTT_Data: 'str'
     - MQTT_ENABLE: 'int'
   PVOutput:
     - PVoutput_SID: 'str?'
