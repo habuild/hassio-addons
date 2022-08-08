@@ -44,7 +44,7 @@ options:
     - MQTT_ItemFormat: "\"{key}\": {value}"
     - MQTT_ItemDelimiter: 'comma'
     - MQTT_PublisherArgs: >-
-             '-h {host} -u {MQTT_Username} -P {MQTT_Password} -t {topic} -m "{{message}}" -d'
+             "-h {host} -u {MQTT_Username} -P {MQTT_Password} -t {topic} -m "{{message}}" -d"
     - MQTT_Data: >-
              'Timestamp,SunRise,SunSet,InvSerial,InvName,InvTime,InvStatus,InvTemperature,InvGridRelay,EToday,ETotal,GridFreq,PACTot,UDC1,UDC2,IDC1,IDC2,PDC1,PDC2'
     - MQTT_ENABLE: '1'
@@ -102,8 +102,8 @@ schema:
     - MQTT_Port: 'str'
     - MQTT_Topic: 'str'
     - MQTT_ItemFormat: 'str"
-    - MQTT_ItemDelimiter: 'str'
-    - MQTT_PublisherArgs: 'str'
+    - MQTT_ItemDelimiter: str
+    - MQTT_PublisherArgs: str
     - MQTT_Data: 'str'
     - MQTT_ENABLE: 'int'
   PVOutput:
