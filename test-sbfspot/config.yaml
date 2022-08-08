@@ -40,7 +40,7 @@ options:
   MQTT_Host: 'core-mosquitto'
   MQTT_Port: '1883'
   MQTT_Topic: 'homeassistant/sbfspot_{plantname}/sbfspot_{serial}'
-  MQTT_ItemFormat: "\"{key}\": {value}"
+  MQTT_ItemFormat: 
   MQTT_ItemDelimiter: 'comma'
   MQTT_PublisherArgs: ["-h {host} -u {MQTT_Username} -P {MQTT_Password} -t {topic} -m "{{message}}" -d"]
   MQTT_Data: ['Timestamp,SunRise,SunSet,InvSerial,InvName,InvTime,InvStatus,InvTemperature,InvGridRelay,EToday,ETotal,GridFreq,PACTot,UDC1,UDC2,IDC1,IDC2,PDC1,PDC2']
