@@ -18,7 +18,7 @@
 	],
                   
 	"options": {
-		"Connection_Type": "Bluetooth"|"Ethernet",
+		"Connection_Type": "list(Bluetooth|Ethernet)?",
 		"Connections": [
 			"BTAddress": "00:00:00:00:00:00",
 			"Password": "0000",
