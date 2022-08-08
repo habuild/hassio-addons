@@ -5,7 +5,9 @@ slug: test-sbfspot
 description: Manage SBFspot with a simple interface
 url: 'https://github.com/habuild/hassio/tree/main/test-sbfspot'
 stage: experimental
-arch: [ amd64, i386 ]
+arch: 
+  - amd64 
+  - i386
 init: false
 hassio_api: true
 panel_icon: mdi:solar-power-variant
