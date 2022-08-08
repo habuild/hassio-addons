@@ -16,7 +16,7 @@ services:
   - 'mysql:need'
   - 'mqtt:want'
 options:
-  Connection_Type: Bluetooth
+  Connection_Type: 
   Connections: [ BTAddress: '00:00:00:00:00:00', Password: '0000', LocalBTAddress: '00:00:00:00:00:00', IP_Adrress: '00:00:00:00:00:00', Plantname: MyPlant]
   Multi_Inverter_Systems: 
     - MIS_Enabled: '0'
@@ -40,12 +40,13 @@ options:
   MQTT_Host: 'core-mosquitto'
   MQTT_Port: '1883'
   MQTT_Topic: 'homeassistant/sbfspot_{plantname}/sbfspot_{serial}'
-  MQTT_ItemFormat: 
+  MQTT_ItemFormat: '' 
   MQTT_ItemDelimiter: 'comma'
-  MQTT_PublisherArgs: ["-h {host} -u {MQTT_Username} -P {MQTT_Password} -t {topic} -m "{{message}}" -d"]
-  MQTT_Data: ['Timestamp,SunRise,SunSet,InvSerial,InvName,InvTime,InvStatus,InvTemperature,InvGridRelay,EToday,ETotal,GridFreq,PACTot,UDC1,UDC2,IDC1,IDC2,PDC1,PDC2']
+  MQTT_PublisherArgs: "-h {host} -u {MQTT_Username} -P 
+  MQTT_Password 
+  MQTT_Data: 
   MQTT_ENABLE: '1'
-  PVoutput_SID: "yourSID0123456789:12345"
+  PVoutput_SID: 'yourSID0123456789:12345"
   PVoutput_Key: 'fake9364fake4545fake834fake'
   LogDir: '/data/sbfspot/log/'
   LogLevel: 'info'
@@ -96,7 +97,7 @@ schema:
   MQTT_Host: 'str'
   MQTT_Port: 'str'
   MQTT_Topic: 'str'
-  MQTT_ItemFormat: 'str"
+  MQTT_ItemFormat: 'str'
   MQTT_ItemDelimiter: str
   MQTT_PublisherArgs: str
   MQTT_Data: 'str'
