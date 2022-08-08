@@ -1,0 +1,112 @@
+---
+name: TEST-BFspot
+version: dev01
+slug: test-sbfspot
+description: Manage SBFspot with a simple interface
+url: 'https://github.com/habuild/hassio/tree/main/test-sbfspot'
+stage: experimental
+arch: [ amd64, i386 ]
+init: false
+hassio_api: true
+panel_icon: mdi:solar-power-variant
+ingress: true
+ingress_port: 0
+ingress_entry: /logs
+services:
+  - 'mysql:need'
+  - 'mqtt:want'
+options:
+  Connection_Type: 
+  Connections: [ BTAddress: '00:00:00:00:00:00', Password: '0000', LocalBTAddress: '00:00:00:00:00:00', IP_Adrress: '00:00:00:00:00:00', Plantname: MyPlant]
+  Multi_Inverter_Systems: 
+    - MIS_Enabled: '0'
+  Path: [ OutputPath: '/data/sbfspot/%Y', OutputPathEvents: '/data/sbfspot/%Y/events']
+  Location_and_Time: [Latitude: 'null', Longitude: 'null', Timezone: 'Europe/Brussels', DateTimeFormat: '%d/%m/%Y %H:%M:%S', DateFormat: "%d/%m/%Y", DecimalPoint: comma, TimeFormat: "%H:%M:%S", SynchTime: '0', SynchTimeLow: '1', SynchTimeHigh: '3600', SunRSOffset: '900', Locale: 'en-US', CalculateMissingSpotValues: '1', BTConnectRetries: '10']
+  CSV_Exporting:
+    - CSV_Export: '0'
+    - CSV_ExtendedHeader: '1'
+    - CSV_Header: '1'
+    - CSV_SaveZeroPower: '1'
+    - CSV_Delimiter: 'semicolon'
+    - CSV_Spot_TimeSource: 'Inverter'
+    - CSV_Spot_WebboxHeader: '0'
+  MariaDB_SQL:
+    - SQL_Database: 'null'
+    - SQL_Hostname: 'core-mariadb'
+    - SQL_Port: '3306'
+    - SQL_Username: 'null'
+    - SQL_Password: 'null'
+  MQTT_Publisher: '/usr/bin/mosquitto_pub'
+  MQTT_Host: 'core-mosquitto'
+  MQTT_Port: '1883'
+  MQTT_Topic: 'homeassistant/sbfspot_{plantname}/sbfspot_{serial}'
+  MQTT_ItemFormat: '' 
+  MQTT_ItemDelimiter: 'comma'
+  MQTT_PublisherArgs: "-h {host} -u {MQTT_Username} -P 
+  MQTT_Password 
+  MQTT_Data: 
+  MQTT_ENABLE: '1'
+  PVoutput_SID: 'yourSID0123456789:12345"
+  PVoutput_Key: 'fake9364fake4545fake834fake'
+  LogDir: '/data/sbfspot/log/'
+  LogLevel: 'info'
+     
+schema:
+  Connection_Type: list(Bluetooth|Ethernet)?
+  Connections:
+    - BTAddress: 'str?'
+    - Password: 'str?'
+    - LocalBTAddress: 'str?'
+    - IP_Address: 'str?'
+    - Plantname: 'str'
+  Multi_Inverter_Systems:  
+    - MIS_Enabled: 'int?'
+  Path:
+    - OutputPath: 'str?'
+    - OutputPathEvents: 'str?'
+  Location_and_Time:
+    - Latitude: 'float'
+    - Longitude: 'float'
+    - Timezone: 'str'
+    - DateTimeFormat: 'str'
+    - DateFormat: 'str'
+    - DecimalPoint: 'str'
+    - TimeFormat: 'str'
+    - SynchTime: 'int'
+    - SynchTimeLow: 'int'
+    - SynchTimeHigh: 'int'
+    - SunRSOffset: 'int'
+    - Locale: 'str'
+    - CalculateMissingSpotValues: 'int'
+    - BTConnectRetries: 'int'
+  CSV_Exporting:
+    - CSV_Export: 'int?'
+    - CSV_ExtendedHeader: 'int?'
+    - CSV_Header: 'int?'
+    - CSV_SaveZeroPower: 'int?'
+    - CSV_Delimiter: 'str?'
+    - CSV_Spot_TimeSource: 'str?'
+    - CSV_Spot_WebboxHeader: 'int?'
+  MariaDB_SQL:
+    - SQL_Database: 'str?'
+    - SQL_Hostname: 'str?'
+    - SQL_Port: 'str?'
+    - SQL_Username: 'str?'
+    - SQL_Password: 'str?'
+  MQTT_Publisher: 'str'
+  MQTT_Host: 'str'
+  MQTT_Port: 'str'
+  MQTT_Topic: 'str'
+  MQTT_ItemFormat: 'str'
+  MQTT_ItemDelimiter: str
+  MQTT_PublisherArgs: str
+  MQTT_Data: 'str'
+  MQTT_ENABLE: 'int'
+  PVOutput:
+    - PVoutput_SID: 'str'
+    - PVoutput_Key: 'str'
+    - LogDir: 'str'
+    - LogLevel: 'str'
+host_network: 'true'
+host_dbus: 'true'
+image: 'ghcr.io/habuild/{arch}-addon-test-sbfspot'
