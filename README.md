@@ -1,6 +1,6 @@
 [![Release][release-shield]][release] ![Project Stage][project-stage-shield] ![Project Maintenance][maintenance-shield]
 
-#  Reposistory add-on by Habuild
+#  Repository add-on by Habuild
 
 Add-on documentation: <https://developers.home-assistant.io/docs/add-ons>
 
