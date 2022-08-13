@@ -1,6 +1,21 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
-## ![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.json)
+## ![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
+
+- Config Options change for Ethernet connection. 
+- (Ethernet Untested as of 13/08/2022)
+- Cleaned up backend scripts.
+- Split BT and Ethernet config.
+
+## ![Release][release-shield-2022-8-2]
+
+[release-shield-2022-8-2]: https://img.shields.io/badge/version-2022.8.2-blue.svg
+
+- Added Local BT address config.
+
+## ![Release][release-shield-2022-8-1]
+
+[release-shield-2022-8-1]: https://img.shields.io/badge/version-2022.8.1-blue.svg
 
 - tweaked the logging
 - Added **Bluetoothctl list** to log
