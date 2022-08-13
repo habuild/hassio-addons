@@ -5,8 +5,7 @@ name: CI
 on:
   push:
     branches:
-      - main
-      - dev
+       - dev
   workflow_call:
     inputs:
       slug:
