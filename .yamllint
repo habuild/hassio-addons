@@ -64,3 +64,4 @@ rules:
     level: error
   truthy:
     level: warning
+    
