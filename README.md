@@ -6,14 +6,7 @@ Add-on documentation: <https://developers.home-assistant.io/docs/add-ons>
 
 [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fhabuild%2Fhassio-addons)
 
-## Add-ons
-
-This repository contains the following add-ons
-
-SBFspot addon for supervised Home Assistant, based an open source project located at github ([SBFspot on github](https://github.com/SBFspot/SBFspot)).
-This project creates an addon install for Home assistant users using the latest release of SBFspot as a docker container.
-
-# Installation and configuration
+## Installation and configuration
 
 Add ([this respository](https://github.com/habuild/hassio-addons)) to Home Assistant via the superviser > new respository menu > add respository
 
@@ -23,21 +16,25 @@ Start the addon
 
 ## [haos-sbfspot](./haos-sbfspot)
 
-![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmaster%2Fhaos-sbfspot%2Fconfig.json)
-![Arch](https://img.shields.io/badge/dynamic/json?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmaster%2Fhaos-sbfspot%2Fconfig.json)
+![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
+![Arch](https://img.shields.io/badge/dynamic/yaml?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
 
-This version is specifically for Home Assistant Operating System HAOS. It omits Openrc found in the other version, which is largely redundant anyway.
+This version is for Home Assistant Operating System HAOS. 
 
-### [Installation](https://github.com/habuild/hassio-addons/blob/main/haos-sbfspot/README.md)
+It works with HAOS or HA Docker/Supervised.
+
+It creates a wrapper to configure the official SBFspot releases.
+
+### [Detailed Installation](https://github.com/habuild/hassio-addons/blob/main/haos-sbfspot/README.md)
 
 ## [SBFspot](./sbfspot)
 
-![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmaster%2Fsbfspot%2Fconfig.json)
-![Arch](https://img.shields.io/badge/dynamic/json?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmaster%2Fsbfspot%2Fconfig.json)
+![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fsbfspot%2Fconfig.yaml)
+![Arch](https://img.shields.io/badge/dynamic/yaml?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fsbfspot%2Fconfig.yaml)
 
-This version includes openrc to manage SBFspotUpload service. It is doesn't particulary offer any great advantage. They both perform very similarly. Except openrc partially requires a read access to the host to monitor other services which HAOS doesn't allow.
+This version is for testing purposes.
 
-### [Installation](https://github.com/habuild/hassio-addons/blob/main/sbfspot/README.md)
+### [Detailed Installation](https://github.com/habuild/hassio-addons/blob/main/sbfspot/README.md)
 
 <!--
 
@@ -59,16 +56,7 @@ Notes to developers after forking or using the github template feature:
 
 ## ![SBFspot Logo](https://user-images.githubusercontent.com/1931158/30831762-006ec650-a249-11e7-86e3-13d01b36dd5d.jpg)
 
-## ToDo List
-
-### Fix
-
-- fix options to display GUI options correctly, currently only edit in yaml is available to save options.
-- Add colors to log file.
-
-## ToDo end
-
-# Special Thanks To:
+## Special Thanks To:
 
 SBFspot
 https://github.com/SBFspot/SBFspot
