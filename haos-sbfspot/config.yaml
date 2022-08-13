@@ -63,7 +63,7 @@ options:
   MQTT_Data: >-
     Timestamp,SunRise,SunSet,InvSerial,InvName,InvTime,InvStatus,InvTemperature,InvGridRelay,EToday,ETotal,GridFreq,PACTot,UDC1,UDC2,IDC1,IDC2,PDC1,PDC2
   PVoutput_SID: "0123456789:12345"
-  PVoutput_Key: "fake9364fake4545fake834fake"
+  PVoutput_Key: "fake9364fkae4545fake834fake"
   LogDir: /data/sbfspot/log/
   LogLevel: info
 schema:
