@@ -39,6 +39,7 @@ This version is for testing purposes.
 <!--
 
 Notes to developers after forking or using the github template feature:
+
 - While developing comment out the 'image' key from 'example/config.yaml' to make the supervisor build the addon
   - Remember to put this back when pushing up your changes.
 - When you merge to the 'main' branch of your repository a new build will be triggered.
@@ -52,6 +53,7 @@ Notes to developers after forking or using the github template feature:
 - Adjust all keys/url's that points to 'home-assistant' to now point to your user/fork.
 - Share your repository on the forums https://community.home-assistant.io/c/projects/9
 - Do awesome stuff!
+
  -->
 
 ## ![SBFspot Logo](https://user-images.githubusercontent.com/1931158/30831762-006ec650-a249-11e7-86e3-13d01b36dd5d.jpg)
@@ -59,15 +61,15 @@ Notes to developers after forking or using the github template feature:
 ## Special Thanks To:
 
 SBFspot
-https://github.com/SBFspot/SBFspot
+[SBFspot Team](https://github.com/SBFspot/SBFspot)
 
 and
 nakla for the dockerfile
-https://github.com/nakla/sbfspot
+[nakla github](https://github.com/nakla/sbfspot)
 
 and
 LauR3y for sbfspot addon
-https://github.com/LauR3y/hassio-addons
+[LauR3y github](https://github.com/LauR3y/hassio-addons)
 
 ## SBFspot Readme ([SBFspot on github](https://github.com/SBFspot/SBFspot)).
 
@@ -94,12 +96,12 @@ Refer to the [Wiki](https://github.com/SBFspot/SBFspot/wiki) for documentation a
 
 ### **Special thanks to:**
 
-1. S. Pittaway: Author of ["NANODE SMA PV MONITOR"](https://github.com/stuartpittaway/nanodesmapvmonitor) on which this project is based.
-2. W. Simons : Early adopter, main tester and SMAdata2® Protocol analyzer
-3. G. Schnuff : SMAdata2® Protocol analyzer
-4. T. Frank: Speedwire® support
-5. Snowmiss: User manual
-6. All other users for their contribution - in any form - to the success of this project
+- S. Pittaway: Author of ["NANODE SMA PV MONITOR"](https://github.com/stuartpittaway/nanodesmapvmonitor) on which this project is based.
+- W. Simons : Early adopter, main tester and SMAdata2® Protocol analyzer
+- G. Schnuff : SMAdata2® Protocol analyzer
+- T. Frank: Speedwire® support
+- Snowmiss: User manual
+- All other users for their contribution - in any form - to the success of this project
 
 ### **Donations**
 
