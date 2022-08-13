@@ -1,5 +1,8 @@
+---
 BTAddress: 00:00:00:00:00:00
 Password: Your_Sunny_Explorer_Password
+LocalBTAddress: 00:00:00:00:00:00
+IP_Address: 255.255.255.255
 MIS_Enabled: 0
 Plantname: YourPlantname
 OutputPath: /data/sbfspot/%Y
