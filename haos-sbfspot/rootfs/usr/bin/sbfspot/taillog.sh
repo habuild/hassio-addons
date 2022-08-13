@@ -12,10 +12,11 @@ sleep 45
 #---- Use lognow variable to select latest file
 #---- Print tail of latest log
 
-message=$(echo "[SBFspot Upload Log Latest] $(tail -n1 /data/sbfspot/log/SBFspotUpload$lognow.log)")
-
+#message=$(echo "[SBFspot Upload Log Latest] $(tail -n1 /data/sbfspot/log/SBFspotUpload$lognow.log)")
+#bashio::log.info "${message:="Hello World..."}"
 ## Print the message the user supplied, defaults to "Hello World..."
-bashio::log.info "${message:="Hello World..."}"
+
+bashio::log.info "[SBFspot Upload Log Latest] $(tail -n1 "/data/sbfspot/log/SBFspotUpload$lognow.log")"
 
 
 #---- Delete old log files 

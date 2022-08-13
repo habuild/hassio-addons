@@ -3,7 +3,7 @@ name: Builder
 
 env:
   # BUILD_ARGS: "--test"
-  MONITORED_FILES: "build.* config.* Dockerfile"
+  MONITORED_FILES: "config.*"
 
 on:
   push:

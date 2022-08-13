@@ -1,0 +1,119 @@
+---
+name: HAOS-SBFspot
+version: 2022.8.2
+slug: haos-sbfspot
+description: Manage SBFspot with a simple interface
+url: "https://github.com/habuild/hassio-addons/tree/main/haos-sbfspot"
+stage: experimental
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+init: false
+homeassistant_api: true
+panel_icon: mdi:solar-power-variant
+services:
+  - mysql:need
+  - mqtt:want
+options:
+  Connection_Type: "Bluetooth"
+  BTAddress: ""
+  Password: "0000"
+  LocalBTAddress: "00:00:00:00:00:00"
+  IP_Address: "255.255.255.255"
+  MIS_Enabled: 0
+  Plantname: MyPlant
+  OutputPath: /data/sbfspot/%Y
+  OutputPathEvents: /data/sbfspot/%Y/events
+  Latitude: "null"
+  Longitude: "null"
+  CalculateMissingSpotValues: 1
+  DateTimeFormat: "%d/%m/%Y %H:%M:%S"
+  DateFormat: "%d/%m/%Y"
+  DecimalPoint: comma
+  TimeFormat: "%H:%M:%S"
+  SynchTime: 0
+  SynchTimeLow: 1
+  SynchTimeHigh: 3600
+  SunRSOffset: 900
+  Locale: en-US
+  Timezone: Europe/Brussels
+  BTConnectRetries: 10
+  CSV_Export: 0
+  CSV_ExtendedHeader: 1
+  CSV_Header: 1
+  CSV_SaveZeroPower: 1
+  CSV_Delimiter: semicolon
+  CSV_Spot_TimeSource: Inverter
+  CSV_Spot_WebboxHeader: 0
+  SQL_Database: "SBFspot"
+  SQL_Hostname: core-mariadb
+  SQL_Port: "3306"
+  SQL_Username: "sbfspot"
+  SQL_Password: ""
+  MQTT_Publisher: /usr/bin/mosquitto_pub
+  MQTT_Host: core-mosquitto
+  MQTT_Port: "1883"
+  MQTT_Topic: "homeassistant/sbfspot_{plantname}/sbfspot_{serial}"
+  MQTT_ItemFormat: '"{key}": {value}'
+  MQTT_ItemDelimiter: comma
+  MQTT_PublisherArgs: >-
+    -h {host} -u MQTT_Username -P MQTT_Password -t {topic} -m "{{message}}" -d
+  MQTT_Data: >-
+    Timestamp,SunRise,SunSet,InvSerial,InvName,InvTime,InvStatus,InvTemperature,InvGridRelay,EToday,ETotal,GridFreq,PACTot,UDC1,UDC2,IDC1,IDC2,PDC1,PDC2
+  PVoutput_SID: "0123456789:12345"
+  PVoutput_Key: "fake9364fake4545fake834fake"
+  LogDir: /data/sbfspot/log/
+  LogLevel: info
+schema:
+  Connection_Type: list(Bluetooth|Ethernet)?
+  BTAddress: "str"
+  Password: "str"
+  LocalBTAddress: "str"
+  IP_Address: "str"
+  Plantname: "str"
+  MIS_Enabled: "int?"
+  OutputPath: "str?"
+  OutputPathEvents: "str?"
+  Latitude: "float"
+  Longitude: "float"
+  Timezone: "str"
+  DateTimeFormat: "str"
+  DateFormat: "str"
+  DecimalPoint: "str"
+  TimeFormat: "str"
+  SynchTime: "int?"
+  SynchTimeLow: "int?"
+  SynchTimeHigh: "int?"
+  SunRSOffset: "int?"
+  Locale: "str"
+  CalculateMissingSpotValues: "int?"
+  BTConnectRetries: "int?"
+  CSV_Export: "int?"
+  CSV_ExtendedHeader: "int?"
+  CSV_Header: "int?"
+  CSV_SaveZeroPower: "int?"
+  CSV_Delimiter: "str?"
+  CSV_Spot_TimeSource: "str?"
+  CSV_Spot_WebboxHeader: "int?"
+  SQL_Database: "str?"
+  SQL_Hostname: "str?"
+  SQL_Port: "str?"
+  SQL_Username: "str?"
+  SQL_Password: "str?"
+  MQTT_Publisher: "str?"
+  MQTT_Host: "str"
+  MQTT_Port: "str"
+  MQTT_Topic: "str"
+  MQTT_ItemFormat: "str"
+  MQTT_ItemDelimiter: str
+  MQTT_PublisherArgs: str
+  MQTT_Data: "str"
+  PVoutput_SID: "str"
+  PVoutput_Key: "str"
+  LogDir: "str?"
+  LogLevel: "str"
+host_network: true
+host_dbus: true
+image: "ghcr.io/habuild/{arch}-addon-haos-sbfspot"
