@@ -1,4 +1,5 @@
-# --- https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
+---
+#  https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
 build_from:
   aarch64: "ghcr.io/home-assistant/aarch64-base:3.16"
   armhf: "ghcr.io/home-assistant/armhf-base:3.16"

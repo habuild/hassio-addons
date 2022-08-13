@@ -1,19 +1,13 @@
 [![Release][release-shield]][release] ![Project Stage][project-stage-shield] ![Project Maintenance][maintenance-shield]
 
-#  Repository add-on by Habuild
+# Repository add-on by Habuild
 
 Add-on documentation: <https://developers.home-assistant.io/docs/add-ons>
 
 [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fhabuild%2Fhassio-addons)
 
-## Add-ons
+## Installation and configuration
 
-This repository contains the following add-ons
-
-SBFspot addon for supervised Home Assistant, based an open source project located at github ([SBFspot on github](https://github.com/SBFspot/SBFspot)).
-This project creates an addon install for Home assistant users using the latest release of SBFspot as a docker container.
-
-# Installation and configuration
 Add ([this respository](https://github.com/habuild/hassio-addons)) to Home Assistant via the superviser > new respository menu > add respository
 
 Fill in the config details to setup Inverter connection, Database, MQTT , and Upload API.
@@ -21,24 +15,31 @@ Fill in the config details to setup Inverter connection, Database, MQTT , and Up
 Start the addon
 
 ## [haos-sbfspot](./haos-sbfspot)
-![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmaster%2Fhaos-sbfspot%2Fconfig.json)
-![Arch](https://img.shields.io/badge/dynamic/json?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmaster%2Fhaos-sbfspot%2Fconfig.json)
 
-This version is specifically for Home Assistant Operating System HAOS. It omits Openrc found in the other version, which is largely redundant anyway.
-### [Installation](https://github.com/habuild/hassio-addons/blob/main/haos-sbfspot/README.md)
+![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
+![Arch](https://img.shields.io/badge/dynamic/yaml?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
+
+This version is for Home Assistant Operating System HAOS.
+
+It works with HAOS or HA Docker/Supervised.
+
+It creates a wrapper to configure the official SBFspot releases.
+
+### [Detailed Installation](https://github.com/habuild/hassio-addons/blob/main/haos-sbfspot/README.md)
 
 ## [SBFspot](./sbfspot)
 
-![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmaster%2Fsbfspot%2Fconfig.json)
-![Arch](https://img.shields.io/badge/dynamic/json?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmaster%2Fsbfspot%2Fconfig.json)
+![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fsbfspot%2Fconfig.yaml)
+![Arch](https://img.shields.io/badge/dynamic/yaml?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fsbfspot%2Fconfig.yaml)
 
-This version includes openrc to manage SBFspotUpload service. It is doesn't particulary offer any great advantage. They both perform very similarly. Except openrc partially requires a read access to the host to monitor other services which HAOS doesn't allow.
+This version is for testing purposes.
 
-### [Installation](https://github.com/habuild/hassio-addons/blob/main/sbfspot/README.md)
+### [Detailed Installation](https://github.com/habuild/hassio-addons/blob/main/sbfspot/README.md)
 
 <!--
 
 Notes to developers after forking or using the github template feature:
+
 - While developing comment out the 'image' key from 'example/config.yaml' to make the supervisor build the addon
   - Remember to put this back when pushing up your changes.
 - When you merge to the 'main' branch of your repository a new build will be triggered.
@@ -52,73 +53,78 @@ Notes to developers after forking or using the github template feature:
 - Adjust all keys/url's that points to 'home-assistant' to now point to your user/fork.
 - Share your repository on the forums https://community.home-assistant.io/c/projects/9
 - Do awesome stuff!
+
  -->
 
 ## ![SBFspot Logo](https://user-images.githubusercontent.com/1931158/30831762-006ec650-a249-11e7-86e3-13d01b36dd5d.jpg)
 
-## ToDo List
-### Fix
+## Special Thanks To:
 
-- fix options to display GUI options correctly, currently only edit in yaml is available to save options.
-- Add colors to log file.
-
-## ToDo end
-
-# Special Thanks To:
 SBFspot
-https://github.com/SBFspot/SBFspot
+[SBFspot Team](https://github.com/SBFspot/SBFspot)
 
 and
 nakla for the dockerfile
-https://github.com/nakla/sbfspot
+[nakla github](https://github.com/nakla/sbfspot)
 
 and
 LauR3y for sbfspot addon
-https://github.com/LauR3y/hassio-addons
+[LauR3y github](https://github.com/LauR3y/hassio-addons)
 
 ## SBFspot Readme ([SBFspot on github](https://github.com/SBFspot/SBFspot)).
+
 ![SBFspot Logo](https://user-images.githubusercontent.com/1931158/30831762-006ec650-a249-11e7-86e3-13d01b36dd5d.jpg)
 
 Translation by Google: [[NL](https://translate.google.com/translate?act=url&depth=1&hl=nl&ie=UTF8&prev=_t&rurl=translate.google.com&sl=en&sp=nmt4&tl=nl&u=https://github.com/SBFspot/SBFspot)] - [[FR](https://translate.google.com/translate?act=url&depth=1&hl=nl&ie=UTF8&prev=_t&rurl=translate.google.com&sl=en&sp=nmt4&tl=fr&u=https://github.com/SBFspot/SBFspot)] - [[DE](https://translate.google.com/translate?act=url&depth=1&hl=nl&ie=UTF8&prev=_t&rurl=translate.google.com&sl=en&sp=nmt4&tl=de&u=https://github.com/SBFspot/SBFspot)] - [[ES](https://translate.google.com/translate?act=url&depth=1&hl=nl&ie=UTF8&prev=_t&rurl=translate.google.com&sl=en&sp=nmt4&tl=es&u=https://github.com/SBFspot/SBFspot)] - [[IT](https://translate.google.com/translate?act=url&depth=1&hl=nl&ie=UTF8&prev=_t&rurl=translate.google.com&sl=en&sp=nmt4&tl=it&u=https://github.com/SBFspot/SBFspot)]
+
 ### **Introduction**
+
 SBFspot, formerly known as SMAspot, is an open source project to get actual and archive data out of an SMA® inverter over Bluetooth or Ethernet (Speedwire®) It works on either Linux ([Raspberry Pi](http://www.raspberrypi.org)) and Windows.
 
 ### **What it does**
+
 SBFspot connects via Bluetooth or Ethernet to your SMA® solar/battery inverter and reads Archive Day/Month Power generation, user/installer events and the actual (spot) data. The collected data is stored in a SQL database (SQLite/MySQL/MariaDB) or SMA® compatible .csv files.
 A separate service/daemon uploads the collected data to [PVoutput.org](https://pvoutput.org)
 
 ### **Known bugs and limitations**
+
 For a list of known bugs, consult the [issues](https://github.com/SBFspot/SBFspot/issues). If you find a bug, please create an [issue](https://github.com/SBFspot/SBFspot/issues).
 
 ### **Documentation**
+
 Refer to the [Wiki](https://github.com/SBFspot/SBFspot/wiki) for documentation and FAQ.
 
 ### **Special thanks to:**
-1. S. Pittaway: Author of ["NANODE SMA PV MONITOR"](https://github.com/stuartpittaway/nanodesmapvmonitor) on which this project is based.
-2. W. Simons : Early adopter, main tester and SMAdata2® Protocol analyzer
-3. G. Schnuff : SMAdata2® Protocol analyzer
-4. T. Frank: Speedwire® support
-5. Snowmiss: User manual
-6. All other users for their contribution - in any form - to the success of this project
+
+- S. Pittaway: Author of ["NANODE SMA PV MONITOR"](https://github.com/stuartpittaway/nanodesmapvmonitor) on which this project is based.
+- W. Simons : Early adopter, main tester and SMAdata2® Protocol analyzer
+- G. Schnuff : SMAdata2® Protocol analyzer
+- T. Frank: Speedwire® support
+- Snowmiss: User manual
+- All other users for their contribution - in any form - to the success of this project
 
 ### **Donations**
+
 SBFspot is a free tool, developed during personal free time. If you like it, consider a donation.
 If you click on the button below, you will be taken to the secure PayPal Web site. You don't need to have a paypal account in order to make a donation.
 
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3R5JSRCXBGSLQ)
 
 ### **License**
+
 [Attribution - NonCommercial - ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)](https://creativecommons.org/licenses/by-nc-sa/3.0/legalcode)
 
 In short, you are free:
-* to Share => to copy, distribute and transmit the work
-* to Remix => to adapt the work
-Under the following conditions:
-* **Attribution:** You must attribute the work in the manner specified by the author or Licensor (but not in any way that suggests that they endorse you or your use of the work).
-* **Noncommercial:** You may not use this work for commercial purposes.
-* **Share Alike:** If you alter, transform, or build upon this work, you may distribute the resulting work only under the same or similar license to this one.
+
+- to Share => to copy, distribute and transmit the work
+- to Remix => to adapt the work
+  Under the following conditions:
+- **Attribution:** You must attribute the work in the manner specified by the author or Licensor (but not in any way that suggests that they endorse you or your use of the work).
+- **Noncommercial:** You may not use this work for commercial purposes.
+- **Share Alike:** If you alter, transform, or build upon this work, you may distribute the resulting work only under the same or similar license to this one.
 
 ### **Disclaimer**
+
 A user of SBFspot software acknowledges that he or she is receiving this software on an "as is" basis and the user is not relying on the accuracy or functionality of the software for any purpose. The user further acknowledges that any use of this software will be at his own risk and the copyright owner accepts no responsibility whatsoever arising from the use or application of the software.
 
 SMA, Speedwire are registered trademarks of [SMA Solar Technology AG](http://www.sma.de/en/company/about-sma.html)
