@@ -3,6 +3,8 @@
 # ![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
 
 - WARNING - Copy your config prior to update.
+- line 1 config needs - Connection_Type: Bluetooth
+- Line 5 config needs - IP_Address: "0.0.0.0"
 - Config Options change for Ethernet connection.
 - (Ethernet Untested as of 13/08/2022)
 - Cleaned up backend scripts.
