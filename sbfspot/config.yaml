@@ -1,6 +1,6 @@
 ---
 name: SBFspot
-version: 2022.8.3
+version: 2022.8.2
 slug: sbfspot
 description: Manage SBFspot with a simple interface
 url: "https://github.com/habuild/hassio-addons/tree/main/sbfspot"
