@@ -1,6 +1,16 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
-## ![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fsbfspot%2Fconfig.json)
+## ![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fsbfspot%2Fconfig.yaml)
+
+- THIS IS CONSIDERED A TEST BRANCH
+- Config Options change for Ethernet connection.
+- (Ethernet Untested as of 13/08/2022)
+- Cleaned up backend scripts.
+- Split BT and Ethernet config.
+
+## ![Release][release-shield-2022-7-3]
+
+[release-shield-2022-7-3]: https://img.shields.io/badge/version-2022.7.3-blue.svg
 
 - THIS IS CONSIDERED A TEST BRANCH
 - bump for testing
