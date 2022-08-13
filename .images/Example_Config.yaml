@@ -41,11 +41,12 @@ MQTT_Password": !secret mqtt_pass,
 MQTT_Topic: homeassistant/sbfspot_{plantname}/sbfspot_{serial}
 MQTT_ItemFormat: '"{key}": {value}'
 MQTT_ItemDelimiter: comma
-MQTT_PublisherArgs: '-h Your_MQTT_Hostname -u Your_MQTT_Username -P Your_MQTT_password -t {topic} -m "{{message}}" -d -r'
+MQTT_PublisherArgs: >-
+   -h Your_MQTT_Hostname -u Your_MQTT_Username -P Your_MQTT_password -t {topic} -m "{{message}}" -d -r
 MQTT_Data: >- 
    Timestamp,SunRise,SunSet,InvSerial,InvName,InvTime,InvStatus,InvTemperature,InvGridRelay,EToday,ETotal,GridFreq,PACTot,UDC1,UDC2,IDC1,IDC2,PDC1,PDC2
 LogDir: /data/sbfspot/log
 LogLevel: info
-PVoutput_SID: '00000000000:11111' #Your_Inverter_Serial:Your_PVoutput_SID
+PVoutput_SID: '0123456789:12345'    #  Your_Inverter_Serial:Your_PVoutput_SID
 PVoutput_Key: Your_PVoutput_API_key
 MQTT_ENABLE: '1'
