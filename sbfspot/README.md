@@ -10,20 +10,22 @@
 
 This [home assistant](https://www.home-assistant.io/getting-started/) add-on provides the installation, configuration, and integration for the **Bluetooth** version of [SBFspot 3.9.5](https://github.com/SBFspot/SBFspot). This version is for the Container/supervised installation method of Home assistant. Although the haos version will also work here. Openrc is omitted in the HAOS version due to read only file system.
 
-This add-on installs a cron service for SPFspot uploader at 5 minutely daytime interval, [PVoutput](https://pvoutput.org/) account and API are required, it also requires an SQL database like Mariadb. 
+This add-on installs a cron service for SPFspot uploader at 5 minutely daytime interval, [PVoutput](https://pvoutput.org/) account and API are required, it also requires an SQL database like Mariadb.
 It also sends a MQTT message to home assistant, therefore a MQTT broker is required.
 
 # Installation
 
 ### Initial database creation.
+
 Download and import either [No Drop DB create](https://github.com/habuild/hassio-addons/blob/main/.images/CreateMySQLDB_no_drop.sql) **or** [Create My SQL.sql](https://github.com/SBFspot/SBFspot/blob/master/SBFspot/CreateMySQLDB.sql) in [phpMyAdmin](https://github.com/hassio-addons/addon-phpmyadmin) to create your database. **IF** you haven't already created the database previously, use the NO Drop version. You will also need to add the Database and User/Password to MariaDB and allocate the port.
 
 ![screenshot](https://raw.githubusercontent.com/habuild/hassio-addons/main/.images/MariaDB%20setup.PNG)
 
-### MQTT 
-[sbfspot_sensors.yaml](https://github.com/habuild/hassio-addons/blob/main/.images/sbfspot_sensors.yaml) I use packages to include these yaml sensors. You will need to change to match your plant name and serial as you have set in the add-on configuration options. 
+### MQTT
 
-**MQTT argument options** [configuration options](https://github.com/habuild/hassio-addons/blob/main/.images/Example_Config.yaml) The MQTT Username, and Password need to be hardcoded into the **MQTT_PublisherArgs:** The **{host}** **{topic}** and **{{message}}** will be picked up from options. 
+[sbfspot_sensors.yaml](https://github.com/habuild/hassio-addons/blob/main/.images/sbfspot_sensors.yaml) I use packages to include these yaml sensors. You will need to change to match your plant name and serial as you have set in the add-on configuration options.
+
+**MQTT argument options** [configuration options](https://github.com/habuild/hassio-addons/blob/main/.images/Example_Config.yaml) The MQTT Username, and Password need to be hardcoded into the **MQTT_PublisherArgs:** The **{host}** **{topic}** and **{{message}}** will be picked up from options.
 
 **MQTT_PublisherArgs:** **'-h {host} -u Your_MQTT_Username -P Your_MQTT_password -t {topic} -m "{{message}}" -d -r'**
 
@@ -32,25 +34,30 @@ Download and import either [No Drop DB create](https://github.com/habuild/hassio
 **-r** is to retain messages. retain is not advised.
 
 ### Find your Local BT device address with Bluetoothctl
+
 You can use the **bluetoothctl** command from the console(terminal or ssh addon) in homeassistant. This will list your controller mac address so you can add it to SBFspot addon config.
 
 ### Example Configuration Options.
 
-Config can be copy/pasted as [Example Config](https://github.com/habuild/hassio-addons/blob/main/.images/Example_Config.yaml) or entered via UI 
-![Example Options](https://github.com/habuild/hassio-addons/blob/main/.images/Example_config_png.PNG) 
+Config can be copy/pasted as [Example Config](https://github.com/habuild/hassio-addons/blob/main/.images/Example_Config.yaml) or entered via UI
+![Example Options](https://github.com/habuild/hassio-addons/blob/main/.images/Example_config_png.PNG)
 
-### Data paths 
-In docker the /data/ path arrives at /usr/share/hassio/addons/data/slug#_sbfspot on the host. 
+### Data paths
+
+In docker the /data/ path arrives at /usr/share/hassio/addons/data/slug#\_sbfspot on the host.
+
 ### Upload logs
-The log file here may need to be cleaned up manually. 
+
+The log file here may need to be cleaned up manually.
 
 ### **Link to SBFspot Documentation**
+
 Refer to the [Wiki](https://github.com/SBFspot/SBFspot/wiki) for documentation and FAQ.
 
 ### **Special thanks to:**
-* LauR3y/hassio-addons which this version is cleaned up from.
-* The SBFspot team for SPFspot.
 
+- LauR3y/hassio-addons which this version is cleaned up from.
+- The SBFspot team for SPFspot.
 
 ![Supports aarch64 Architecture][aarch64-shield]
 ![Supports armhf Architecture][armhf-shield]
