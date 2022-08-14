@@ -83,10 +83,10 @@ cat > "$CFG_PATH" <<EOL
 # Windows: smaspot -scan
 # Linux  : hcitool scan
 # IMPORTANT FOR SPEEDWIRE USERS: COMMENT OUT BTADDRESS (PUT # IN FRONT)
-# BTAddress=$CONFIG_BTADDRESS
+# BTAddress=
 
 # If multiple local BT adapters are available, select the one to use
-# LocalBTAddress=$CONFIG_LOCALBTADDRESS
+# LocalBTAddress=
 
 # SMA Inverter's Speedwire IP address
 # If IP_Address is not set or is 0.0.0.0 SBFspot will try to detect the speedwire inverter by broadcast
@@ -95,7 +95,7 @@ cat > "$CFG_PATH" <<EOL
 IP_Address=$CONFIG_IP_ADDRESS
 
 # User password (default 0000)
-# Password=$CONFIG_PASSWORD
+Password=$CONFIG_PASSWORD
 
 # MIS_Enabled (Multi Inverter Support: Default=0 Disabled)
 # +------------+-------+-------------+
