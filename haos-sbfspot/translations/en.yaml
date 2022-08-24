@@ -3,11 +3,11 @@ configuration:
   Connection_Type:
     name: Connection Type
     description: >-
-       Pick Bluetooth or Ethernet, only the related options are generated in SBFspot.cfg
+      Pick Bluetooth or Ethernet, only the related options are generated in SBFspot.cfg
   BTAddress:
     name: Bluetooth Mac
     description: >-
-       Your Inverter Bluetooth MAC Address
+      Your Inverter Bluetooth MAC Address
   Password:
     name: Password
     description: >-
@@ -39,11 +39,11 @@ configuration:
   Latitude:
     name: Latitude
     description: >-
-       Position of pv-plant http://itouchmap.com/latlong.html
+      Position of pv-plant http://itouchmap.com/latlong.html
   Longitude:
     name: Longitude
     description: >-
-       Example for Ukkel, Belgium Latitude=50.80 Longitude=4.33
+      Example for Ukkel, Belgium Latitude=50.80 Longitude=4.33
   CalculateMissingSpotValues:
     name: Calculate Missing Spot Values
     description: >-
@@ -51,33 +51,33 @@ configuration:
   DateTimeFormat:
     name: Date and Tiem format
     description: >-
-       DateTimeFormat (default %d/%m/%Y %H:%M:%S) see strftime() function
+      DateTimeFormat (default %d/%m/%Y %H:%M:%S) see strftime() function
   SynchTime:
     name: Inverter Sync Time
     description: >-
-       SynchTime (0-30 - 0=disabled, 1=once a day (default), 7=once a week, 30=once a month) If set to non-zero value, the plant time is synchronised with local host time
+      SynchTime (0-30 - 0=disabled, 1=once a day (default), 7=once a week, 30=once a month) If set to non-zero value, the plant time is synchronised with local host time
   SynchTimeLow:
     name: Sync Lower threshold
     description: SynchTimeLow (1-120 - default 1)
   SynchTimeHigh:
     name: Sync High threshold
     description: >-
-       SynchTimeHigh (1200-3600 - default 3600) Plant time is adjusted to local host time when SynchTime=1 and time difference is between SynchTimeLow and SynchTimeHigh limits
+      SynchTimeHigh (1200-3600 - default 3600) Plant time is adjusted to local host time when SynchTime=1 and time difference is between SynchTimeLow and SynchTimeHigh limits
   SunRSOffset:
     name: Sun Rise/Set Offset
     description: >-
-       Offset to start before sunrise and end after sunset (0-3600 - default 900 seconds)
+      Offset to start before sunrise and end after sunset (0-3600 - default 900 seconds)
   Locale:
     name: Language for CSV
     description: >-
-       Default en-US Supported locales: de-DE;en-US;fr-FR;nl-NL;es-ES;it-IT
+      Default en-US Supported locales: de-DE;en-US;fr-FR;nl-NL;es-ES;it-IT
   Timezone:
     name: Timezone
     description: Europe/Brussels
   BTConnectRetries:
     name: BT connection attempts
     description: >-
-       Number of Bluetooth Connection attempts (1-15; Default=10)
+      Number of Bluetooth Connection attempts (1-15; Default=10)
   CSV_Export:
     name: CSV Export
     description: >-
@@ -105,44 +105,44 @@ configuration:
   MQTT_Host:
     name: MQTT Host
     description: >-
-       core-mosquitto is default for HA. MQTT host IP or Hostname.
+      core-mosquitto is default for HA. MQTT host IP or Hostname.
   MQTT_Port:
     name: MQTT Port
     description: >-
-       1883 is default. Can be Blank.
+      1883 is default. Can be Blank.
   MQTT_Topic:
     name: MQTT Topic
     description: >-
-       homeassistant/sbfspot_{plantname}/sbfspot_{serial} is default. {plantname} and {serial} are captured variables.
+      homeassistant/sbfspot_{plantname}/sbfspot_{serial} is default. {plantname} and {serial} are captured variables.
   MQTT_ItemFormat:
     name: MQTT json globbing style
     description: >-
-       '"{key}": {value}' is default.
+      '"{key}": {value}' is default.
   MQTT_ItemDelimiter:
     name: MQTT json separator
     description: >-
-       comma is default.
+      comma is default.
   MQTT_PublisherArgs:
     name: MQTT Publisher args. ADD MQTT user and pass
     description: >-
-       -h {host} -u MQTT_Username -P MQTT_Password -t {topic} -m "{{message}}" -d ADD your MQTT username and password here. -d is for debug.
+      -h {host} -u MQTT_Username -P MQTT_Password -t {topic} -m "{{message}}" -d ADD your MQTT username and password here. -d is for debug.
   MQTT_Data:
     name: MQTT sensors items.
     description: >-
-       Timestamp,SunRise,SunSet,InvSerial,InvName,InvTime,InvStatus,InvTemperature,InvGridRelay,EToday,ETotal,GridFreq,PACTot,UDC1,UDC2,IDC1,IDC2,PDC1,PDC2 is default
+      Timestamp,SunRise,SunSet,InvSerial,InvName,InvTime,InvStatus,InvTemperature,InvGridRelay,EToday,ETotal,GridFreq,PACTot,UDC1,UDC2,IDC1,IDC2,PDC1,PDC2 is default
   PVoutput_SID:
     name: PVoutput SID
     description: >-
-        Add your Inverter serial number and PVoutput API id here. Can be fake if you don't want to create an account.
+      Add your Inverter serial number and PVoutput API id here. Can be fake if you don't want to create an account.
   PVoutput_Key:
     name: PVoutput API key
     description: >-
-     Add you PVoutput API key here. Can be fake if you don't want to create an account.
+      Add you PVoutput API key here. Can be fake if you don't want to create an account.
   LogDir:
     name: PVoutput Upload logs
     description: >-
-       /data/sbfspot/log/ is Default. These logs are deleted after 3 days as long as the default path is used.
+      /data/sbfspot/log/ is Default. These logs are deleted after 3 days as long as the default path is used.
   LogLevel:
     name: PVoutput upload logs level
     description: >-
-       debug|info|warning|error (default info)
+      debug|info|warning|error (default info)
