@@ -1,5 +1,10 @@
 ---
 configuration:
-  message:
-    name: Message
-    description: Monitoring SMA Bluetooth inverters with SBFspot.
+  Password:
+    name: Password
+    description: >-
+      Inverter password - usually 0000 or Sunny Explorer password.
+  MIS_Enabled:
+    name: Multi Inverter Systems
+    description: >-
+      It is only for Bluetooth multi inverter systems.
