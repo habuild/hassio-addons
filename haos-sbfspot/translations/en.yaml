@@ -122,7 +122,7 @@ configuration:
     name: MQTT json separator
     description: >-
        comma is default.
-  MQTT_PublisherArgs: >-
+  MQTT_PublisherArgs: 
     name: MQTT Publisher args. ADD MQTT user and pass
     description: >-  
        -h {host} -u MQTT_Username -P MQTT_Password -t {topic} -m "{{message}}" -d ADD your MQTT username and password here. -d is for debug.
