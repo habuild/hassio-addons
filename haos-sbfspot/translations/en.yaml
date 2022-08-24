@@ -45,9 +45,9 @@ configuration:
     description: >-
        Example for Ukkel, Belgium Latitude=50.80 Longitude=4.33
   CalculateMissingSpotValues:
-    name: Calculate Missing SpotValues
+    name: Calculate Missing Spot Values
     description: >-
-      If set to 1, values not provided by inverter will be calculated. eg: Pdc1 = Idc1 * Udc1 
+      If set to 1, values not provided by inverter will be calculated. eg: Pdc1 = Idc1 * Udc1
   DateTimeFormat:
     name: Date and Tiem format
     description: >-
