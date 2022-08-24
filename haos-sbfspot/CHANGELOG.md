@@ -2,6 +2,14 @@
 
 # ![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
 
+- Created translations to give more detail to UI options.
+- MQTT_Enable option has been removed.
+- It has to be manually removed via yaml options to stop supervisor log warning about it.
+
+## ![Release][release-shield-2022-8-3]
+
+[release-shield-2022-8-3]: https://img.shields.io/badge/version-2022.8.3-blue.svg
+
 - WARNING - Copy your config prior to update.
 - line 1 config needs - Connection_Type: Bluetooth
 - Line 5 config needs - IP_Address: "0.0.0.0"
