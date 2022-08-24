@@ -22,7 +22,7 @@ RUN apk update && apk add --no-cache \
     git=2.36.2-r0 \
     g++=11.2.1_git20220219-r2 \
     make=4.3-r0 \
-    mariadb-dev=10.6.8-r0 \
+    mariadb-dev=10.6.9-r0 \
     mosquitto-clients=2.0.14-r1 \
     nginx=1.22.0-r1 \
     tzdata=2022a-r0
