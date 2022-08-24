@@ -138,13 +138,11 @@ configuration:
     name: PVoutput API key
     description: >-
      Add you PVoutput API key here. Can be fake if you don't want to create an account.
-  
   LogDir: /data/sbfspot/log/
     name: PVoutput upload logs
     description: >-
-       /data/sbfspot/log/ is default. These logs are deleted after 3 days as long as the default path is used.
+       default is /data/sbfspot/log/ These logs are deleted after 3 days as long as the default path is used.
   LogLevel: 
     name: PVoutput upload logs level
     description: >-
-       debug|info|warning|error (default info)
-      
+       debug|info|warning|error (default info)     
