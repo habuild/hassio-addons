@@ -6,6 +6,11 @@ on:
   push:
     branches:
       - dev
+      - main
+  pull_request:
+    branches:
+      - dev
+      - main    
   workflow_call:
     inputs:
       slug:
@@ -49,7 +54,7 @@ jobs:
       - name: ⤵️ Check out code from GitHub
         uses: actions/checkout@v3
       - name: 🚀 Run Add-on Lint
-        uses: frenck/action-addon-linter@v2.9.0
+        uses: frenck/action-addon-linter@v2.10.0
         with:
           community: false
           path: "./${{ needs.information.outputs.target }}"
