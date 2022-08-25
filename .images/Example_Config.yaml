@@ -49,4 +49,3 @@ LogDir: /data/sbfspot/log
 LogLevel: info
 PVoutput_SID: '0123456789:12345'    #  Your_Inverter_Serial:Your_PVoutput_SID
 PVoutput_Key: Your_PVoutput_API_key
-MQTT_ENABLE: '1'
