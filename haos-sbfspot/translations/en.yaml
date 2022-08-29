@@ -117,7 +117,7 @@ configuration:
   MQTT_Pass:
     name: MQTT Pass
     description: >-
-      "$MQTT_Pass" is the value required to use variable in mqtt topic. Required for Sensor setup.    
+      "$MQTT_Pass" is the value required to use variable in mqtt topic. Required for Sensor setup.
   MQTT_Topic:
     name: MQTT Topic
     description: >-
