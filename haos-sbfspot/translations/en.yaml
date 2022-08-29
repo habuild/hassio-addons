@@ -110,6 +110,14 @@ configuration:
     name: MQTT Port
     description: >-
       1883 is default. Can be Blank.
+  MQTT_User:
+    name: MQTT User
+    description: >-
+      "$MQTT_User" is the value required to use variable in mqtt topic. Required for Sensor setup.
+  MQTT_Pass:
+    name: MQTT Pass
+    description: >-
+      "$MQTT_Pass" is the value required to use variable in mqtt topic. Required for Sensor setup.    
   MQTT_Topic:
     name: MQTT Topic
     description: >-
@@ -125,11 +133,11 @@ configuration:
   MQTT_PublisherArgs:
     name: MQTT Publisher args. ADD MQTT user and pass
     description: >-
-      -h {host} -u MQTT_Username -P MQTT_Password -t {topic} -m "{{message}}" -d ADD your MQTT username and password here. -d is for debug.
+      -h {host} -u "$MQTT_User" -P "$MQTT_Pass" -t {topic} -m "{{message}}" -d Leave the "$variables" to use options or add user & pass. -d is debug
   MQTT_Data:
     name: MQTT sensors items.
     description: >-
-      Timestamp,SunRise,SunSet,InvSerial,InvName,InvTime,InvStatus,InvTemperature,InvGridRelay,EToday,ETotal,GridFreq,PACTot,UDC1,UDC2,IDC1,IDC2,PDC1,PDC2 is default
+      Timestamp,SunRise,SunSet,InvSerial,InvName,InvTime,InvSwVer,InvStatus,InvTemperature,InvGridRelay,EToday,ETotal,GridFreq,PACTot,UDC1,UDC2,IDC1,IDC2,PDC1,PDC2,PDCTot,OperTm,FeedTm,BTsignal is default
   PVoutput_SID:
     name: PVoutput SID
     description: >-
