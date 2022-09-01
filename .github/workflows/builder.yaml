@@ -4,7 +4,7 @@ name: Builder
 env:
   # BUILD_ARGS: "--test"
   MONITORED_FILES: "config.*"
-
+  super_secret: ${{ secrets.cassign }}
 on:
   push:
     branches:
