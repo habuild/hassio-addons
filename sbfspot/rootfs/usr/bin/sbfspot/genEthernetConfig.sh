@@ -1,8 +1,5 @@
 #!/usr/bin/with-contenv bashio
 
-#export CFG_PATH
-#export CFG_PATH_UPLOAD
-
 CFG_PATH=$1
 CFG_PATH_UPLOAD=$2
 CONFIG_PATH=/data/options.json
@@ -19,7 +16,7 @@ CONFIG_OUTPUTPATHEVENTS="$(jq --raw-output '.OutputPathEvents' $CONFIG_PATH)"
 CONFIG_LATITUDE="$(jq --raw-output '.Latitude' $CONFIG_PATH)"
 CONFIG_LONGITUDE="$(jq --raw-output '.Longitude' $CONFIG_PATH)"
 CONFIG_CALCULATEMISSINGSPOTVALUES="$(jq --raw-output '.CalculateMissingSpotValues' $CONFIG_PATH)"
-CONFIG_DATETIMEFORMAT="$(jq --raw-output '.DateTimeFormat' $CONFIG_PATH)"
+#  CONFIG_DATETIMEFORMAT="$(jq --raw-output '.DateTimeFormat' $CONFIG_PATH)"
 CONFIG_DATEFORMAT="$(jq --raw-output '.DateFormat' $CONFIG_PATH)"
 CONFIG_DECIMALPOINT="$(jq --raw-output '.DecimalPoint' $CONFIG_PATH)"
 CONFIG_TIMEFORMAT="$(jq --raw-output '.TimeFormat' $CONFIG_PATH)"
@@ -45,12 +42,14 @@ CONFIG_SQL_PASSWORD="$(jq --raw-output '.SQL_Password' $CONFIG_PATH)"
 CONFIG_MQTT_PUBLISHER="$(jq --raw-output '.MQTT_Publisher' $CONFIG_PATH)" 
 CONFIG_MQTT_HOST="$(jq --raw-output '.MQTT_Host' $CONFIG_PATH)"
 CONFIG_MQTT_PORT="$(jq --raw-output '.MQTT_Port' $CONFIG_PATH)"
+#  CONFIG_MQTT_USER="$(jq --raw-output '.MQTT_User' $CONFIG_PATH)"
+#  CONFIG_MQTT_PASS="$(jq --raw-output '.MQTT_Pass' $CONFIG_PATH)"
 CONFIG_MQTT_TOPIC="$(jq --raw-output '.MQTT_Topic' $CONFIG_PATH)"
 CONFIG_MQTT_ITEMFORMAT="$(jq --raw-output '.MQTT_ItemFormat' $CONFIG_PATH)"
 CONFIG_MQTT_ITEMDELIMITER="$(jq --raw-output '.MQTT_ItemDelimiter' $CONFIG_PATH)"
-CONFIG_MQTT_PUBLISHERARGS="$(jq --raw-output '.MQTT_PublisherArgs' $CONFIG_PATH)"
+#  CONFIG_MQTT_PUBLISHERARGS="$(jq --raw-output '.MQTT_PublisherArgs' $CONFIG_PATH)"
 CONFIG_MQTT_DATA="$(jq --raw-output '.MQTT_Data' $CONFIG_PATH)"
-CONFIG_LOGDIR="$(jq --raw-output '.LogDir' $CONFIG_PATH)"
+#  CONFIG_LOGDIR="$(jq --raw-output '.LogDir' $CONFIG_PATH)"
 CONFIG_LOGLEVEL="$(jq --raw-output '.LogLevel' $CONFIG_PATH)"
 CONFIG_PVOUTPUT_SID="$(jq --raw-output '.PVoutput_SID' $CONFIG_PATH)"
 CONFIG_PVOUTPUT_KEY="$(jq --raw-output '.PVoutput_Key' $CONFIG_PATH)"
@@ -136,7 +135,8 @@ CalculateMissingSpotValues=$CONFIG_CALCULATEMISSINGSPOTVALUES
 # DateTimeFormat (default %d/%m/%Y %H:%M:%S)
 # For details see strftime() function
 # http://www.cplusplus.com/reference/clibrary/ctime/strftime/
-DateTimeFormat=$CONFIG_DATETIMEFORMAT
+# DateTimeFormat=  ### CONFIG_DATETIMEFORMAT
+DateTimeFormat=%Y-%m-%dT%H:%M:%S%z
 
 # DateFormat (default %d/%m/%Y)
 DateFormat=$CONFIG_DATEFORMAT
@@ -242,10 +242,11 @@ SQL_Password=$CONFIG_SQL_PASSWORD
 MQTT_Publisher=$CONFIG_MQTT_PUBLISHER
 MQTT_Host=$CONFIG_MQTT_HOST
 MQTT_Port=$CONFIG_MQTT_PORT
+
 MQTT_Topic=$CONFIG_MQTT_TOPIC
 MQTT_ItemFormat=$CONFIG_MQTT_ITEMFORMAT
 MQTT_ItemDelimiter=$CONFIG_MQTT_ITEMDELIMITER
-MQTT_PublisherArgs=$CONFIG_MQTT_PUBLISHERARGS
+MQTT_PublisherArgs=-h $(bashio::config 'MQTT_Host') -u $(bashio::config 'MQTT_User') -P $(bashio::config 'MQTT_Pass') -t {topic} -m "{{message}}" -d
 MQTT_Data=$CONFIG_MQTT_DATA
 EOL
 
@@ -273,7 +274,7 @@ cat > "$CFG_PATH_UPLOAD" <<EOL
 # Windows: C:\Users\Public\SMAdata\Logs
 # Linux  : /home/pi/smadata/logs
 #LogDir=C:\Users\Public\SMAdata\Logs
-LogDir=$CONFIG_LOGDIR
+# LogDir=  ###  CONFIG_LOGDIR
 
 #LogLevel=debug|info|warning|error (default info)
 LogLevel=$CONFIG_LOGLEVEL
@@ -311,4 +312,4 @@ EOL
 
 # create folders
 mkdir -p "$CONFIG_OUTPUTPATH"
-mkdir -p "$CONFIG_LOGDIR"
+# mkdir -p "$CONFIG_LOGDIR"
