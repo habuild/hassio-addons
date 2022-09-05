@@ -87,7 +87,7 @@ configuration:
     description: >-
       CSV Export to data path. Leave off. Data paths are not maintained for file deletion.
   SQL_Database:
-    name: SQL DB Name. 
+    name: SQL DB Name.
     description: >-
       The name of your SBFspot DB. SBFspot is default.
   SQL_Hostname:
@@ -118,7 +118,7 @@ configuration:
     name: MQTT Port
     description: >-
       1883 is default. Can be Blank.
-  MQTT_User: 
+  MQTT_User:
     name: !secret mqtt_user is default!
     description: >-
       MQTT username. Defaults to !secret mqtt_user if blank!
@@ -143,7 +143,7 @@ configuration:
     description: >-
       Option removed to allow Sensor set up. Add MQTT_User and MQTT_Pass to respective options.
   MQTT_Data:
-    name: MQTT Sensors items. Add or remove desired options. The list be found in SBFspot.default.cfg or the readme. 
+    name: MQTT Sensors items. Add or remove desired options. The list be found in SBFspot.default.cfg or the readme.
     description: >-
       Timestamp,SunRise,SunSet,InvSerial,InvName,InvTime,InvStatus,InvSwVer,InvClass,InvType,InvTemperature,OperTm,FeedTm,EToday,ETotal,GridFreq,PACTot,PAC1,UAC1,IAC1,PDCTot,UDC1,UDC2,IDC1,IDC2,PDC1,PDC2,BTSignal is default
   PVoutput_SID:
