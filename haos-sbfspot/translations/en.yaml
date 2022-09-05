@@ -7,7 +7,7 @@ configuration:
   Sensors_HA:
     name: Create or Purge Sensors via the MQTT integration.
     description: >-
-       If you have exisiting yaml sensors, backup and remove them prior to avoid naming conflicts.
+      If you have exisiting yaml sensors, backup and remove them prior to avoid naming conflicts.
   BTAddress:
     name: Bluetooth Mac !secret BTAddress is Default
     description: >-
@@ -55,7 +55,7 @@ configuration:
   DateTimeFormat:
     name: Date and Time format %Y-%m-%dT%H:%M:%S%z is hardcoded for Sensors.
     description: >-
-      Ignored currently. DateTimeFormat (default %d/%m/%Y %H:%M:%S) see strftime() function. 
+      Ignored currently. DateTimeFormat (default %d/%m/%Y %H:%M:%S) see strftime() function.
   SynchTime:
     name: Inverter Sync Time. Default is 0 if left blank
     description: >-
@@ -147,11 +147,11 @@ configuration:
     description: >-
       Timestamp,SunRise,SunSet,InvSerial,InvName,InvTime,InvStatus,InvSwVer,InvClass,InvType,InvTemperature,OperTm,FeedTm,EToday,ETotal,GridFreq,PACTot,PAC1,UAC1,IAC1,PDCTot,UDC1,UDC2,IDC1,IDC2,PDC1,PDC2,BTSignal is default
   PVoutput_SID:
-    name: PVoutput SID !secret pvoSID    ### inverter serial > 0123456789:12345 < PVoutput ID ###
+    name: PVoutput SID !secret pvoSID ### inverter serial > 0123456789:12345 < PVoutput ID ###
     description: >-
       Add your Inverter serial number and PVoutput API id here. if blank! defaults to fake if you don't want to create an account.
   PVoutput_Key:
-    name: PVoutput API key !secret pvoAPIkey 
+    name: PVoutput API key !secret pvoAPIkey
     description: >-
       Add you PVoutput API key here. Defaults to fake if you don't want to create an account.
   LogDir:
