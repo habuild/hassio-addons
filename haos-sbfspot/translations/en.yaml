@@ -123,7 +123,7 @@ configuration:
     description: >-
       MQTT username. Defaults to !secret mqtt_user if blank!
   MQTT_Pass: MQTT Pass
-    name: !secret mqtt_pass is default!
+    name: !secret mqtt_pass is set default!
     description: >-
       MQTT password. Defaults to !secret mqtt_pass if blank!
   MQTT_Topic:
