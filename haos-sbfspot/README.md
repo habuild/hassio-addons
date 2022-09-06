@@ -82,6 +82,36 @@ If you need to change the broker address, you can stil use the options.
 
 ##### HA Sensor Generation
 
+<details><summary>MQTT Sensor list</summary>
+<p>
+
+Description available in the SBFspot config file.
+
+[Default SBFspot CFG](https://raw.githubusercontent.com/habuild/hassio-addons/2022.9.1/haos-sbfspot/rootfs/usr/bin/sbfspot/SBFspot.default.cfg)
+
+*
+Default list of Sensors for MQTT_Data
+```
+Timestamp,SunRise,SunSet,InvSerial,InvName,InvTime,InvStatus,InvSwVer,InvClass,InvType,InvTemperature,OperTm,FeedTm,EToday,ETotal,GridFreq,PACTot,PAC1,UAC1,IAC1,PDCTot,UDC1,UDC2,IDC1,IDC2,PDC1,PDC2,BTSignal
+```
+
+*
+Current available list of sensors (There are some new ones, which are not available yet)
+
+```
+Timestamp,InvTime,SunRise,SunSet,InvSerial,InvName,InvClass,InvType,InvSwVer,InvStatus,InvTemperature,InvGridRelay,EToday,ETotal,PDCTot,UDC1,UDC2,IDC1,IDC2,PDC1,PDC2,OperTm,FeedTm,PACTot,PAC1,PAC2,PAC3,UAC1,UAC2,UAC3,IAC1,IAC2,IAC3,GridFreq,BTSignal,BatTmpVal,BatVol,BatAmp,BatChaStt 
+```
+
+*
+Sensors to be added at a later date
+```
+PrgVersion,InvWakeupTm,InvSleepTm,MeteringWOut,MeteringWIn,MeteringWTot
+```  
+[MASTER SBFspot CFG](https://raw.githubusercontent.com/SBFspot/SBFspot/master/SBFspot/SBFspot.cfg)
+  
+</p>
+</details>
+
 <details><summary>MQTT Image</summary>
 <p>
 
