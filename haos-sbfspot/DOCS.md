@@ -61,7 +61,7 @@ The above options are the only required options if you want to fill out the opti
 
 ### The rest of the options default to standard HAOS server addresses and SBFspot defaults
 
-<details><summary>OPTIONS Image</summary>
+<details><summary> OPTIONS Image </summary>
 <p>
 
 ![screenshot](https://raw.githubusercontent.com/habuild/hassio-addons/main/.images/UI%20options.PNG)
@@ -85,7 +85,7 @@ If you need to change the broker address, you can stil use the options.
 <details><summary>MQTT Image</summary>
 <p>
 
-[MQTT Integration]![screenshot](https://raw.githubusercontent.com/habuild/hassio-addons/main/.images/mqtt%20Capture.PNG)
+![screenshot](https://raw.githubusercontent.com/habuild/hassio-addons/dev/.images/mqtt%20Capture.PNG)
 
 </p>
 </details>
@@ -94,12 +94,12 @@ It is advised to **backup and/or disable existing yaml sensors** to avoid naming
 
 Autogen Sensors - No, Create, Purge, options
 
-<details><summary><b>No</b> sensors. HAOS-SBFspot will run without generating sensors. It will use yaml or mqtt sensors.</summary>
+<details><summary><b>No</b> sensors. HAOS-SBFspot will run without generating sensors. It will use yaml or mqtt sensors. </summary>
 <p>
 </p>
 </details>
 
-<details><summary><b>Create</b> sensors. HAOS-SBFspot will automatically create sensors in the MQTT Integration.</summary>
+<details><summary><b>Create</b> sensors. HAOS-SBFspot will automatically create sensors in the MQTT Integration. </summary>
 <p>
 
 [MQTT Integration](https://www.home-assistant.io/integrations/mqtt)
@@ -115,7 +115,7 @@ It is advised to **backup and/or disable existing yaml sensors** to avoid naming
 </p>
 </details>
 
-<details><summary><b>Purge</b> sensors. HAOS-SBFspot will send empty topics to your broker address to clear Retained topics.</summary>
+<details><summary><b>Purge</b> sensors. HAOS-SBFspot will send empty topics to your broker address to clear Retained topics. </summary>
 <p>
 
 - This will fail if you change topics between creating and purging sensors.
@@ -124,7 +124,7 @@ It is advised to **backup and/or disable existing yaml sensors** to avoid naming
 </p>
 </details>
 
-<details><summary>Earlier versions and yaml mqtt sensors</summary>
+<details><summary> Earlier versions and yaml mqtt sensors </summary>
 <p>
 
 ### Prior to 2022.9.1
@@ -135,7 +135,7 @@ It is advised to **backup and/or disable existing yaml sensors** to avoid naming
 
 **MQTT_PublisherArgs:** **'-h {host} -u Your_MQTT_Username -P Your_MQTT_password -t {topic} -m "{{message}}" -d -r'**
 
-<i>Publisher arguments has been removed to allow for sensors</i>
+<i> Publisher arguments has been removed to allow for sensors </i>
 
 **-d** is for MQTT debug in log. Which is helpful for confirming the MQTT messages are actually being sent.
 
