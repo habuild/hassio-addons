@@ -80,7 +80,7 @@ The above options are the only required options if you want to fill out the opti
 The other options default automatically if blank.
 If you need to change the broker address, you can stil use the options.
 
-##### HA Sensor Generation
+#### HA Sensor Generation
 
 <details><summary>MQTT Sensor list</summary>
 <p>
@@ -122,7 +122,7 @@ PrgVersion,InvWakeupTm,InvSleepTm,MeteringWOut,MeteringWIn,MeteringWTot
 
 It is advised to **backup and/or disable existing yaml sensors** to avoid naming conflicts.
 
-Autogen Sensors - No, Create, Purge, options
+#### Autogen Sensors - No, Create, Purge, options
 
 <details><summary><b>No</b> sensors. HAOS-SBFspot will run without generating sensors. It will use yaml or mqtt sensors. </summary>
 <p>
@@ -187,9 +187,9 @@ Download and import either [No Drop DB create](https://github.com/habuild/hassio
 
 ## Container Data paths
 
-In HAOS (home assistant operating system) the /data/ path arrives at /mnt/data/supervisor/addons/data/{slug}\_haos-sbfspot on the host.
+In HAOS (home assistant operating system) the /data/ path arrives at `/mnt/data/supervisor/addons/data/{slug_haos-sbfspot}` on the host.
 
-In docker/supervisor the /data/ path arrives at /usr/share/hassio/addons/data/{slug}\_haos-sbfspot on the host.
+In docker/supervisor the /data/ path arrives at `/usr/share/hassio/addons/data/{slug_haos-sbfspot}` on the host.
 
 ## **Link to official SBFspot Documentation**
 
