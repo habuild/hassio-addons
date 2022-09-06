@@ -7,10 +7,12 @@
 - Major overhaul of options
 - Most options have defaults set that will be used when options left blank
 - Secrets template provided in the readme!
+
 <br></br>
 
 - MQTT user and pass have moved locations in options
 - MQTT Publisher args option has been disabled
+
 <br></br>
 
 - AUTOGEN SENSORS
@@ -22,15 +24,18 @@
 - Sensors can now be created and purged via the Addon and HA MQTT integration
 - Backup and disable/remove existing yaml sensors to avoid naming conflicts
 - MQTT_Data list can be used to create desired Sensors.
+
 <br></br>
 
 - custom timestamp can be set for InvTime SunRise and SunSet
 - Timestamp sensor can not use custom timestamp
 - (can be changed by value_template in a lovelace card)
+
 <br></br>
 
 - Logging to *.txt file is being removed from SBFspot 3.9.6 onwards
 - option for logging dir removed to accommodate this change
+
 <br></br>
 
 - Cleaned up readme...
