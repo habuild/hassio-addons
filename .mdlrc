@@ -1,2 +1,2 @@
 # Exclude line length 
-rules "~MD013", "~MD026", "~MD022"
+rules "~MD013", "~MD026", "~MD022", "~MD033", "~MD034"
