@@ -140,7 +140,7 @@ configuration:
       comma is default.
   MQTT_PublisherArgs:
     name: MQTT_PublisherArgs - - Option removed to allow Sensor set up. Add MQTT_User and MQTT_Pass to respective options.
-    description: >-    
+    description: >-
       Option removed to allow Sensor set up. Add MQTT_User and MQTT_Pass to respective options.
   MQTT_Data:
     name: MQTT Sensors items. Add or remove desired options. The list be found in SBFspot.default.cfg or the readme.
