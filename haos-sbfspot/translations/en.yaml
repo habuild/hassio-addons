@@ -5,7 +5,7 @@ configuration:
     description: >-
       Pick Bluetooth or Ethernet, only the related options are generated in SBFspot.cfg
   Sensors_HA:
-    name: Create or Purge Sensors via the MQTT integration.
+    name: Create or Purge Sensors for the MQTT integration.
     description: >-
       If you have exisiting yaml sensors, backup and remove them prior to avoid naming conflicts.
   BTAddress:
@@ -17,7 +17,7 @@ configuration:
     description: >-
       Inverter password - usually 0000 or Sunny Explorer password.
   LocalBTAddress:
-    name: Host BT MAC
+    name: Host BT MAC !secret LocalBTAddress
     description: >-
       Your Host Bluetooth MAC. It is shown in the logs. It can be Blank.
   IP_Address:
@@ -31,7 +31,7 @@ configuration:
   Plantname:
     name: Plant Name !secret Plantname
     description: >-
-      Plant name is included to your mqtt topic.
+      Plant name is included to create your mqtt topic.
   OutputPath:
     name: Data path
     description: >-
@@ -53,9 +53,9 @@ configuration:
     description: >-
       If set to 1, values not provided by inverter will be calculated. eg: Pdc1 = Idc1 * Udc1
   DateTimeFormat:
-    name: Date and Time format %Y-%m-%dT%H:%M:%S%z is hardcoded for Sensors.
+    name: Date and Time format for InvTime SunRise and SunSet.
     description: >-
-      Ignored currently. DateTimeFormat (default %d/%m/%Y %H:%M:%S) see strftime() function.
+      Custom time display for InvTime SunRise and SunSet (looks nice '%H:%M:%S %d/%m/%Y' ) see strftime() function
   SynchTime:
     name: Inverter Sync Time. Default is 0 if left blank
     description: >-
@@ -103,7 +103,7 @@ configuration:
     description: >-
       User and Pass need to be created in MariaDB addon. myPHPadmin addon can be used for Initial DB table creation see readme for link to creation file.
   SQL_Password:
-    name: SQL User
+    name: SQL password !secret mariadb_pw
     description: >-
       User and Pass need to be created in MariaDB addon. !secret mariadb_pw is default!
   MQTT_Publisher:
@@ -119,13 +119,13 @@ configuration:
     description: >-
       1883 is default. Can be Blank.
   MQTT_User:
-    name: !secret mqtt_user is default!
+    name: MQTT User !secret mqtt_user is default!
     description: >-
       MQTT username. Defaults to !secret mqtt_user if blank!
-  MQTT_Pass:
+  MQTT_Pass: MQTT Pass 
     name: !secret mqtt_pass is default!
     description: >-
-      MQTT passowrd. Defaults to !secret mqtt_pass if blank!
+      MQTT password. Defaults to !secret mqtt_pass if blank!
   MQTT_Topic:
     name: MQTT Topic Leave as default for sensors!
     description: >-
@@ -133,7 +133,7 @@ configuration:
   MQTT_ItemFormat:
     name: MQTT json globbing style
     description: >-
-      '"{key}": {value}' is default.
+      '"{key}": {value}' is default. Leave blank for default!
   MQTT_ItemDelimiter:
     name: MQTT json separator
     description: >-
