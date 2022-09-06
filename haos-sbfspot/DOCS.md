@@ -61,6 +61,14 @@ The above options are the only required options if you want to fill out the opti
 
 **The rest of the options default to standard HAOS server addresses and SBFspot defaults**
 
+<details><summary>OPTIONS Image</summary>
+<p>
+
+![screenshot](https://raw.githubusercontent.com/habuild/hassio-addons/main/.images/UI%20options.PNG)
+
+</p>
+</details>
+
 <br></br>
 
 ## MQTT
@@ -74,6 +82,14 @@ If you need to change the broker address, you can stil use the options.
 
 ##### HA Sensor Generation
 
+<details><summary>MQTT Image</summary>
+<p>
+  
+![screenshot](https://raw.githubusercontent.com/habuild/hassio-addons/main/.images/mqtt%20Capture.PNG)
+
+</p>
+</details>
+
 It is advised to **backup and/or disable existing yaml sensors** to avoid naming conflicts.
 
 Autogen Sensors - No, Create, Purge, options
@@ -82,6 +98,7 @@ Autogen Sensors - No, Create, Purge, options
 <p>
 </p>
 </details>
+
 <details><summary><b>Create</b> sensors. HAOS-SBFspot will automatically create sensors in the MQTT Integration.</summary>
 <p>
   
