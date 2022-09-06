@@ -115,7 +115,7 @@ PrgVersion,InvWakeupTm,InvSleepTm,MeteringWOut,MeteringWIn,MeteringWTot
 <details><summary>MQTT Image</summary>
 <p>
 
-![screenshot](https://raw.githubusercontent.com/habuild/hassio-addons/dev/.images/mqtt%20Capture.PNG)
+![screenshot](https://raw.githubusercontent.com/habuild/hassio-addons/main/.images/mqtt%20Capture.PNG)
 
 </p>
 </details>
