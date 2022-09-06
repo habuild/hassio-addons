@@ -1,5 +1,7 @@
 # SBFspot addon for HAOS
-************************
+
+---
+
 ![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
 ![Project Stage](https://img.shields.io/badge/dynamic/yaml?color=blueviolet&label=Project%20Stage&query=%24.stage&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
 ![Arch](https://img.shields.io/badge/dynamic/yaml?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
@@ -23,16 +25,19 @@ This add-on runs a crontab service for SBFspot and SPFspotUploader at 5 minutely
 [MQTT broker](https://github.com/home-assistant/addons/tree/master/mosquitto) is needed to send MQTT messages to home Assistant.
 
 ### Installation
-****************
-### Options and Secrets
-If you want to template your options with secrets, the below template can be used. 
 
-These names auto default so you shouldn't need to confirm(save) any options on installation 
+---
+
+### Options and Secrets
+
+If you want to template your options with secrets, the below template can be used.
+
+These names auto default so you shouldn't need to confirm(save) any options on installation
 
 It should all just default when starting the addon.
 
 ```
-##template for secrets.yaml 
+##template for secrets.yaml
 ## a restart might be required after Saving your secrets file
 
 BTAddress: ""          ## Inverter BT mac
@@ -46,7 +51,7 @@ mqtt_pass: ""
 
 home_lat: ""
 home_long: ""
-Timezone: ""   
+Timezone: ""
                              ### IF YOU WANT TO SKIP PVoutput
 pvoSID: "0123456789:12345"   ### will default to fake if left empty
 pvoAPIkey: "fake9364fake4545afke834fake"   ### will default to fake if left empty
@@ -59,18 +64,19 @@ The above options are the only required options if you want to fill out the opti
 <br></br>
 
 ## MQTT
-### 2022.9.1+
-##### Add MQTT mqtt user and password to options. 
 
-The other options default automatically if blank. 
-If you need to change the broker address, you can stil use the options. 
+### 2022.9.1+
+
+##### Add MQTT mqtt user and password to options.
+
+The other options default automatically if blank.
+If you need to change the broker address, you can stil use the options.
 
 ##### HA Sensor Generation
 
 It is advised to **backup and/or disable existing yaml sensors** to avoid naming conflicts.
 
 Autogen Sensors - No, Create, Purge, options
-
 
 <details><summary><b>No</b> sensors. HAOS-SBFspot will run without generating sensors. It will use yaml or mqtt sensors.</summary>
 <p>
@@ -95,7 +101,7 @@ Autogen Sensors - No, Create, Purge, options
 <p>
   
   - This will fail if you change topics between creating and purging sensors.
-  - You can use MQTT explorer or similar MQTT tool to manually remove the topics if this occurs. 
+  - You can use MQTT explorer or similar MQTT tool to manually remove the topics if this occurs.
 
 </p>
 </details>
@@ -104,37 +110,38 @@ Autogen Sensors - No, Create, Purge, options
 <p>
 
 ### Prior to 2022.9.1
+
 [haos-sbfspot_sensors.yaml](https://github.com/habuild/hassio-addons/blob/main/.images/sbfspot_sensors.yaml) I use packages to include these yaml sensors. You will need to change to match your plant name and serial as you have set in the add-on configuration options.
 
 **MQTT options argument** [configuration options](https://github.com/habuild/hassio-addons/blob/main/.images/Example_Config.yaml). The MQTT Username, and Password need to be hardcoded into the **MQTT_PublisherArgs:** The **{host}** **{topic}** and **{{message}}** will be picked up from options.
 
 **MQTT_PublisherArgs:** **'-h {host} -u Your_MQTT_Username -P Your_MQTT_password -t {topic} -m "{{message}}" -d -r'**
 
-  <i>Publisher arguments has been removed to allow for sensors</i>
-  
+<i>Publisher arguments has been removed to allow for sensors</i>
+
 **-d** is for MQTT debug in log. Which is helpful for confirming the MQTT messages are actually being sent.
 
 **-r** is to retain messages. it is advised against using retain flag
-  
+
 </p>
 </details> 
-<br></br> 
+<br></br>
 
 ## MariaDB
+
 ### Initial database creation.
 
 Download and import either [No Drop DB create](https://github.com/habuild/hassio-addons/blob/main/.images/CreateMySQLDB_no_drop.sql) **or** [Create My SQL.sql](https://github.com/SBFspot/SBFspot/blob/master/SBFspot/CreateMySQLDB.sql) in [phpMyAdmin](https://github.com/hassio-addons/addon-phpmyadmin) to create your database. **IF** you haven't already created the database previously, use the NO Drop version. You will also need to add the Database and User/Password to MariaDB and allocate the port.
 
 ![screenshot](https://raw.githubusercontent.com/habuild/hassio-addons/main/.images/MariaDB%20setup.PNG)
 
+<br></br>
 
-<br></br> 
 ## Container Data paths
 
-In HAOS (home assistant operating system) the /data/ path arrives at /mnt/data/supervisor/addons/data/{slug}_haos-sbfspot on the host.
+In HAOS (home assistant operating system) the /data/ path arrives at /mnt/data/supervisor/addons/data/{slug}\_haos-sbfspot on the host.
 
-In docker/supervisor the /data/ path arrives at /usr/share/hassio/addons/data/{slug}_haos-sbfspot on the host.
-
+In docker/supervisor the /data/ path arrives at /usr/share/hassio/addons/data/{slug}\_haos-sbfspot on the host.
 
 ## **Link to official SBFspot Documentation**
 
