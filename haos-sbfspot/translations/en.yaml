@@ -147,7 +147,7 @@ configuration:
     description: >-
       Timestamp,SunRise,SunSet,InvSerial,InvName,InvTime,InvStatus,InvSwVer,InvClass,InvType,InvTemperature,OperTm,FeedTm,EToday,ETotal,GridFreq,PACTot,PAC1,UAC1,IAC1,PDCTot,UDC1,UDC2,IDC1,IDC2,PDC1,PDC2,BTSignal is default
   PVoutput_SID:
-    name: PVoutput SID !secret pvoSID     ### inverter serial > 0123456789:12345 < PVoutput ID ###
+    name: PVoutput SID !secret pvoSID ### inverter serial > 0123456789:12345 < PVoutput ID ###
     description: >-
       Add your Inverter serial number and PVoutput API id here. if blank! defaults to fake if you don't want to create an account.
   PVoutput_Key:
