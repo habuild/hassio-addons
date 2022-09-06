@@ -122,8 +122,8 @@ configuration:
     name: MQTT User !secret mqtt_user is default!
     description: >-
       MQTT username. Defaults to !secret mqtt_user if blank!
-  MQTT_Pass: MQTT Pass
-    name: !secret mqtt_pass is set default!
+  MQTT_Pass:
+    name: MQTT Pass !secret mqtt_pass is default!
     description: >-
       MQTT password. Defaults to !secret mqtt_pass if blank!
   MQTT_Topic:
