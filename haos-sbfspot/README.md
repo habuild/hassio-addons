@@ -64,7 +64,7 @@ The above options are the only required options if you want to fill out the opti
 <details><summary> OPTIONS Image </summary>
 <p>
 
-<img src="https://raw.githubusercontent.com/habuild/hassio-addons/2022.9.1/.images/UIoptions.PNG" width="900">
+![screenshot](https://raw.githubusercontent.com/habuild/hassio-addons/main/.images/UIoptions.PNG)
 
 </p>
 </details>
@@ -115,7 +115,8 @@ PrgVersion,InvWakeupTm,InvSleepTm,MeteringWOut,MeteringWIn,MeteringWTot
 <details><summary>MQTT Image</summary>
 <p>
 
-<img src="https://raw.githubusercontent.com/habuild/hassio-addons/2022.9.1/.images/mqttCapture.PNG" width="400">
+
+![screenshot](https://raw.githubusercontent.com/habuild/hassio-addons/main/.images/mqttcap.PNG)
 
 
 </p>
