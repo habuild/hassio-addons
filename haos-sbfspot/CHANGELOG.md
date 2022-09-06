@@ -33,7 +33,7 @@
 
 <br></br>
 
-- Logging to *.txt file is being removed from SBFspot 3.9.6 onwards
+- Logging to \*.txt file is being removed from SBFspot 3.9.6 onwards
 - option for logging dir removed to accommodate this change
 
 <br></br>
