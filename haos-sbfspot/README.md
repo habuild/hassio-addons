@@ -24,7 +24,7 @@ This add-on runs a crontab service for SBFspot and SPFspotUploader at 5 minutely
 
 [MQTT broker](https://github.com/home-assistant/addons/tree/master/mosquitto) is needed to send MQTT messages to home Assistant.
 
-### Installation
+## Installation
 
 ---
 
@@ -59,7 +59,7 @@ pvoAPIkey: "fake9364fake4545afke834fake"   ### will default to fake if left empt
 
 The above options are the only required options if you want to fill out the options manually.
 
-**The rest of the options default to standard HAOS server addresses and SBFspot defaults**
+### The rest of the options default to standard HAOS server addresses and SBFspot defaults
 
 <details><summary>OPTIONS Image</summary>
 <p>
@@ -75,7 +75,7 @@ The above options are the only required options if you want to fill out the opti
 
 ### 2022.9.1+
 
-##### Add MQTT mqtt user and password to options.
+#### Add MQTT mqtt user and password to options.
 
 The other options default automatically if blank.
 If you need to change the broker address, you can stil use the options.
@@ -84,8 +84,8 @@ If you need to change the broker address, you can stil use the options.
 
 <details><summary>MQTT Image</summary>
 <p>
-  
-![screenshot](https://raw.githubusercontent.com/habuild/hassio-addons/main/.images/mqtt%20Capture.PNG)
+
+[MQTT Integration]![screenshot](https://raw.githubusercontent.com/habuild/hassio-addons/main/.images/mqtt%20Capture.PNG)
 
 </p>
 </details>
@@ -101,22 +101,23 @@ Autogen Sensors - No, Create, Purge, options
 
 <details><summary><b>Create</b> sensors. HAOS-SBFspot will automatically create sensors in the MQTT Integration.</summary>
 <p>
-  
-  [MQTT Integration](https://www.home-assistant.io/integrations/mqtt) 
-    
+
+[MQTT Integration](https://www.home-assistant.io/integrations/mqtt)
+
   It is advised to **backup and/or disable existing yaml sensors** to avoid naming conflicts.
-    
-    - This option will create topics using your plantname and inverter serial number 
-  
+
+    - This option will create topics using your plantname and inverter serial number
+
        - homeassistant/sensor/sbfspot_{*Your Plantname*}/sbf_spot{*your inv serial*}{*SensorType*}/config
-  
-       - homeassistant/sbfspot_{Your Plantname}/sbf_spot{Your Inv Serial} is the state_topic 
+
+       - homeassistant/sbfspot_{Your Plantname}/sbf_spot{Your Inv Serial} is the state_topic
+
 </p>
 </details>
-  
+
 <details><summary><b>Purge</b> sensors. HAOS-SBFspot will send empty topics to your broker address to clear Retained topics.</summary>
 <p>
-  
+
   - This will fail if you change topics between creating and purging sensors.
   - You can use MQTT explorer or similar MQTT tool to manually remove the topics if this occurs.
 
@@ -141,7 +142,7 @@ Autogen Sensors - No, Create, Purge, options
 **-r** is to retain messages. it is advised against using retain flag
 
 </p>
-</details> 
+</details>
 <br></br>
 
 ## MariaDB
