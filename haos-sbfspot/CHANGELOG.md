@@ -2,15 +2,16 @@
 
 # ![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
 
+
 - Bump to SBFspot 3.9.6
 - BREAKING CHANGES
 - Major overhaul of options
 - Most options have defaults set that will be used when options left blank
 - Secrets template provided in the readme!
-- 
+-
 - MQTT user and pass have moved locations in options
-- MQTT Publisher args option has been disabled 
-- 
+- MQTT Publisher args option has been disabled
+-
 - AUTOGEN SENSORS
 - List of upto 39 sensors available
 - New Option create or purge sensors (defaults to No)
@@ -20,17 +21,18 @@
 - Sensors can now be created and purged via the Addon and HA MQTT integration
 - Backup and disable/remove existing yaml sensors to avoid naming conflicts
 - MQTT_Data list can be used to create desired Sensors.
-- 
+-
 - custom timestamp can be set for InvTime SunRise and SunSet
-- Timestamp sensor can not use custom timestamp 
+- Timestamp sensor can not use custom timestamp
 - (can be changed by value_template in a lovelace card)
-- 
+-
 - Logging to *.txt file is being removed from SBFspot 3.9.6 onwards
 - option for logging dir removed to accommodate this change
-- 
-- Cleaned up readme... 
+-
+- Cleaned up readme...
 - updated translations to reflect options changes
 - bump curl dev dependancy
+
 
 ## ![Release][release-shield-2022-8-4]
 
