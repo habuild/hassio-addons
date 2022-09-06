@@ -5,6 +5,7 @@ slug: haos-sbfspot
 description: Manage SBFspot with a simple interface
 url: "https://github.com/habuild/hassio-addons/tree/main/haos-sbfspot"
 stage: experimental
+image: "ghcr.io/habuild/{arch}-addon-haos-sbfspot"
 arch:
   - armhf
   - armv7
@@ -13,7 +14,6 @@ arch:
 init: false
 host_network: true
 host_dbus: true
-image: "ghcr.io/habuild/{arch}-addon-haos-sbfspot"
 homeassistant_api: true
 panel_icon: mdi:solar-power-variant
 services:
