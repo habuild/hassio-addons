@@ -104,7 +104,7 @@ Autogen Sensors - No, Create, Purge, options
 
 [MQTT Integration](https://www.home-assistant.io/integrations/mqtt)
 
-  It is advised to **backup and/or disable existing yaml sensors** to avoid naming conflicts.
+It is advised to **backup and/or disable existing yaml sensors** to avoid naming conflicts.
 
     - This option will create topics using your plantname and inverter serial number
 
@@ -118,8 +118,8 @@ Autogen Sensors - No, Create, Purge, options
 <details><summary><b>Purge</b> sensors. HAOS-SBFspot will send empty topics to your broker address to clear Retained topics.</summary>
 <p>
 
-  - This will fail if you change topics between creating and purging sensors.
-  - You can use MQTT explorer or similar MQTT tool to manually remove the topics if this occurs.
+- This will fail if you change topics between creating and purging sensors.
+- You can use MQTT explorer or similar MQTT tool to manually remove the topics if this occurs.
 
 </p>
 </details>
