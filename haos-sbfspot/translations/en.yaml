@@ -121,11 +121,11 @@ configuration:
   MQTT_User:
     name: MQTT User !secret mqtt_user is default!
     description: >-
-      MQTT username. Defaults to !secret mqtt_user if blank!
+      MQTT username. Defaults to !secret mqtt_user if blank! Required for Sensor setup.
   MQTT_Pass:
     name: MQTT Pass !secret mqtt_pass is default!
     description: >-
-      MQTT password. Defaults to !secret mqtt_pass if blank!
+      MQTT password. Defaults to !secret mqtt_pass if blank! Required for Sensor setup.
   MQTT_Topic:
     name: MQTT Topic Leave as default for sensors!
     description: >-
@@ -140,7 +140,7 @@ configuration:
       comma is default.
   MQTT_PublisherArgs:
     name: MQTT_PublisherArgs - - Option removed to allow Sensor set up. Add MQTT_User and MQTT_Pass to respective options.
-    description: >-
+    description: >-    
       Option removed to allow Sensor set up. Add MQTT_User and MQTT_Pass to respective options.
   MQTT_Data:
     name: MQTT Sensors items. Add or remove desired options. The list be found in SBFspot.default.cfg or the readme.

@@ -36,8 +36,8 @@ SQL_Password: Your_MariaDB_Password
 MQTT_Publisher: /usr/bin/mosquitto_pub
 MQTT_Host: Your_MariaDB_Host (usually your homeassistant hostname or IP)
 MQTT_Port: '1883'
-MQTT_Username": !secret mqtt_user,
-MQTT_Password": !secret mqtt_pass,
+MQTT_User": !secret mqtt_user,     <<< Use "$MQTT_User" in topic to enable Username here. Required for Sensors.
+MQTT_Pass": !secret mqtt_pass,     <<< Use "$MQTT_Pass" in topic to enable Password here. Required for Sensors.
 MQTT_Topic: homeassistant/sbfspot_{plantname}/sbfspot_{serial}
 MQTT_ItemFormat: '"{key}": {value}'
 MQTT_ItemDelimiter: comma
@@ -49,4 +49,3 @@ LogDir: /data/sbfspot/log
 LogLevel: info
 PVoutput_SID: '0123456789:12345'    #  Your_Inverter_Serial:Your_PVoutput_SID
 PVoutput_Key: Your_PVoutput_API_key
-MQTT_ENABLE: '1'
