@@ -129,7 +129,7 @@ It is advised to **backup and/or disable existing yaml sensors** to avoid naming
 
 - Use this option if you want to keep your existing yaml energy sensor on the energy dashboard.
 
-  You can make new sensors, You can't convert the new sensors to keep the old energy dash values.
+  You can make new sensors. You can't convert the new sensors to keep the old energy dash values.
 
 </p>
 </details>
