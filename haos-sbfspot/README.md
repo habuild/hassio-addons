@@ -127,7 +127,7 @@ It is advised to **backup and/or disable existing yaml sensors** to avoid naming
 <details><summary><b>No</b> sensors. HAOS-SBFspot will run without generating sensors. It will use yaml or mqtt sensors. </summary>
 <p>
 
-  * Use this option if you want to keep your existing yaml sensor on the energy dashboard
+- Use this option if you want to keep your existing yaml sensor on the energy dashboard
 
 </p>
 </details>
@@ -139,7 +139,7 @@ It is advised to **backup and/or disable existing yaml sensors** to avoid naming
 
 It is advised to **backup and/or disable existing yaml sensors** to avoid naming conflicts.
 
-  Updating the new energy sensor to follow the old energy sensor on the energy dashboard is not possible in HA.
+Updating the new energy sensor to follow the old energy sensor on the energy dashboard is not possible in HA.
 
     - This option will create topics using your plantname and inverter serial number
 
