@@ -2,6 +2,14 @@
 
 # ![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
 
+- additional sensors - 2022.9.2
+- BREAKING CHANGES - any version below 2022.9.1
+- see 2022.9.1 changelog
+
+## ![Release][release-shield-2022-9-1]
+
+[release-shield-2022-9-1]: https://img.shields.io/badge/version-2022.9.1-blue.svg
+
 - Bump to SBFspot 3.9.6
 - BREAKING CHANGES
 - Major overhaul of options

@@ -9,8 +9,8 @@ CONFIG_PATH=/data/options.json
 
 PLANTNAME="$(bashio::config 'Plantname')"
 MQTT_Host="$(bashio::config 'MQTT_Host' 'core-mosquitto')"
-MQTT_User="$(bashio::config 'MQTT_User' '!secret mqtt_user')"
-MQTT_Pass="$(bashio::config 'MQTT_Pass' '!secret mqtt_pass')"
+MQTT_User="$(bashio::config 'MQTT_User' )"
+MQTT_Pass="$(bashio::config 'MQTT_Pass' )"
 MQTT_Topic="$(bashio::config 'MQTT_Topic')"
 MQTT_Data="$(bashio::config 'MQTT_Data')"
 
@@ -115,7 +115,19 @@ if bashio::config 'InvSerial' 'InvSerial'; then
 fi
 
 
-if bashio::var.has_value "${MQTT_Data}" "InvName" ; then
+if bashio::var.has_value "${MQTT_Data}" 'PrgVersion' ; then
+   value='PrgVersion'
+   
+   /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
+fi
+
+if bashio::var.has_value "${MQTT_Data}" 'Plantname' ; then
+   value='Plantname'
+   
+   /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
+fi
+
+if bashio::var.has_value "${MQTT_Data}" 'InvName' ; then
    value='InvName'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
@@ -127,228 +139,270 @@ if bashio::var.has_value 'Timestamp' ; then
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "InvTime" ; then
+if bashio::var.has_value "${MQTT_Data}" 'InvTime' ; then
    value='InvTime'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "SunRise" ; then
+if bashio::var.has_value "${MQTT_Data}" 'SunRise' ; then
    value='SunRise'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "SunSet" ; then
+if bashio::var.has_value "${MQTT_Data}" 'SunSet' ; then
    value='SunSet'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "InvSerial" ; then
+if bashio::var.has_value "${MQTT_Data}" 'InvSerial' ; then
    value='InvSerial'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "InvClass" ; then
+if bashio::var.has_value "${MQTT_Data}" 'InvClass' ; then
    value='InvClass'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "InvType" ; then
+if bashio::var.has_value "${MQTT_Data}" 'InvType' ; then
    value='InvType'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "InvSwVer" ; then
+if bashio::var.has_value "${MQTT_Data}" 'InvSwVer' ; then
    value='InvSwVer'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "InvStatus" ; then
+if bashio::var.has_value "${MQTT_Data}" 'InvStatus' ; then
    value='InvStatus'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "InvTemperature" ; then
+if bashio::var.has_value "${MQTT_Data}" 'InvTemperature' ; then
    value='InvTemperature'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "InvGridRelay" ; then
+if bashio::var.has_value "${MQTT_Data}" 'InvGridRelay' ; then
    value='InvGridRelay'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "EToday" ; then
+if bashio::var.has_value "${MQTT_Data}" 'EToday' ; then
    value='EToday'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "ETotal" ; then
+if bashio::var.has_value "${MQTT_Data}" 'ETotal' ; then
    value='ETotal'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "PACTot" ; then
+if bashio::var.has_value "${MQTT_Data}" 'PACTot' ; then
    value='PACTot'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "UDC1" ; then
+if bashio::var.has_value "${MQTT_Data}" 'UDC1' ; then
    value='UDC1'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "UDC2" ; then
+if bashio::var.has_value "${MQTT_Data}" 'UDC2' ; then
    value='UDC2'
-   
+
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "IDC1" ; then
+if bashio::var.has_value "${MQTT_Data}" 'UDC' ; then
+   value='UDC'
+
+   /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
+fi
+
+if bashio::var.has_value "${MQTT_Data}" 'IDC1' ; then
    value='IDC1'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "IDC2" ; then
+if bashio::var.has_value "${MQTT_Data}" 'IDC2' ; then
    value='IDC2'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "PDC1" ; then
+if bashio::var.has_value "${MQTT_Data}" 'IDC' ; then
+   value='IDC'
+
+   /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
+fi
+
+if bashio::var.has_value "${MQTT_Data}" 'PDC1' ; then
    value='PDC1'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "PDC2" ; then
+if bashio::var.has_value "${MQTT_Data}" 'PDC2' ; then
    value='PDC2'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "PDCTot" ; then
+value='PDC'
+if bashio::var.has_value "${MQTT_Data}" 'PDCTot' ; then
    value='PDCTot'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "OperTm" ; then
+if bashio::var.has_value "${MQTT_Data}" 'OperTm' ; then
    value='OperTm'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "FeedTm" ; then
+if bashio::var.has_value "${MQTT_Data}" 'FeedTm' ; then
    value='FeedTm'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "PAC1" ; then
+if bashio::var.has_value "${MQTT_Data}" 'PAC1' ; then
    value='PAC1'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "PAC2" ; then
+if bashio::var.has_value "${MQTT_Data}" 'PAC2' ; then
    value='PAC2'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "PAC3" ; then
+if bashio::var.has_value "${MQTT_Data}" 'PAC3' ; then
    value='PAC3'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "UAC1" ; then
+if bashio::var.has_value "${MQTT_Data}" 'UAC1' ; then
    value='UAC1'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "UAC2" ; then
+if bashio::var.has_value "${MQTT_Data}" 'UAC2' ; then
    value='UAC2'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "UAC3" ; then
+if bashio::var.has_value "${MQTT_Data}" 'UAC3' ; then
    value='UAC3'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "IAC1" ; then
+if bashio::var.has_value "${MQTT_Data}" 'IAC1' ; then
    value='IAC1'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "IAC2" ; then
+if bashio::var.has_value "${MQTT_Data}" 'IAC2' ; then
    value='IAC2'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "IAC3" ; then
+if bashio::var.has_value "${MQTT_Data}" 'IAC3' ; then
    value='IAC3'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "GridFreq" ; then
+if bashio::var.has_value "${MQTT_Data}" 'GridFreq' ; then
    value='GridFreq'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "BTSignal" ; then
+if bashio::var.has_value "${MQTT_Data}" 'BTSignal' ; then
    value='BTSignal'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "BatTmpVal" ; then
+if bashio::var.has_value "${MQTT_Data}" 'BatTmpVal' ; then
    value='BatTmpVal'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "BatVol" ; then
+if bashio::var.has_value "${MQTT_Data}" 'BatVol' ; then
    value='BatVol'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "BatAmp" ; then
+if bashio::var.has_value "${MQTT_Data}" 'BatAmp' ; then
    value='BatAmp'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
-if bashio::var.has_value "${MQTT_Data}" "BatChaStt" ; then
+if bashio::var.has_value "${MQTT_Data}" 'BatChaStt' ; then
     value='BatChaStt'
    
    /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
 fi
 
+if bashio::var.has_value "${MQTT_Data}" 'InvWakeupTm' ; then
+value='InvWakeupTm'
+
+   /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
+fi
+
+if bashio::var.has_value "${MQTT_Data}" 'InvSleepTm' ; then
+   value='InvSleepTm'
+
+   /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
+fi
+
+if bashio::var.has_value "${MQTT_Data}" 'MeteringWOut' ; then
+   value='MeteringWOut'
+
+   /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
+fi
+
+if bashio::var.has_value "${MQTT_Data}" 'MeteringWIn' ; then
+value='MeteringWIn'
+
+   /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
+fi
+
+if bashio::var.has_value "${MQTT_Data}" 'MeteringWTot' ; then
+value='MeteringWTot'
+
+   /usr/bin/mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sensor/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial""$value"/config -m "" -r
+fi
 
 #  remove device info from default topic and device topic
 mosquitto_pub -h "$MQTT_Host" -u "$MQTT_User" -P "$MQTT_Pass" -t homeassistant/sbfspot_"$PLANTNAME"/sbfspot_"$InvSerial" -m "" -r
