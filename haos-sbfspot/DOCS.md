@@ -18,11 +18,11 @@ This add-on runs a crontab service for SBFspot and SPFspotUploader at 5 minutely
 
 [PVoutput](https://pvoutput.org/) account and API are required to use the upload feature.
 
-[Mariadb addon](https://github.com/home-assistant/addons/tree/master/mariadb) or similiar SQL database, is needed to store the data for upload to PVOutput.
+[Mariadb addon](https://my.home-assistant.io/redirect/supervisor_addon/?addon=core_mariadb) or similiar SQL database, is needed to store the data for upload to PVOutput.
 
-[phpMyAdmin](https://github.com/hassio-addons/addon-phpmyadmin) is required to create the DB structure.
+[phpMyAdmin](https://my.home-assistant.io/redirect/supervisor_addon/?addon=a0d7b954_phpmyadmin&repository_url=https%3A%2F%2Fgithub.com%2Fhassio-addons%2Faddon-phpmyadmin) is required to create the DB structure.
 
-[MQTT broker](https://github.com/home-assistant/addons/tree/master/mosquitto) is needed to send MQTT messages to home Assistant.
+[MQTT broker](https://my.home-assistant.io/redirect/supervisor_addon/?addon=core_mosquitto) is needed to send MQTT messages to home Assistant.
 
 ## Installation
 
