@@ -56,7 +56,7 @@ RUN apk update && apk add --no-cache \
     mariadb-common=10.6.9-r0 \
     mariadb-connector-c=3.1.13-r4 \
     ncurses-libs=6.3_p20220521-r0 \
-    libcurl=7.83.1-r2 \
+    libcurl=7.83.1-r3 \
     mosquitto-clients=2.0.14-r1 \
     nginx=1.22.0-r1
     
