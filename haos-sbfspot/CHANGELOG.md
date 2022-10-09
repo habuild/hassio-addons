@@ -2,6 +2,12 @@
 
 # ![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
 
+- minor bump for typo in ethernet configs. 
+
+## ![Release][release-shield-2022-9-2]
+
+[release-shield-2022-9-2]: https://img.shields.io/badge/version-2022.9.2-blue.svg
+
 - additional sensors - 2022.9.2
 - BREAKING CHANGES - any version below 2022.9.1
 - see 2022.9.1 changelog
