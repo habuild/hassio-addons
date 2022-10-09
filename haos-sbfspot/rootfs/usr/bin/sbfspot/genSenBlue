@@ -24,7 +24,7 @@ CONFIG_SYNCHTIME="$(bashio::config 'SynchTime' '0')"
 CONFIG_SYNCHTIMELOW="$(bashio::config 'SynchTimeLow' '1')"
 CONFIG_SYNCHTIMEHIGH="$(bashio::config 'SynchTimeHigh' '3600')"
 CONFIG_SUNRSOFFSET="$(bashio::config 'SunRSOffset' '900')"
-CONFIG_LOCALE="$(bashio::config 'Locale' 'en-US' 'Australia/Sydney')"
+CONFIG_LOCALE="$(bashio::config 'Locale' 'en-US')"
 CONFIG_TIMEZONE="$(bashio::config 'Timezone' )"
 CONFIG_BTCONNECTRETRIES="$(bashio::config 'BTConnectRetries' '10')"
 # CONFIG_CSV_EXPORT="$(bashio::config 'CSV_Export' '0')"
@@ -241,6 +241,6 @@ MQTT_Port=$CONFIG_MQTT_PORT
 MQTT_Topic=$(bashio::addon.name)/device
 MQTT_ItemFormat=$CONFIG_MQTT_ITEMFORMAT
 MQTT_ItemDelimiter=$CONFIG_MQTT_ITEMDELIMITER
-MQTT_PublisherArgs=-h {host} -u "$(bashio::config 'MQTT_User' 'core-mosquitto')" -P "$(bashio::config 'MQTT_Pass')" -t {topic} -m "{{message}}" -d -r
+MQTT_PublisherArgs=-h {host} -u "$(bashio::config 'MQTT_User')" -P "$(bashio::config 'MQTT_Pass')" -t {topic} -m "{{message}}" -d -r
 MQTT_Data=InvSerial,InvName,InvClass,InvType,InvSwVer
 EOL
