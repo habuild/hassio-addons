@@ -26,7 +26,7 @@ options:
   BTAddress: "!secret BTAddress"
   Password: "!secret SBFpassword"
   LocalBTAddress: "!secret LocalBTAddress"
-  IP_Address: "55.255.255.254"
+  IP_Address: "55.255.255.255"
   Plantname: "!secret SBFplantname"
   Latitude: "!secret home_lat"
   Longitude: "!secret home_long"
