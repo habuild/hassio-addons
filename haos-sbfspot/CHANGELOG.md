@@ -33,9 +33,6 @@
 
 - MQTT user and pass have moved locations in options
 - MQTT Publisher args option has been disabled
-
-<br></br>
-
 - AUTOGEN SENSORS
 - List of upto 39 sensors available
 - New Option create or purge sensors (defaults to No)
@@ -45,15 +42,9 @@
 - Sensors can now be created and purged via the Addon and HA MQTT integration
 - Backup and disable/remove existing yaml sensors to avoid naming conflicts
 - MQTT_Data list can be used to create desired Sensors.
-
-<br></br>
-
 - custom timestamp can be set for InvTime SunRise and SunSet
 - Timestamp sensor can not use custom timestamp
 - (can be changed by value_template in a lovelace card)
-
-<br></br>
-
 - Logging to \*.txt file is being removed from SBFspot 3.9.6 onwards
 - option for logging dir removed to accommodate this change
 
@@ -127,7 +118,7 @@
 [release-shield-2022-3-3]: https://img.shields.io/badge/version-2022.3.3-blue.svg
 
 - Upload logging moved to HA logging window.
-  - needs default /data/sbfspot/log directory.
+- needs default /data/sbfspot/log directory.
 - SBFspot version 3.9.3
 
 ## ![Release][release-shield-2022-3-2]
@@ -144,7 +135,7 @@
 - SBFspot version 3.9.3
 - Initial release
 - Rebuilt to multi stage docker containter.
-  - This saves ~450MB on the final image.
+- This saves ~450MB on the final image.
 - Is using base HA alpine container and s6 Overlay, so should be fully compatible with HAOS.
 - Doesn't require complicated USER setups.
 
