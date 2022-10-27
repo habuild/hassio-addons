@@ -1,57 +1,57 @@
 #!/usr/bin/with-contenv bashio
 
-# export CFG_PATH
-# export CFG_PATH_UPLOAD
-CFG_PATH=$1
-CFG_PATH_UPLOAD=$2
-CONFIG_PATH=/data/options.json
+CFG_PATH="${1}"
+CFG_PATH_UPLOAD="${2}"
+#CONFIG_PATH=/data/options.json
 
-# CONFIG_CONNECTION_TYPE="$(jq --raw-output '.Connection_Type' $CONFIG_PATH)"
-CONFIG_BTADDRESS="$(jq --raw-output '.BTAddress' $CONFIG_PATH)"
-CONFIG_LOCALBTADDRESS="$(jq --raw-output '.LocalBTAddress' $CONFIG_PATH)"
-CONFIG_PASSWORD="$(jq --raw-output '.Password' $CONFIG_PATH)"
-CONFIG_MSI_ENABLED="$(jq --raw-output '.MIS_Enabled' $CONFIG_PATH)"
-CONFIG_PLANTNAME="$(jq --raw-output '.Plantname' $CONFIG_PATH)"
-CONFIG_OUTPUTPATH="$(jq --raw-output '.OutputPath' $CONFIG_PATH)"
-CONFIG_OUTPUTPATHEVENTS="$(jq --raw-output '.OutputPathEvents' $CONFIG_PATH)"
-CONFIG_LATITUDE="$(jq --raw-output '.Latitude' $CONFIG_PATH)"
-CONFIG_LONGITUDE="$(jq --raw-output '.Longitude' $CONFIG_PATH)"
-CONFIG_CALCULATEMISSINGSPOTVALUES="$(jq --raw-output '.CalculateMissingSpotValues' $CONFIG_PATH)"
-CONFIG_DATETIMEFORMAT="$(jq --raw-output '.DateTimeFormat' $CONFIG_PATH)"
-CONFIG_DATEFORMAT="$(jq --raw-output '.DateFormat' $CONFIG_PATH)"
-CONFIG_DECIMALPOINT="$(jq --raw-output '.DecimalPoint' $CONFIG_PATH)"
-CONFIG_TIMEFORMAT="$(jq --raw-output '.TimeFormat' $CONFIG_PATH)"
-CONFIG_SYNCHTIME="$(jq --raw-output '.SynchTime' $CONFIG_PATH)"
-CONFIG_SYNCHTIMELOW="$(jq --raw-output '.SynchTimeLow' $CONFIG_PATH)"
-CONFIG_SYNCHTIMEHIGH="$(jq --raw-output '.SynchTimeHigh' $CONFIG_PATH)"
-CONFIG_SUNRSOFFSET="$(jq --raw-output '.SunRSOffset' $CONFIG_PATH)"
-CONFIG_LOCALE="$(jq --raw-output '.Locale' $CONFIG_PATH)"
-CONFIG_TIMEZONE="$(jq --raw-output '.Timezone' $CONFIG_PATH)"
-CONFIG_BTCONNECTRETRIES="$(jq --raw-output '.BTConnectRetries' $CONFIG_PATH)"
-CONFIG_CSV_EXPORT="$(jq --raw-output '.CSV_Export' $CONFIG_PATH)"
-CONFIG_CSV_EXTENDEDHEADER="$(jq --raw-output '.CSV_ExtendedHeader' $CONFIG_PATH)"
-CONFIG_CSV_HEADER="$(jq --raw-output '.CSV_Header' $CONFIG_PATH)"
-CONFIG_CSV_SAVEZEROPOWER="$(jq --raw-output '.CSV_SaveZeroPower' $CONFIG_PATH)"
-CONFIG_CSV_DELIMITER="$(jq --raw-output '.CSV_Delimiter' $CONFIG_PATH)"
-CONFIG_CSV_SPOT_TIMESOURCE="$(jq --raw-output '.CSV_Spot_TimeSource' $CONFIG_PATH)"
-CONFIG_CSV_SPOT_WEBBOXHEADER="$(jq --raw-output '.CSV_Spot_WebboxHeader' $CONFIG_PATH)"
-CONFIG_SQL_DATABASE="$(jq --raw-output '.SQL_Database' $CONFIG_PATH)"
-CONFIG_SQL_HOSTNAME="$(jq --raw-output '.SQL_Hostname' $CONFIG_PATH)"
-CONFIG_SQL_PORT="$(jq --raw-output '.SQL_Port' $CONFIG_PATH)"
-CONFIG_SQL_USERNAME="$(jq --raw-output '.SQL_Username' $CONFIG_PATH)"
-CONFIG_SQL_PASSWORD="$(jq --raw-output '.SQL_Password' $CONFIG_PATH)"
-CONFIG_MQTT_PUBLISHER="$(jq --raw-output '.MQTT_Publisher' $CONFIG_PATH)" 
-CONFIG_MQTT_HOST="$(jq --raw-output '.MQTT_Host' $CONFIG_PATH)"
-CONFIG_MQTT_PORT="$(jq --raw-output '.MQTT_Port' $CONFIG_PATH)"
-CONFIG_MQTT_TOPIC="$(jq --raw-output '.MQTT_Topic' $CONFIG_PATH)"
-CONFIG_MQTT_ITEMFORMAT="$(jq --raw-output '.MQTT_ItemFormat' $CONFIG_PATH)"
-CONFIG_MQTT_ITEMDELIMITER="$(jq --raw-output '.MQTT_ItemDelimiter' $CONFIG_PATH)"
-CONFIG_MQTT_PUBLISHERARGS="$(jq --raw-output '.MQTT_PublisherArgs' $CONFIG_PATH)"
-CONFIG_MQTT_DATA="$(jq --raw-output '.MQTT_Data' $CONFIG_PATH)"
-CONFIG_LOGDIR="$(jq --raw-output '.LogDir' $CONFIG_PATH)"
-CONFIG_LOGLEVEL="$(jq --raw-output '.LogLevel' $CONFIG_PATH)"
-CONFIG_PVOUTPUT_SID="$(jq --raw-output '.PVoutput_SID' $CONFIG_PATH)"
-CONFIG_PVOUTPUT_KEY="$(jq --raw-output '.PVoutput_Key' $CONFIG_PATH)"
+# CONFIG_CONNECTION_TYPE="$(bashio::config 'Connection_Type')"
+CONFIG_BTADDRESS="$(bashio::config 'BTAddress' )"
+CONFIG_LOCALBTADDRESS="$(bashio::config 'LocalBTAddress' '00:00:00:00:00:00' )"
+CONFIG_PASSWORD="$(bashio::config 'Password' '0000')"
+CONFIG_MSI_ENABLED="$(bashio::config 'MIS_Enabled' '0')"
+CONFIG_PLANTNAME="$(bashio::config 'Plantname')"
+CONFIG_OUTPUTPATH="$(bashio::config 'OutputPath' '/data/sbfspot/%Y')"
+CONFIG_OUTPUTPATHEVENTS="$(bashio::config 'OutputPathEvents' '/data/sbfspot/%Y/events')"
+CONFIG_LATITUDE="$(bashio::config 'Latitude' '50.80')"
+CONFIG_LONGITUDE="$(bashio::config 'Longitude' '4.33')"
+CONFIG_CALCULATEMISSINGSPOTVALUES="$(bashio::config 'CalculateMissingSpotValues' '1')"
+#  CONFIG_DATETIMEFORMAT="$(bashio::config 'DateTimeFormat' '%Y-%m-%d%H:%M:%S%z')"
+CONFIG_DATEFORMAT="$(bashio::config 'DateFormat' '%d/%m/%Y')"
+CONFIG_DECIMALPOINT="$(bashio::config 'DecimalPoint' 'comma')"
+CONFIG_TIMEFORMAT="$(bashio::config 'TimeFormat' '%H:%M:%S%')"
+CONFIG_SYNCHTIME="$(bashio::config 'SynchTime' '0')"
+CONFIG_SYNCHTIMELOW="$(bashio::config 'SynchTimeLow' '1')"
+CONFIG_SYNCHTIMEHIGH="$(bashio::config 'SynchTimeHigh' '3600')"
+CONFIG_SUNRSOFFSET="$(bashio::config 'SunRSOffset' '900')"
+CONFIG_LOCALE="$(bashio::config 'Locale' 'en-US')"
+CONFIG_TIMEZONE="$(bashio::config 'Timezone' 'Australia/Sydney')"
+CONFIG_BTCONNECTRETRIES="$(bashio::config 'BTConnectRetries' '10')"
+CONFIG_CSV_EXPORT="$(bashio::config 'CSV_Export' '0')"
+CONFIG_CSV_EXTENDEDHEADER="$(bashio::config 'CSV_ExtendedHeader' '1')"
+CONFIG_CSV_HEADER="$(bashio::config 'CSV_Header' '1')"
+CONFIG_CSV_SAVEZEROPOWER="$(bashio::config 'CSV_SaveZeroPower' '1')"
+CONFIG_CSV_DELIMITER="$(bashio::config 'CSV_Delimiter' 'semicolon')"
+CONFIG_CSV_SPOT_TIMESOURCE="$(bashio::config 'CSV_Spot_TimeSource' 'Inverter')"
+CONFIG_CSV_SPOT_WEBBOXHEADER="$(bashio::config 'CSV_Spot_WebboxHeader' '0')"
+CONFIG_SQL_DATABASE="$(bashio::config 'SQL_Database' 'SBFspot')"
+CONFIG_SQL_HOSTNAME="$(bashio::config 'SQL_Hostname' 'core-mariadb')"
+CONFIG_SQL_PORT="$(bashio::config 'SQL_Port' '3306')"
+CONFIG_SQL_USERNAME="$(bashio::config 'SQL_Username' 'sbfspot')"
+CONFIG_SQL_PASSWORD="$(bashio::config 'SQL_Password')"
+CONFIG_MQTT_PUBLISHER="$(bashio::config 'MQTT_Publisher' '/usr/bin/mosquitto_pub')"
+CONFIG_MQTT_HOST="$(bashio::config 'MQTT_Host' 'core-mosquitto')" 
+CONFIG_MQTT_PORT="$(bashio::config 'MQTT_Port')"
+#  CONFIG_MQTT_USER="$(bashio::config 'MQTT_User')"
+#  CONFIG_MQTT_PASS="$(bashio::config 'MQTT_Pass')"
+CONFIG_MQTT_TOPIC="$(bashio::config 'MQTT_Topic' 'homeassistant/sbfspot_{plantname}/sbfspot_{serial}')"
+CONFIG_MQTT_ITEMFORMAT="$(bashio::config 'MQTT_ItemFormat' '"{key}": {value}')"
+CONFIG_MQTT_ITEMDELIMITER="$(bashio::config 'MQTT_ItemDelimiter' 'comma')"
+#  CONFIG_MQTT_PUBLISHERARGS="$(bashio::config 'MQTT_PublisherArgs')"
+CONFIG_MQTT_DATA="$(bashio::config 'MQTT_Data')"
+#  CONFIG_LOGDIR="$(bashio::config 'LogDir')"
+CONFIG_LOGLEVEL="$(bashio::config 'LogLevel' 'info')"
+CONFIG_PVOUTPUT_SID="$(bashio::config 'PVoutput_SID' '0123456789:12345')"
+CONFIG_PVOUTPUT_KEY="$(bashio::config 'PVoutput_Key' 'fake9364fake4545afke834fake')"
 
 cat > "$CFG_PATH" <<EOL
 ################################################################################
@@ -134,7 +134,8 @@ CalculateMissingSpotValues=$CONFIG_CALCULATEMISSINGSPOTVALUES
 # DateTimeFormat (default %d/%m/%Y %H:%M:%S)
 # For details see strftime() function
 # http://www.cplusplus.com/reference/clibrary/ctime/strftime/
-DateTimeFormat=$CONFIG_DATETIMEFORMAT
+# DateTimeFormat= ###CONFIG_DATETIMEFORMAT
+DateTimeFormat=%Y-%m-%dT%H:%M:%S%z
 
 # DateFormat (default %d/%m/%Y)
 DateFormat=$CONFIG_DATEFORMAT
@@ -240,10 +241,11 @@ SQL_Password=$CONFIG_SQL_PASSWORD
 MQTT_Publisher=$CONFIG_MQTT_PUBLISHER
 MQTT_Host=$CONFIG_MQTT_HOST
 MQTT_Port=$CONFIG_MQTT_PORT
+
 MQTT_Topic=$CONFIG_MQTT_TOPIC
 MQTT_ItemFormat=$CONFIG_MQTT_ITEMFORMAT
 MQTT_ItemDelimiter=$CONFIG_MQTT_ITEMDELIMITER
-MQTT_PublisherArgs=$CONFIG_MQTT_PUBLISHERARGS
+MQTT_PublisherArgs=-h $(bashio::config 'MQTT_Host' 'core-mosquitto') -u $(bashio::config 'MQTT_User') -P $(bashio::config 'MQTT_Pass') -t {topic} -m "{{message}}" -d
 MQTT_Data=$CONFIG_MQTT_DATA
 EOL
 
@@ -271,7 +273,7 @@ cat > "$CFG_PATH_UPLOAD" <<EOL
 # Windows: C:\Users\Public\SMAdata\Logs
 # Linux  : /home/pi/smadata/logs
 #LogDir=C:\Users\Public\SMAdata\Logs
-LogDir=$CONFIG_LOGDIR
+#  LogDir=  ###   CONFIG_LOGDIR
 
 #LogLevel=debug|info|warning|error (default info)
 LogLevel=$CONFIG_LOGLEVEL
@@ -301,6 +303,7 @@ PVoutput_Key=$CONFIG_PVOUTPUT_KEY
 # Reserved for MySQL
 SQL_Database=$CONFIG_SQL_DATABASE
 SQL_Hostname=$CONFIG_SQL_HOSTNAME
+SQL_Port=$CONFIG_SQL_PORT
 SQL_Username=$CONFIG_SQL_USERNAME
 SQL_Password=$CONFIG_SQL_PASSWORD
 EOL
@@ -309,4 +312,4 @@ EOL
 
 # create folders
 mkdir -p "$CONFIG_OUTPUTPATH"
-mkdir -p "$CONFIG_LOGDIR"
+# mkdir -p  ##### "CONFIG_LOGDIR"
