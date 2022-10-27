@@ -1,13 +1,18 @@
 ---
-name: SBFspot
-version: 2022.8.3
-slug: sbfspot
+name: MultiINV-SBFspot
+version: 2022.10.3
+slug: multiinv-sbfspot
 description: Manage SBFspot with a simple interface
-url: "https://github.com/habuild/hassio-addons/tree/main/sbfspot"
+url: "https://github.com/habuild/hassio-addons/tree/main/haos-sbfspot"
 stage: experimental
+
+image: "ghcr.io/habuild/{arch}-addon-multiinv-sbfspot"
 arch:
+  - aarch64
   - amd64
 init: false
+host_network: true
+host_dbus: true
 homeassistant_api: true
 panel_icon: mdi:solar-power-variant
 services:
@@ -15,76 +20,48 @@ services:
   - mqtt:want
 options:
   Connection_Type: "Bluetooth"
-  BTAddress: ""
-  Password: "0000"
-  LocalBTAddress: "00:00:00:00:00:00"
-  IP_Address: "255.255.255.255"
-  MIS_Enabled: 0
-  Plantname: MyPlant
-  OutputPath: /data/sbfspot/%Y
-  OutputPathEvents: /data/sbfspot/%Y/events
-  Latitude: "null"
-  Longitude: "null"
-  CalculateMissingSpotValues: 1
-  DateTimeFormat: "%d/%m/%Y %H:%M:%S"
-  DateFormat: "%d/%m/%Y"
-  DecimalPoint: comma
-  TimeFormat: "%H:%M:%S"
-  SynchTime: 0
-  SynchTimeLow: 1
-  SynchTimeHigh: 3600
-  SunRSOffset: 900
-  Locale: en-US
-  Timezone: Europe/Brussels
-  BTConnectRetries: 10
-  CSV_Export: 0
-  CSV_ExtendedHeader: 1
-  CSV_Header: 1
-  CSV_SaveZeroPower: 1
-  CSV_Delimiter: semicolon
-  CSV_Spot_TimeSource: Inverter
-  CSV_Spot_WebboxHeader: 0
-  SQL_Database: "SBFspot"
-  SQL_Hostname: core-mariadb
-  SQL_Port: "3306"
-  SQL_Username: "sbfspot"
-  SQL_Password: ""
-  MQTT_Publisher: /usr/bin/mosquitto_pub
-  MQTT_Host: core-mosquitto
-  MQTT_Port: "1883"
+  Sensors_HA: No
+  BTAddress: "!secret BTAddress"
+  Password: "!secret SBFpassword"
+  LocalBTAddress: "!secret LocalBTAddress"
+  IP_Address: "55.255.255.255"
+  Plantname: "!secret SBFplantname"
+  Latitude: "!secret home_lat"
+  Longitude: "!secret home_long"
+  Timezone: "!secret Timezone"
+  DateTimeFormat: "'%H:%M:%S %d-%m-%y'"
+  SQL_Password: "!secret mariadb_pw"
+  MQTT_User: "!secret mqtt_user"
+  MQTT_Pass: "!secret mqtt_pass"
   MQTT_Topic: "homeassistant/sbfspot_{plantname}/sbfspot_{serial}"
-  MQTT_ItemFormat: '"{key}": {value}'
-  MQTT_ItemDelimiter: comma
-  MQTT_PublisherArgs: >-
-    -h {host} -u MQTT_Username -P MQTT_Password -t {topic} -m "{{message}}" -d
   MQTT_Data: >-
-    Timestamp,SunRise,SunSet,InvSerial,InvName,InvTime,InvStatus,InvTemperature,InvGridRelay,EToday,ETotal,GridFreq,PACTot,UDC1,UDC2,IDC1,IDC2,PDC1,PDC2
-  PVoutput_SID: "0123456789:12345"
-  PVoutput_Key: "fake9364fake4545fake834fake"
-  LogDir: /data/sbfspot/log/
+    PrgVersion,Plantname,Timestamp,SunRise,SunSet,InvSerial,InvName,InvTime,InvStatus,InvSwVer,InvClass,InvType,InvTemperature,InvGridRelay,EToday,ETotal,GridFreq,PACTot,PAC1,UAC1,IAC1,OperTm,FeedTm,PDCTot,UDC1,UDC2,IDC1,IDC2,PDC1,PDC2,BTSignal,InvWakeupTm,InvSleepTm
+  PVoutput_SID: "!secret pvoSID"
+  PVoutput_Key: "!secret pvoAPIkey"
   LogLevel: info
 schema:
   Connection_Type: list(Bluetooth|Ethernet)?
+  Sensors_HA: list(No||Create||Purge|)?
   BTAddress: "str"
-  Password: "str"
-  LocalBTAddress: "str"
-  IP_Address: "str"
+  Password: "password"
+  LocalBTAddress: "str?"
+  IP_Address: "str?"
   Plantname: "str"
   MIS_Enabled: "int?"
   OutputPath: "str?"
   OutputPathEvents: "str?"
-  Latitude: "float"
-  Longitude: "float"
-  Timezone: "str"
-  DateTimeFormat: "str"
-  DateFormat: "str"
-  DecimalPoint: "str"
-  TimeFormat: "str"
+  Latitude: "str?"
+  Longitude: "str?"
+  Timezone: "str?"
+  DateTimeFormat: "str?"
+  DateFormat: "str?"
+  DecimalPoint: "str?"
+  TimeFormat: "str?"
   SynchTime: "int?"
   SynchTimeLow: "int?"
   SynchTimeHigh: "int?"
   SunRSOffset: "int?"
-  Locale: "str"
+  Locale: "str?"
   CalculateMissingSpotValues: "int?"
   BTConnectRetries: "int?"
   CSV_Export: "int?"
@@ -98,19 +75,17 @@ schema:
   SQL_Hostname: "str?"
   SQL_Port: "str?"
   SQL_Username: "str?"
-  SQL_Password: "str?"
+  SQL_Password: "password?"
   MQTT_Publisher: "str?"
-  MQTT_Host: "str"
-  MQTT_Port: "str"
+  MQTT_Host: "str?"
+  MQTT_Port: "str?"
+  MQTT_User: "str"
+  MQTT_Pass: "password"
   MQTT_Topic: "str"
-  MQTT_ItemFormat: "str"
-  MQTT_ItemDelimiter: str
-  MQTT_PublisherArgs: str
+  MQTT_ItemFormat: "str?"
+  MQTT_ItemDelimiter: str?
+  MQTT_PublisherArgs: str?
   MQTT_Data: "str"
-  PVoutput_SID: "str"
-  PVoutput_Key: "str"
-  LogDir: "str?"
-  LogLevel: "str"
-host_network: true
-host_dbus: true
-image: "ghcr.io/habuild/{arch}-addon-sbfspot"
+  PVoutput_SID: "password?"
+  PVoutput_Key: "password?"
+  LogLevel: list(debug|info||warning||error)?
