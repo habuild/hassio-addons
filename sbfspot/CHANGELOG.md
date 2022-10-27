@@ -3,6 +3,14 @@
 # ![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fsbfspot%2Fconfig.yaml)
 
 - THIS IS CONSIDERED A TEST BRANCH
+- brought inline with HAOS-SBFspot for multi inverter quickfix
+
+## ![Release][release-shield-2022-8-3]
+
+[release-shield-2022-8-3]: https://img.shields.io/badge/version-2022.8.3-blue.svg
+
+
+- THIS IS CONSIDERED A TEST BRANCH
 - Config Options change for Ethernet connection.
 - (Ethernet Untested as of 13/08/2022)
 - Cleaned up backend scripts.
