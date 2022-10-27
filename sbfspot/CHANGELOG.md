@@ -9,7 +9,6 @@
 
 [release-shield-2022-8-3]: https://img.shields.io/badge/version-2022.8.3-blue.svg
 
-
 - THIS IS CONSIDERED A TEST BRANCH
 - Config Options change for Ethernet connection.
 - (Ethernet Untested as of 13/08/2022)
