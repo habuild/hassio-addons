@@ -8,6 +8,8 @@ stage: experimental
 
 image: "ghcr.io/habuild/{arch}-addon-multiinv-sbfspot"
 arch:
+  - armhf
+  - armv7
   - aarch64
   - amd64
 init: false
