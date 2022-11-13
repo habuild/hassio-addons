@@ -1,6 +1,6 @@
 ---
 name: TriINV-SBFspot
-version: 2022.10.2
+version: 2022.10.3
 slug: triinv-sbfspot
 description: Manage SBFspot with a simple interface
 url: "https://github.com/habuild/hassio-addons/tree/main/triinv-sbfspot"
