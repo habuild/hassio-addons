@@ -4,14 +4,10 @@ version: 2022.10.3
 slug: triinv-sbfspot
 description: Manage SBFspot with a simple interface
 url: "https://github.com/habuild/hassio-addons/tree/main/triinv-sbfspot"
-stage: experimental
+stage: deprecated
 
 image: "ghcr.io/habuild/{arch}-addon-triinv-sbfspot"
 arch:
-  - armhf
-  - armv7
-  - aarch64
-  - amd64
 init: false
 host_network: true
 host_dbus: true
