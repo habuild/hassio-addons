@@ -3,7 +3,7 @@
 # ![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fsbfspot%2Fconfig.yaml)
 
 - THIS IS CONSIDERED A TEST BRANCH
-- Shifted Bluetoothctl list command 
+- Shifted Bluetoothctl list command
 
 ## ![Release][release-shield-2022-10-3]
 
