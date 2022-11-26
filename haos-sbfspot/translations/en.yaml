@@ -25,9 +25,9 @@ configuration:
     description: >-
       Inverter IP address. Can be comma separated for Multiple Inverters. 196.168.01.10, 196.168.01.20
   MIS_Enabled:
-    name: Multi Inverter Systems
+    name:  MIS_Enabled Multi Inverter Systems
     description: >-
-      It is only for Bluetooth multi inverter systems.
+      It is only for Bluetooth multi inverter systems. 0 Disabled, 1 Enabled.
   Plantname:
     name: Plant Name !secret Plantname
     description: >-
