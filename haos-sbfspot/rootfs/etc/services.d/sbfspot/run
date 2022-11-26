@@ -22,11 +22,13 @@ bashio::log.info
 bashio::log.info ${__BASHIO_COLORS_CYAN} "${message:="Hello World..."}"
 bashio::log.info
 
-# ---- Print Host BT Controller
-message=$(echo "[Host Bluetooth MAC Address] $(bluetoothctl list)")
-bashio::log.info
-bashio::log.info ${__BASHIO_COLORS_BLUE} "${message:="Hello World..."}"
-bashio::log.info
+if  bashio::var.equals "${value}" "Bluetooth"; then
+   # ---- Print Host BT Controller
+   message=$(echo "[Host Bluetooth MAC Address] $(bluetoothctl list)")
+   bashio::log.info
+   bashio::log.info ${__BASHIO_COLORS_BLUE} "${message:="Hello World..."}"
+   bashio::log.info
+fi
 
 #set -x
 
