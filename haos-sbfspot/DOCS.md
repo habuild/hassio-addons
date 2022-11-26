@@ -71,6 +71,37 @@ The above options are the only required options if you want to fill out the opti
 
 <br></br>
 
+### MIS_Enabled Bluetooth Multi Inverter support.
+
+<b>This option is only for Bluetooth multi-inverter systems.</b>
+
+Each inverter first needs to be run through the sensor create setting to enable the MQTT sensors.
+Each inverter needs to run through on it's BTAddress.
+(You may have to tweak the Plantname and topic slightly)
+
+Once the sensors are created set the Sensor create option back to NO (Disable the sensor creation setting)
+
+You can now enable MIS under the GUI or yaml options configuration.
+
+```
+MIS_Enabled: 1
+```
+
+The NET ID needs to be greater than 1 on all inverters.
+
+PVoutput SIDs can be comma separated entries with Inverter serial and separate PVO account IDs.
+
+
+```
+eg. Inverter1:acc1,Inverter2:acc2
+
+0123456789:12345,2222222222:54321
+```
+
+refer to [Issue 42 for more info](https://github.com/habuild/hassio-addons/issues/42)
+
+<br></br>
+
 ## MQTT
 
 ### 2022.9.1+
