@@ -1,6 +1,6 @@
 ---
 name: MultiINV-SBFspot
-version: 2022.10.3
+version: 2022.11.1
 slug: multiinv-sbfspot
 description: Manage SBFspot with a simple interface
 url: "https://github.com/habuild/hassio-addons/tree/main/sbfspot"
