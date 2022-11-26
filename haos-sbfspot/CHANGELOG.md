@@ -2,6 +2,14 @@
 
 # ![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
 
+- added MIS support to readme
+- bump for dependencies
+- Shifted Bluetoothctl list command to avoid hanging devices without BT.
+
+## ![Release][release-shield-2022-10-3]
+
+[release-shield-2022-10-3]: https://img.shields.io/badge/version-2022.10.3-blue.svg
+
 - bump for dependencies
 - added codenotary
 
