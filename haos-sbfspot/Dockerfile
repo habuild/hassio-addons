@@ -18,14 +18,14 @@ RUN apk update && apk add --no-cache \
     bluez=5.65-r0 \
     bluez-dev=5.65-r0 \
     boost-dev=1.78.0-r1 \
-    curl-dev=7.83.1-r3 \
+    curl-dev=7.83.1-r4 \
     git=2.36.3-r0 \
     g++=11.2.1_git20220219-r2 \
     make=4.3-r0 \
     mariadb-dev=10.6.10-r0 \
-    mosquitto-clients=2.0.14-r1 \
+    mosquitto-clients=2.0.14-r2 \
     nginx=1.22.1-r0 \
-    tzdata=2022c-r0
+    tzdata=2022f-r1
            
 # download and build SBFspot
 WORKDIR /tmp
@@ -56,8 +56,8 @@ RUN apk update && apk add --no-cache \
     mariadb-common=10.6.10-r0 \
     mariadb-connector-c=3.1.13-r4 \
     ncurses-libs=6.3_p20220521-r0 \
-    libcurl=7.83.1-r3 \
-    mosquitto-clients=2.0.14-r1 \
+    libcurl=7.83.1-r4 \
+    mosquitto-clients=2.0.14-r2 \
     nginx=1.22.1-r0
     
     #tzdata=2022c-r0 
