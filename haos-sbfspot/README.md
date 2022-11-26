@@ -91,7 +91,6 @@ The NET ID needs to be greater than 1 on all inverters.
 
 PVoutput SIDs can be comma separated entries with Inverter serial and separate PVO account IDs.
 
-
 ```
 eg. Inverter1:acc1,Inverter2:acc2
 
@@ -101,7 +100,6 @@ eg. Inverter1:acc1,Inverter2:acc2
 refer to [Issue 42 for more info](https://github.com/habuild/hassio-addons/issues/42)
 
 <br></br>
-
 
 ## MQTT
 
