@@ -52,6 +52,10 @@ mqtt_pass: ""
 home_lat: ""
 home_long: ""
 Timezone: ""
+
+# Map inverters to PVoutput System ID's
+# PVoutput_SID=SerialNmbrInverter_1:PVoutput_System_ID_1,SerialNmbrInverter_2:PVoutput_System_ID_2
+# e.g. PVoutput_SID=200212345:4321
                              ### IF YOU WANT TO SKIP PVoutput
 pvoSID: "0123456789:12345"   ### will default to fake if left empty
 pvoAPIkey: "fake9364fake4545afke834fake"   ### will default to fake if left empty
