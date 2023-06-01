@@ -2,6 +2,13 @@
 
 # ![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
 
+- Bump container base to 3.18
+- Bump dependencies
+
+## ![Release][release-shield-2023-1-1]
+
+[release-shield-2023-1-1]: https://img.shields.io/badge/version-2023.1.1-blue.svg
+
 - added share to container mapping
 - bump for dependencies
 

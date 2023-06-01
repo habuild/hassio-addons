@@ -8,7 +8,7 @@
 ![Project Maintenance][maintenance-shield] [![CI](https://github.com/habuild/hassio-addons/actions/workflows/addon-ci.yaml/badge.svg)](https://github.com/habuild/hassio-addons/actions/workflows/addon-ci.yaml)
 
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
-[maintenance-shield]: https://img.shields.io/maintenance/yes/2022.svg
+[maintenance-shield]: https://img.shields.io/maintenance/yes/2023.svg
 
 [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fhabuild%2Fhassio-addons)
 
@@ -70,6 +70,20 @@ The above options are the only required options if you want to fill out the opti
 </details>
 
 <br></br>
+
+### PVoutput SIDs
+
+PVoutput SIDs are a combination of your inverter serial number and your PVoutput Account ID.
+
+PVoutput SIDs can be comma separated entries with Inverter serial and separate PVO account IDs.
+
+```
+InverterSerial:AccID
+
+eg. Inverter1:acc1,Inverter2:acc2
+
+0123456789:12345,2222222222:54321
+```
 
 ### MIS_Enabled Bluetooth Multi Inverter support.
 
