@@ -18,7 +18,7 @@ RUN apk update && apk add --no-cache \
     bluez=5.66-r5 \
     bluez-dev=5.66-r5 \
     boost-dev=1.82.0-r1 \
-    curl-dev=-8.1.1-r1 \
+    curl-dev=8.1.1-r1 \
     git=2.40.1-r0 \
     g++=12.2.1_git20220924-r10 \
     make=4.4.1-r1 \
@@ -49,14 +49,14 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 
 RUN apk update && apk add --no-cache \
-    bluez=5.65-r0 \
-    nano=6.3-r0 \
-    bluez-libs=5.65-r0 \
-    libstdc++=11.2.1_git20220219-r2 \
-    mariadb-common=10.6.13-r0 \
-    mariadb-connector-c=3.1.13-r4 \
-    ncurses-libs=6.3_p20220521-r0 \
-    libcurl=8.0.1-r0 \
+    bluez=5.66-r5 \
+    nano=7.2-r1 \
+    bluez-libs=5.66-r5 \
+    libstdc++=12.2.1_git20220924-r10 \
+    mariadb-common=10.11.3-r0 \
+    mariadb-connector-c=3.3.5-r0 \
+    ncurses-libs=6.4_p20230506-r0 \
+    libcurl=8.0.1-r2 \
     mosquitto-clients=2.0.15-r3 \
     nginx=1.24.0-r6
     
