@@ -18,7 +18,7 @@ RUN apk update && apk add --no-cache \
     bluez=5.66-r5 \
     bluez-dev=5.66-r5 \
     boost-dev=1.82.0-r1 \
-    curl-dev=8.1.1-r1 \
+    curl-dev=8.1.2-r0 \
     git=2.40.1-r0 \
     g++=12.2.1_git20220924-r10 \
     make=4.4.1-r1 \
