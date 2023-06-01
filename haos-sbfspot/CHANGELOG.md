@@ -43,7 +43,6 @@
 - Major overhaul of options
 - Most options have defaults set that will be used when options left blank
 - Secrets template provided in the readme!
-
 <br></br>
 
 - MQTT user and pass have moved locations in options
@@ -62,7 +61,6 @@
 - (can be changed by value_template in a lovelace card)
 - Logging to \*.txt file is being removed from SBFspot 3.9.6 onwards
 - option for logging dir removed to accommodate this change
-
 <br></br>
 
 - Cleaned up readme...
