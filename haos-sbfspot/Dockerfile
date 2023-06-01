@@ -15,17 +15,17 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # install requirements
 RUN apk update && apk add --no-cache \
-    bluez=5.65-r0 \
-    bluez-dev=5.65-r0 \
-    boost-dev=1.78.0-r1 \
-    curl-dev=8.1.2-r0 \
-    git=2.36.6-r0 \
-    g++=11.2.1_git20220219-r2 \
-    make=4.3-r0 \
-    mariadb-dev=10.6.13-r0 \
-    mosquitto-clients=2.0.14-r2 \
-    nginx=1.22.1-r0 \
-    tzdata=2023c-r0
+    bluez=5.66-r5 \
+    bluez-dev=5.66-r5 \
+    boost-dev=1.82.0-r1 \
+    curl-dev=-8.1.1-r1 \
+    git=2.40.1-r0 \
+    g++=12.2.1_git20220924-r10 \
+    make=4.4.1-r1 \
+    mariadb-dev=10.11.3-r0\
+    mosquitto-clients=2.0.15-r3 \
+    nginx=1.24.0-r6 \
+    tzdata=2023c-r1
            
 # download and build SBFspot
 WORKDIR /tmp
@@ -57,10 +57,10 @@ RUN apk update && apk add --no-cache \
     mariadb-connector-c=3.1.13-r4 \
     ncurses-libs=6.3_p20220521-r0 \
     libcurl=8.0.1-r0 \
-    mosquitto-clients=2.0.14-r2 \
-    nginx=1.22.1-r0
+    mosquitto-clients=2.0.15-r3 \
+    nginx=1.24.0-r6
     
-    #tzdata=2022c-r0 
+    #tzdata=2023c-r1 
     #boost-date_time1.78 
 
 
