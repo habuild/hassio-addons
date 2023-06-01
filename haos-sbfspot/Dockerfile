@@ -18,7 +18,7 @@ RUN apk update && apk add --no-cache \
     bluez=5.66-r5 \
     bluez-dev=5.66-r5 \
     boost-dev=1.82.0-r1 \
-    curl-dev=8.1.2-r0 \
+    curl-dev \  # split version in pkgs manager =8.1.2-r0
     git=2.40.1-r0 \
     g++=12.2.1_git20220924-r10 \
     make=4.4.1-r1 \
@@ -56,7 +56,7 @@ RUN apk update && apk add --no-cache \
     mariadb-common=10.11.3-r0 \
     mariadb-connector-c=3.3.5-r0 \
     ncurses-libs=6.4_p20230506-r0 \
-    libcurl=8.1.2-r0 \
+    libcurl \ # split version in pkgs manager =8.1.2-r0
     mosquitto-clients=2.0.15-r3 \
     nginx=1.24.0-r6
     
