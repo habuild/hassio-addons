@@ -2,6 +2,15 @@
 
 # ![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
 
+- Added network to apparmor capabilities for DEB12 supervised installs
+- Added 14 day archive to daily archive function
+- bump dependencies
+- fixed some defunct nano config options
+
+## ![Release][release-shield-2023-6-1]
+
+[release-shield-2023-6-1]: https://img.shields.io/badge/version-2023.6.1-blue.svg
+
 - Bump container base to 3.18
 - Bump dependencies
 
