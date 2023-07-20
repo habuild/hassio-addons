@@ -23,7 +23,7 @@ RUN apk update && apk add --no-cache \
     git=2.40.1-r0 \
     g++=12.2.1_git20220924-r10 \
     make=4.4.1-r1 \
-    mariadb-dev=10.11.3-r0\
+    mariadb-dev=10.11.4-r0\
     mosquitto-clients=2.0.15-r3 \
     nginx=1.24.0-r6 \
     tzdata=2023c-r1
@@ -54,7 +54,7 @@ RUN apk update && apk add --no-cache \
     nano=7.2-r1 \
     bluez-libs=5.66-r5 \
     libstdc++=12.2.1_git20220924-r10 \
-    mariadb-common=10.11.3-r0 \
+    mariadb-common=10.11.4-r0 \
     mariadb-connector-c=3.3.5-r0 \
     ncurses-libs=6.4_p20230506-r0 \
     # split version in pkgs manager
@@ -94,7 +94,7 @@ RUN echo '@reboot sleep 30 && /usr/bin/sbfspot/SBFspot -v -ad0 -am0 -mqtt -finq 
 # daily data SBFspot
 RUN echo '*/5 6-22 * * *    /usr/bin/sbfspot/SBFspot -v -ad1 -am0 -ae0 -mqtt > /dev/stdout' >> /etc/crontabs/root
 # monthly data SBFspot
-RUN echo '55 05 * * *       /usr/bin/sbfspot/SBFspot -v -sp0 -ad0 -am1 -ae1 -finq > /dev/stdout' >> /etc/crontabs/root
+RUN echo '55 05 * * *       /usr/bin/sbfspot/SBFspot -v -sp0 -ad14 -am1 -ae1 -finq > /dev/stdout' >> /etc/crontabs/root
 # start SBFspotUpload 1 min after boot
 RUN echo '@reboot sleep 60 && /usr/bin/sbfspot/SBFspotUploadDaemon -c /usr/bin/sbfspot/SBFspotUpload.cfg > /dev/stdout' >> /etc/crontabs/root
 #  Log SBFspotUpload to HA logging window  defunct now in version 3.9.6+ sbfspot, using it for the timed message
