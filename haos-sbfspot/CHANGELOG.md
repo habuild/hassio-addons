@@ -2,6 +2,13 @@
 
 # ![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
 
+- Bump SPBspot to latest.
+- Bump dependencies
+
+## ![Release][release-shield-2023-7-1]
+
+[release-shield-2023-7-1]: https://img.shields.io/badge/version-2023.7.1-blue.svg
+
 - Added network to apparmor capabilities for DEB12 supervised installs - issue75
 - Added 14 day archive to daily archive function
 - bump dependencies
