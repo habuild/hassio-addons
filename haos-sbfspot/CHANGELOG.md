@@ -3,6 +3,7 @@
 # ![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
 
 - Bump SPBspot to latest.
+- Bump base images to 3.19
 - Bump dependencies
 
 ## ![Release][release-shield-2023-7-1]
