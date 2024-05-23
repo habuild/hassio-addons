@@ -2,7 +2,8 @@
 
 # ![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
 
-- Bump SPBspot to latest.
+- Bump SPBspot to latest. Which is technically 3.9.9 due to SBFspot github setup. 
+- https://github.com/SBFspot/SBFspot/blob/master/SBFspot/version.h
 - Bump base images to 3.19
 - Bump dependencies
 
