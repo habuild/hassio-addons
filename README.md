@@ -129,7 +129,7 @@ A user of SBFspot software acknowledges that he or she is receiving this softwar
 
 SMA, Speedwire are registered trademarks of [SMA Solar Technology AG](http://www.sma.de/en/company/about-sma.html)
 
-[maintenance-shield]: https://img.shields.io/maintenance/yes/2023.svg
+[maintenance-shield]: https://img.shields.io/maintenance/yes/2024.svg
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-production%20testing-red.svg
-[release-shield]: https://img.shields.io/badge/version-2023.repo-blue.svg
-[release]: https://github.com/hassio-addons/addon-ssh/tree/2023.repo
+[release-shield]: https://img.shields.io/badge/version-2024.repo-blue.svg
+[release]: https://github.com/hassio-addons/addon-ssh/tree/2024.repo
