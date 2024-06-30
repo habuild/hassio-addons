@@ -15,17 +15,17 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # install requirements
 RUN apk update && apk add --no-cache \
-    bluez=5.70-r0 \
-    bluez-dev=5.70-r0 \
-    boost-dev=1.82.0-r3 \
-    curl-dev=8.5.0-r0 \
-    git=2.43.4-r0 \
-    g++=13.2.1_git20231014-r0 \
+    bluez=5.76-r0 \
+    bluez-dev=5.76-r0 \
+    boost-dev=1.82.0-r5 \
+    curl-dev=8.8.0-r0 \
+    git=2.45.2-r0 \
+    g++=13.2.1_git20240309-r0 \
     make=4.4.1-r2 \
-    mariadb-dev=10.11.6-r0\
+    mariadb-dev=10.11.8-r0\
     mosquitto-clients=2.0.18-r0 \
-    nginx=1.24.0-r16 \
-    tzdata=2024a-r0
+    nginx=1.26.1-r0 \
+    tzdata=2024a-r1
            
 # download and build SBFspot
 WORKDIR /tmp
@@ -49,16 +49,16 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 
 RUN apk update && apk add --no-cache \
-    bluez=5.70-r0 \
-    bluez-libs=5.70-r0 \
-    nano=7.2-r1 \
-    libstdc++=13.2.1_git20231014-r0 \
-    mariadb-common=10.11.6-r0 \
-    mariadb-connector-c=3.3.8-r0 \
-    ncurses-libs=6.4_p20231125-r0 \
-    libcurl=8.5.0-r0 \
+     bluez=5.76-r0 \
+    nano=8.0-r0 \
+    bluez-libs=5.76-r0 \
+    libstdc++=13.2.1_git20240309-r0 \
+    mariadb-common=10.11.8-r0 \
+    mariadb-connector-c=3.3.10-r0 \
+    ncurses-libs=6.4_p20240420-r0 \
+    libcurl=8.7.1-r0 \
     mosquitto-clients=2.0.18-r0 \
-    nginx=1.24.0-r16
+    nginx=1.26.1-r0
     
     #tzdata=2023c-r1 
     #boost-date_time1.78 
@@ -91,8 +91,8 @@ RUN echo 'SHELL=/bin/bash' > /etc/crontabs/root
 RUN echo '@reboot sleep 30 && /usr/bin/sbfspot/SBFspot -v -ad0 -am0 -mqtt -finq > /dev/stdout' >> /etc/crontabs/root
 # daily data SBFspot
 RUN echo '*/5 6-22 * * *    /usr/bin/sbfspot/SBFspot -v -ad1 -am0 -ae0 -mqtt > /dev/stdout' >> /etc/crontabs/root
-# monthly data SBFspot
-RUN echo '55 05 * * *       /usr/bin/sbfspot/SBFspot -v -sp0 -ad14 -am1 -ae1 -finq > /dev/stdout' >> /etc/crontabs/root
+# monthly data SBFspot archive upload at 5:55am now with -mqtt call
+RUN echo '55 05 * * *       /usr/bin/sbfspot/SBFspot -v -sp0 -ad14 -am1 -ae1 -mqtt -finq > /dev/stdout' >> /etc/crontabs/root
 # start SBFspotUpload 1 min after boot
 RUN echo '@reboot sleep 60 && /usr/bin/sbfspot/SBFspotUploadDaemon -c /usr/bin/sbfspot/SBFspotUpload.cfg > /dev/stdout' >> /etc/crontabs/root
 #  Log SBFspotUpload to HA logging window  defunct now in version 3.9.6+ sbfspot, using it for the timed message
