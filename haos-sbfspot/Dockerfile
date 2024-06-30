@@ -18,13 +18,13 @@ RUN apk update && apk add --no-cache \
     bluez=5.76-r0 \
     bluez-dev=5.76-r0 \
     boost-dev=1.82.0-r5 \
-    curl-dev=8.7.1-r0 \
-    git=2.45.1-r0 \
+    curl-dev=8.8.0-r0 \
+    git=2.45.2-r0 \
     g++=13.2.1_git20240309-r0 \
     make=4.4.1-r2 \
     mariadb-dev=10.11.8-r0\
     mosquitto-clients=2.0.18-r0 \
-    nginx=1.26.0-r1 \
+    nginx=1.26.1-r0 \
     tzdata=2024a-r1
            
 # download and build SBFspot
@@ -50,7 +50,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN apk update && apk add --no-cache \
      bluez=5.76-r0 \
-    nano=7.2-r1 \
+    nano=8.0-r0 \
     bluez-libs=5.76-r0 \
     libstdc++=13.2.1_git20240309-r0 \
     mariadb-common=10.11.8-r0 \
@@ -58,7 +58,7 @@ RUN apk update && apk add --no-cache \
     ncurses-libs=6.4_p20240420-r0 \
     libcurl=8.7.1-r0 \
     mosquitto-clients=2.0.18-r0 \
-    nginx=1.26.0-r1
+    nginx=1.26.1-r0
     
     #tzdata=2023c-r1 
     #boost-date_time1.78 
