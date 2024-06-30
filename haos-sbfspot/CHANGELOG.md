@@ -2,7 +2,7 @@
 
 # ![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
 
-- bump dependencies for container base 3.20 
+- bump dependencies for container base 3.20
 - added -mqtt to archive poll due to feature request
 
 ## ![Release][release-shield-2024-5-1]
