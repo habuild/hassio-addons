@@ -2,6 +2,15 @@
 
 # ![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
 
+- bump container base to 3.21
+- bump dependencies for container base 3.21
+- Add warning to docs about leave sensor creation set to NO until working MQTT connection.
+- bug chasing on pi5 version.
+
+## ![Release][release-shield-2024-7-1]
+
+[release-shield-2024-7-1]: https://img.shields.io/badge/version-2024.7.1-blue.svg
+
 - bump dependencies for container base 3.20
 - added -mqtt to archive poll due to feature request
 

@@ -5,9 +5,9 @@ configuration:
     description: >-
       Pick Bluetooth or Ethernet, only the related options are generated in SBFspot.cfg
   Sensors_HA:
-    name: Create or Purge Sensors for the MQTT integration.
+    name: Create or Purge Sensors for the MQTT integration. Set as NO until working MQTT connection or sensor creation will break.
     description: >-
-      If you have exisiting yaml sensors, backup and remove them prior to avoid naming conflicts.
+      Leave this option on NO, until you have confirmed MQTT connection is working, then create sensors. If you have exisiting yaml sensors, backup and remove them prior to avoid naming conflicts.
   BTAddress:
     name: Bluetooth Mac !secret BTAddress is Default
     description: >-
