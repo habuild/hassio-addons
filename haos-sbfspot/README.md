@@ -117,7 +117,7 @@ refer to [Issue 42 for more info](https://github.com/habuild/hassio-addons/issue
 
 ## MQTT
 
-### 2022.9.1+
+### Leave this option set to NO until you have a warking MQTT connection.
 
 #### Add MQTT mqtt user and password to options.
 
