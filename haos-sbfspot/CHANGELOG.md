@@ -2,6 +2,12 @@
 
 # ![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fhaos-sbfspot%2Fconfig.yaml)
 
+- bump for SBFspot V3.9.12
+
+## ![Release][release-shield-2025-1-0]
+
+[release-shield-2025-1-0]: https://img.shields.io/badge/version-2025.1.0-blue.svg
+
 - bump container base to 3.21
 - bump dependencies for container base 3.21
 - Add warning to docs about leave sensor creation set to NO until working MQTT connection.
