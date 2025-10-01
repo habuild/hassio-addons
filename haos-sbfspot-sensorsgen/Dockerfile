@@ -4,7 +4,7 @@ FROM $BUILD_FROM
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-# hadolint ignore=DL3003
+# hadolint ignore=DL3018
 RUN apk update && apk add --no-cache \
     mosquitto-clients \
     nano
