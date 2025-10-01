@@ -1,5 +1,5 @@
 ---
-name: HAOS SBFspot SensorsGen
+name: HAOS-SBFspot SensorsGen
 version: 2025.10.1
 slug: haos-sbfspot-sensorsgen
 description: Create extra sensors for SBFspot multiple inverter setups
