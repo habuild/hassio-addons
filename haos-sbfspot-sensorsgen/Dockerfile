@@ -17,8 +17,8 @@ COPY rootfs /
 RUN chmod -Rv a+x /etc/s6-overlay/s6-rc.d/**
 
 
-# Build arguments
-ARG BUILD_ARCH --test  <<<< Need to remove this to build
+# Build arguments  # --test  <<<< Need to remove this to build or add to build_arch to ignore builder
+ARG BUILD_ARCH  
 ARG BUILD_DATE
 ARG BUILD_DESCRIPTION
 ARG BUILD_NAME
