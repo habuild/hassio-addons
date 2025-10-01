@@ -17,7 +17,7 @@ RUN chmod -Rv a+x /etc/s6-overlay/s6-rc.d/**
 
 
 # Build arguments
-ARG BUILD_ARCH --test
+ARG BUILD_ARCH --test  <<<< Need to remove this to build
 ARG BUILD_DATE
 ARG BUILD_DESCRIPTION
 ARG BUILD_NAME
@@ -38,7 +38,7 @@ LABEL \
     org.opencontainers.image.vendor="Hasqt" \
     org.opencontainers.image.authors="Hasqt <https://community.home-assistant.io/u/hasqt>" \
     org.opencontainers.image.licenses="MIT" \
-    org.opencontainers.image.url="https://github.com/habuild/hassio/tree/main/sensorsgen" \
+    org.opencontainers.image.url="https://github.com/habuild/hassio-addons/tree/main/haos-sbfspot-sensorsgen" \
     org.opencontainers.image.source="https://github.com/${BUILD_REPOSITORY}" \
     org.opencontainers.image.documentation="https://github.com/${BUILD_REPOSITORY}/blob/main/README.md" \
     org.opencontainers.image.created=${BUILD_DATE} \
