@@ -1,7 +1,7 @@
 ---
 name: SensorsGen
 version: 2025.10.20
-slug: sensorsgen
+slug: sensorsgen --test
 description: Create your extra sensors for SBFspot multiple inverter setups
 url: "https://github.com/habuild/hassio/tree/main/sensorsgen"
 image: "ghcr.io/habuild/{arch}-addon-sensorsgen"
