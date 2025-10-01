@@ -17,7 +17,7 @@ RUN chmod -Rv a+x /etc/s6-overlay/s6-rc.d/**
 
 
 # Build arguments
-ARG BUILD_ARCH
+ARG BUILD_ARCH --test
 ARG BUILD_DATE
 ARG BUILD_DESCRIPTION
 ARG BUILD_NAME
