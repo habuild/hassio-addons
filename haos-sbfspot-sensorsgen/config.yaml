@@ -42,7 +42,7 @@ options:
   InvType3: ""
   InvClass3: ""
   DateTimeFormat: "null"
-  MQTT_Host: "null"
+  MQTT_Host: 
   MQTT_User: "!secret mqtt_user"
   MQTT_Pass: "!secret mqtt_pass"
   MQTT_Topic: "homeassistant/sbfspot_{plantname}/sbfspot_{serial}"
