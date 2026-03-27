@@ -12,7 +12,5 @@ labels:
   org.opencontainers.image.description: "SBFspot for new add-ons."
   org.opencontainers.image.source: "https://github.com/habuild"
   org.opencontainers.image.licenses: "Apache License 2.0"
-codenotary:
-  base_image: notary@home-assistant.io
 args:
   TEMPIO_VERSION: "2021.09.0"
