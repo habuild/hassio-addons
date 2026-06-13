@@ -1,5 +1,5 @@
 ---
-name: noip-renewer --test
+name: noip-renewer
 version: 2026.6.1
 slug: noip-renewer
 description: simao-silva/noip-renewer for homeassistant addon
