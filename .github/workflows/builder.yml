@@ -1,4 +1,5 @@
-name: Build
+- name: Home Assistant builder
+  uses: home-assistant/builder@2026.03.2
 
 on:
   release:
