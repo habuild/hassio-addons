@@ -1,6 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base:18.1.1
-FROM $BUILD_FROM
-
+FROM ghcr.io/home-assistant/base:latest
 
 
 # Set shell
