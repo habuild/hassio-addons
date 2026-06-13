@@ -65,8 +65,8 @@ jobs:
       id-token: write  # Write needed for Cosign signing (issue OIDC token for signing)
       packages: write  # To push the manifest to GitHub Container Registry
     steps:
-      - name: Publish multi-arch manifest
-        uses: home-assistant/builder/actions/publish-multi-arch-manifest@[version]
+      - name: Home Assistant builder
+        uses: home-assistant/builder@2026.03.2
         with:
           architectures: ${{ env.ARCHITECTURES }}
           container-registry-password: ${{ secrets.GITHUB_TOKEN }}
