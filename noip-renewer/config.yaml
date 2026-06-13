@@ -1,7 +1,7 @@
 ---
-name: noip-renewer
+name: noip-renewer-ha
 version: 2026.6.1
-slug: noip-renewer
+slug: noip-renewer-ha
 description: simao-silva/noip-renewer for homeassistant addon
 url: "https://github.com/habuild/hassio-addons/tree/main/noip-renewer"
 stage: experimental
