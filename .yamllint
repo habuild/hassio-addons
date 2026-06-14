@@ -52,6 +52,7 @@ rules:
     ignore: |
       .github/support.yml
       hassio-addons/haos-sbfspot/translations/en.yaml
+      **/en.yaml
     level: warning
     max: 120
     allow-non-breakable-words: true
