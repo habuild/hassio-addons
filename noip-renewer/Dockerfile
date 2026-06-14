@@ -18,9 +18,9 @@ RUN apk update && apk add --no-cache \
 
 COPY rootfs /
 
-WORKDIR /etc/noip-renewer/
+WORKDIR /etc/services.d/noip-renewer/
 
-RUN chmod -Rv a+x /etc/noip-renewer/**
+RUN chmod -Rv a+x /etc/services.d/noip-renewer/**
 
 ENTRYPOINT ["/bin/bash"]
 CMD ["/etc/noip-renewer/run"]
