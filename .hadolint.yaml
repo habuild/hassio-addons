@@ -2,3 +2,6 @@
 ignored:
   - DL3006
   # Always tag the version of an image explicitly.
+
+  - DL3007
+  # Avoid latest tag
