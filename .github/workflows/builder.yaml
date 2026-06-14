@@ -14,7 +14,10 @@ env:
   IMAGE_NAME: my-image
 
 permissions:
+  actions: write
   contents: write
+  packages: read
+  security-events: write
 
 jobs:
   init:
