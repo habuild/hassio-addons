@@ -23,7 +23,7 @@ WORKDIR /etc/services.d/noip-renewer/
 RUN chmod -Rv a+x /etc/services.d/noip-renewer/**
 
 ENTRYPOINT ["/bin/bash"]
-CMD ["/etc/noip-renewer/run"]
+CMD ["/etc/services.d/noip-renewer/run"]
 
 # Build arguments    <<<< Need to remove this to build or add to build_arch to ignore builder
 ARG BUILD_ARCH  
