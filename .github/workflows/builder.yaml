@@ -1,19 +1,20 @@
 ---
 name: Build
 
+# yamllint disable-line rule:truthy
 on:
   release:
     types: [published]
   push:
     branches:
-      - main   
-
+      - main
+      
 env:
   ARCHITECTURES: '["amd64", "aarch64"]'
   IMAGE_NAME: my-image
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   init:
@@ -36,9 +37,9 @@ jobs:
     needs: init
     runs-on: ${{ matrix.os }}
     permissions:
-      contents: read # To check out the code
-      id-token: write # Write needed for Cosign signing (issue OIDC token for signing)
-      packages: write # To push built images to GitHub Container Registry
+      contents: read   # To check out the code
+      id-token: write  # Write needed for Cosign signing (issue OIDC token for signing)
+      packages: write  # To push built images to GitHub Container Registry
     strategy:
       fail-fast: false
       matrix: ${{ fromJSON(needs.init.outputs.matrix) }}
@@ -62,8 +63,8 @@ jobs:
     needs: [init, build]
     runs-on: ubuntu-latest
     permissions:
-      id-token: write # Write needed for Cosign signing (issue OIDC token for signing)
-      packages: write # To push the manifest to GitHub Container Registry
+      id-token: write   # Write needed for Cosign signing (issue OIDC token for signing)
+      packages: write   # To push the manifest to GitHub Container Registry
     steps:
       - name: Publish multi-arch manifest
         uses: home-assistant/builder/actions/publish-multi-arch-manifest@2026.03.2
