@@ -1,5 +1,6 @@
 ---
 .images/Example_Config.yaml
 .github/workflows/addon-ci.yaml
+.github/workflows/app-ci.yaml
 .github/workflows/builder.yaml
 *.png
