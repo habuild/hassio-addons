@@ -15,7 +15,7 @@ env:
 permissions:
   actions: write
   contents: write
-  packages: read
+  packages: write
   security-events: write
 
 jobs:
