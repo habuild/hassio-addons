@@ -6,7 +6,6 @@ description: Create extra sensors for SBFspot multiple inverter setups
 url: "https://github.com/habuild/hassio/tree/main/haos-sbfspot-sensorsgen"
 image: "ghcr.io/habuild/{arch}-addon-haos-sbfspot-sensorsgen"
 arch:
-  - armv7
   - aarch64
   - amd64
 init: false
