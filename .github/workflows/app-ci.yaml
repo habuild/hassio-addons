@@ -36,7 +36,7 @@ jobs:
       target: ${{ steps.information.outputs.target }}
     steps:
       - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10   # v6.0.3
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0   # v7.0.0
         with:
           persist-credentials: false
       - name: 🚀 Run app information action
@@ -61,7 +61,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10   # v6.0.3
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0   # v7.0.0
         with:
           persist-credentials: false
       - name: 🚀 Run App Lint
@@ -77,7 +77,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10   # v6.0.3
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0   # v7.0.0
         with:
           persist-credentials: false
       - name: 🚀 Run Hadolint
@@ -90,7 +90,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10   # v6.0.3
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0   # v7.0.0
         with:
           persist-credentials: false
       - name: 🚀 Run JQ
@@ -109,7 +109,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10   # v6.0.3
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0   # v7.0.0
         with:
           persist-credentials: false
       - name: 🚀 Run Shellcheck
@@ -122,7 +122,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10   # v6.0.3
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0   # v7.0.0
         with:
           persist-credentials: false
       - name: 🚀 Run YAMLLint
@@ -133,7 +133,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10   # v6.0.3
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0   # v7.0.0
         with:
           persist-credentials: false
       - name: 🚀 Run Prettier
@@ -148,7 +148,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10   # v6.0.3
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0   # v7.0.0
         with:
           persist-credentials: false
       - name: 🚀 Run zizmor
@@ -160,7 +160,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10   # v6.0.3
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0   # v7.0.0
         with:
           persist-credentials: false
       - name: 👀 Dependency review
@@ -183,7 +183,7 @@ jobs:
         architecture: ${{ fromJson(needs.information.outputs.architectures) }}
     steps:
       - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10   # v6.0.3
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0   # v7.0.0
         with:
           persist-credentials: false
       - name: 🏗 Set up Docker Buildx
